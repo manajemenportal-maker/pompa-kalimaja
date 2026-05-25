@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT Kalimaja Surya Alam - Pompa, Alat Berat & Sistem Hidrolik</title>
     <meta name="description" content="PT Kalimaja Surya Alam menyediakan pompa air irigasi, alat berat, sistem hidrolik, dan suku cadang industri terbaik dan terpercaya.">
+    <link rel="icon" type="image/jpeg" href="Logo Kalimaja1.jpg">
+    <link rel="apple-touch-icon" href="Logo Kalimaja1.jpg">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -592,7 +594,7 @@
             <div class="flex justify-between items-center h-16 md:h-18">
                 <div class="flex-shrink-0 flex items-center gap-3 relative group">
                     <!-- Logo Perusahaan -->
-                    <img id="logo-img" class="h-10 w-10 md:h-11 md:w-11 rounded-full object-cover shadow-sm border-2 border-white bg-white p-0.5" src="Logo Kalimaja1.jpg" onerror="this.src='https://via.placeholder.com/150?text=KSA'" alt="Logo PT Kalimaja">
+                    <img id="logo-img" class="h-10 w-10 md:h-11 md:w-11 rounded-full object-cover shadow-sm border-2 border-white bg-white p-0.5" src="Logo Kalimaja1.jpg" loading="eager" decoding="async" onload="document.getElementById('loading-logo')?.classList.add('hidden')" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 96 96%27%3E%3Ccircle cx=%2748%27 cy=%2748%27 r=%2744%27 fill=%27%23087333%27/%3E%3Ccircle cx=%2748%27 cy=%2748%27 r=%2734%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2748%27 y=%2756%27 font-size=%2726%27 text-anchor=%27middle%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27%23087333%27%3EKSA%3C/text%3E%3C/svg%3E'; document.getElementById('loading-logo')?.classList.add('hidden')" alt="Logo PT Kalimaja">
                     <span class="font-extrabold text-base md:text-lg tracking-tight text-gray-900 hidden sm:block">PT Kalimaja Surya Alam</span>
                     
                     <!-- Alat Admin untuk Upload Logo -->
@@ -602,7 +604,7 @@
                         </label>
                     </div>
                     <!-- Loading Overlay Logo -->
-                    <div id="loading-logo" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-50 text-white rounded-full w-12 h-12">
+                    <div id="loading-logo" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-50 text-white rounded-full w-11 h-11 pointer-events-none">
                         <i class="fas fa-spinner fa-spin text-xs text-brand"></i>
                     </div>
                 </div>
@@ -1381,6 +1383,100 @@
         const db = getFirestore(app);
         const storage = getStorage(app);
 
+        // ==========================================
+        // FALLBACK GAMBAR AGAR HALAMAN TIDAK KOSONG
+        // Jika file gambar lokal belum ikut ter-upload ke hosting,
+        // website tetap menampilkan visual pengganti dan tidak muter terus.
+        // ==========================================
+        function svgFallback(label, bg = '#0f7a3b', accent = '#f5b301') {
+            const safeLabel = encodeURIComponent(label);
+            const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'>
+                <defs>
+                    <linearGradient id='g' x1='0' x2='1' y1='0' y2='1'>
+                        <stop offset='0%' stop-color='${bg}'/>
+                        <stop offset='100%' stop-color='#07130c'/>
+                    </linearGradient>
+                    <radialGradient id='r' cx='78%' cy='18%' r='60%'>
+                        <stop offset='0%' stop-color='${accent}' stop-opacity='.45'/>
+                        <stop offset='100%' stop-color='${accent}' stop-opacity='0'/>
+                    </radialGradient>
+                </defs>
+                <rect width='1200' height='800' fill='url(#g)'/>
+                <rect width='1200' height='800' fill='url(#r)'/>
+                <circle cx='190' cy='160' r='82' fill='rgba(255,255,255,.10)'/>
+                <circle cx='1010' cy='650' r='150' fill='rgba(255,255,255,.08)'/>
+                <text x='80' y='390' font-family='Arial, sans-serif' font-size='54' font-weight='800' fill='white'>PT Kalimaja Surya Alam</text>
+                <text x='80' y='465' font-family='Arial, sans-serif' font-size='72' font-weight='900' fill='${accent}'>${safeLabel}</text>
+                <text x='80' y='535' font-family='Arial, sans-serif' font-size='30' font-weight='600' fill='rgba(255,255,255,.82)'>Solusi Total Mekanisasi Pertanian</text>
+            </svg>`;
+            return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+        }
+
+        const FALLBACK = {
+            logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Ccircle cx='48' cy='48' r='44' fill='%23087333'/%3E%3Ccircle cx='48' cy='48' r='34' fill='%23ffffff'/%3E%3Ctext x='48' y='56' font-size='26' text-anchor='middle' font-family='Arial' font-weight='700' fill='%23087333'%3EKSA%3C/text%3E%3C/svg%3E",
+            hero1: svgFallback('Pompa Irigasi'),
+            hero2: svgFallback('Alat Berat'),
+            hero3: svgFallback('Sistem Hidrolik'),
+            hero4: svgFallback('Spare Part'),
+            hero5: svgFallback('Garansi Digital'),
+            pump: svgFallback('Pompa Air Irigasi'),
+            heavy: svgFallback('Alat Berat'),
+            hydraulic: svgFallback('Hydraulic System'),
+            spare: svgFallback('Spare Part Industri'),
+            gallery: svgFallback('Dokumentasi'),
+            partner: svgFallback('Mitra')
+        };
+
+        function preloadImage(url) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => resolve(url);
+                img.onerror = reject;
+                img.src = url;
+            });
+        }
+
+        async function setBackgroundSafe(elId, url, fallbackUrl) {
+            const el = document.getElementById(elId);
+            if (!el) return;
+            try {
+                await preloadImage(url);
+                el.style.backgroundImage = `url('${url}')`;
+            } catch (e) {
+                el.style.backgroundImage = `url('${fallbackUrl}')`;
+            }
+        }
+
+        function setStaticImgSafe(img, fallbackUrl) {
+            if (!img) return;
+            img.addEventListener('error', () => {
+                if (img.dataset.fallbackApplied === '1') return;
+                img.dataset.fallbackApplied = '1';
+                img.src = fallbackUrl;
+            });
+        }
+
+        function applyInitialImageFallbacks() {
+            setBackgroundSafe('hero-slide-1', '1.jpg', FALLBACK.hero1);
+            setBackgroundSafe('hero-slide-2', '2.jpg', FALLBACK.hero2);
+            setBackgroundSafe('hero-slide-3', '3.png', FALLBACK.hero3);
+            setBackgroundSafe('hero-slide-4', '4.jpeg', FALLBACK.hero4);
+            setBackgroundSafe('hero-slide-5', '5.jpeg', FALLBACK.hero5);
+
+            setStaticImgSafe(document.getElementById('logo-img'), FALLBACK.logo);
+            setStaticImgSafe(document.getElementById('img-tentang'), FALLBACK.hero1);
+
+            document.querySelectorAll('img[src="M.jpg"]').forEach(img => setStaticImgSafe(img, FALLBACK.pump));
+            document.querySelectorAll('img[src="N.jpg"]').forEach(img => setStaticImgSafe(img, FALLBACK.heavy));
+            document.querySelectorAll('img[src="O.jpeg"]').forEach(img => setStaticImgSafe(img, FALLBACK.hydraulic));
+            document.querySelectorAll('img[src="P.jpeg"]').forEach(img => setStaticImgSafe(img, FALLBACK.spare));
+            document.querySelectorAll('#galeri img').forEach(img => setStaticImgSafe(img, FALLBACK.gallery));
+            document.querySelectorAll('section.py-10 img').forEach(img => setStaticImgSafe(img, FALLBACK.partner));
+            document.querySelectorAll('#admin-slider-panel img').forEach((img, idx) => setStaticImgSafe(img, FALLBACK[`hero${idx + 1}`] || FALLBACK.hero1));
+        }
+
+        document.addEventListener('DOMContentLoaded', applyInitialImageFallbacks);
+
         window.toggleMobileMenu = function(forceState) {
             const menu = document.getElementById('mobile-menu');
             if (!menu) return;
@@ -1455,8 +1551,7 @@
             // 3. Fetch Gambar Tentang Kami
             onSnapshot(doc(db, 'settings', 'tentang_image'), (docSnap) => {
                 if (docSnap.exists() && docSnap.data().imageUrl) {
-                    const imgEl = document.getElementById('img-tentang');
-                    if (imgEl) imgEl.src = docSnap.data().imageUrl;
+                    setImageSafe('img-tentang', docSnap.data().imageUrl, FALLBACK.hero1, 'loading-tentang');
                 }
             }, (error) => {
                 console.error("Error Fetch Tentang Kami:", error);
@@ -1469,11 +1564,10 @@
                         const bgUrl = docSnap.data().imageUrl;
                         // Ubah slider animasi utama
                         const slideEl = document.getElementById('hero-slide-' + i);
-                        if (slideEl) slideEl.style.backgroundImage = `url('${bgUrl}')`;
+                        if (slideEl) setBackgroundSafe('hero-slide-' + i, bgUrl, FALLBACK['hero' + i] || FALLBACK.hero1);
                         
                         // Ubah thumbnail di panel admin
-                        const thumbEl = document.getElementById('admin-hero-thumb-' + i);
-                        if (thumbEl) thumbEl.src = bgUrl;
+                        setImageSafe('admin-hero-thumb-' + i, bgUrl, FALLBACK['hero' + i] || FALLBACK.hero1);
                     }
                 }, (error) => {
                     console.error(`Error Fetch Slide ${i}:`, error);
@@ -1486,8 +1580,7 @@
                     if (docSnap.exists()) {
                         const data = docSnap.data();
                         if (data.imageUrl) {
-                            const imgEl = document.getElementById('gal-img-' + i);
-                            if (imgEl) imgEl.src = data.imageUrl;
+                            setImageSafe('gal-img-' + i, data.imageUrl, FALLBACK.gallery, 'loading-gal-' + i);
                         }
                         if (data.title) {
                             const titleEl = document.getElementById('gal-title-' + i);
@@ -1500,8 +1593,7 @@
             // 6. Fetch Logo Perusahaan
             onSnapshot(doc(db, 'settings', 'logo_image'), (docSnap) => {
                 if (docSnap.exists() && docSnap.data().imageUrl) {
-                    const imgEl = document.getElementById('logo-img');
-                    if (imgEl) imgEl.src = docSnap.data().imageUrl;
+                    setImageSafe('logo-img', docSnap.data().imageUrl, FALLBACK.logo, 'loading-logo');
                 }
             }, (error) => {
                 console.error("Error Fetch Logo:", error);
@@ -1514,6 +1606,40 @@
         window.refreshUI = function() {
             renderGaransiTable(currentGaransiData);
             renderPartnerGrid(currentPartnerData);
+        };
+
+        function setImageSafe(imgId, url, fallbackUrl = FALLBACK.logo, loadingId = null) {
+            const img = document.getElementById(imgId);
+            const loading = loadingId ? document.getElementById(loadingId) : null;
+            if (!img || !url) return;
+
+            if (loading) {
+                loading.classList.remove('hidden');
+                loading.classList.add('flex');
+            }
+
+            let finished = false;
+            const finish = (src) => {
+                if (finished) return;
+                finished = true;
+                img.src = src;
+                if (loading) {
+                    loading.classList.add('hidden');
+                    loading.classList.remove('flex');
+                }
+            };
+
+            const timer = setTimeout(() => finish(fallbackUrl), 8000);
+            const testImg = new Image();
+            testImg.onload = () => {
+                clearTimeout(timer);
+                finish(url);
+            };
+            testImg.onerror = () => {
+                clearTimeout(timer);
+                finish(fallbackUrl);
+            };
+            testImg.src = url;
         };
 
         function escapeHTML(value) {
@@ -1663,9 +1789,14 @@
         window.uploadLogo = async function(event) {
             const file = event.target.files[0];
             if (!file) return;
+
+            const imgEl = document.getElementById('logo-img');
+            if (imgEl) imgEl.src = URL.createObjectURL(file);
+
             const url = await uploadFileToStorage(file, 'logo_image', 'loading-logo');
             if (url) {
                 await setDoc(doc(db, 'settings', 'logo_image'), { imageUrl: url, updatedAt: Date.now() });
+                setImageSafe('logo-img', url, FALLBACK.logo, 'loading-logo');
                 showCloudToast("Logo berhasil diperbarui di server.");
             }
         };
