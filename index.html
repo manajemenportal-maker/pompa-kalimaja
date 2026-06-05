@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT Kalimaja Surya Alam - Pompa, Alat Berat & Sistem Hidrolik</title>
-    <meta name="description" content="PT Kalimaja Surya Alam menyediakan pompa air irigasi, alat berat, sistem hidrolik, dan suku cadang industri terbaik dan terpercaya.">
-    <link rel="icon" type="image/jpeg" href="Logo Kalimaja1.jpg">
-    <link rel="apple-touch-icon" href="Logo Kalimaja1.jpg">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- FontAwesome untuk Ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PT Kalimaja Surya Alam - Spesialis Pompa Air Irigasi Bensin</title>
+<meta content="PT Kalimaja Surya Alam fokus menyediakan pompa air irigasi bensin untuk sawah, perkebunan, proyek, dan kebutuhan debit air lapangan." name="description"/>
+<link href="Logo Kalimaja1.jpg" rel="icon" type="image/jpeg"/>
+<link href="Logo Kalimaja1.jpg" rel="apple-touch-icon"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- FontAwesome untuk Ikon -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -48,1320 +45,786 @@
             }
         };
     </script>
-    <style>
-        :root {
-            --brand: #087333;
-            --brand-2: #12b85f;
-            --brand-3: #064e2b;
-            --accent: #f5b301;
-            --accent-2: #ffcf33;
-            --ink: #0b1220;
-            --muted: #475569;
-            --panel: #ffffff;
-            --line: #d7dee7;
-        }
+<style>
+:root{
+  --brand:#7c3aed;
+  --brand-2:#ff3f8b;
+  --brand-3:#ff7a18;
+  --accent:#18a8ff;
+  --accent-2:#22d3ee;
+  --green:#16c784;
+  --ink:#102033;
+  --muted:#52677f;
+  --soft:#f7fbff;
+  --panel:#ffffff;
+  --line:rgba(124,58,237,.16);
+}
+*{ -webkit-tap-highlight-color:transparent; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:linear-gradient(135deg,#fff7ed 0%,#fff1f8 30%,#eef7ff 62%,#ecfeff 100%) !important;
+  color:var(--ink) !important;
+  min-height:100vh;
+}
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 8% 8%,rgba(255,122,24,.28),transparent 27%),
+    radial-gradient(circle at 88% 8%,rgba(255,63,139,.24),transparent 27%),
+    radial-gradient(circle at 52% 45%,rgba(24,168,255,.20),transparent 34%),
+    linear-gradient(135deg,#fff7ed 0%,#fff1f8 34%,#eef7ff 68%,#ecfeff 100%) !important;
+}
+::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#fff1f8}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--brand-3),var(--brand-2),var(--brand));border-radius:999px}
+.glass-nav{
+  background:rgba(255,255,255,.90) !important;
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(124,58,237,.16) !important;
+  box-shadow:0 14px 45px rgba(24,48,88,.12) !important;
+}
+.glass-nav span,.glass-nav a,.glass-nav button{color:var(--ink)!important}.glass-nav img{background:#fff!important;border-color:rgba(255,63,139,.36)!important}.glass-nav .bg-gray-100{background:#fff1f8!important}.nav-link{position:relative}.nav-link::after{content:'';position:absolute;left:0;bottom:-8px;width:0;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--brand-3),var(--brand-2),var(--brand),var(--accent));transition:width .2s ease}.nav-link:hover::after{width:100%}.nav-link:hover{color:var(--brand-2)!important}
+.bg-brand,.hover\:bg-brand:hover,.hover\:bg-brand-dark:hover{background:linear-gradient(135deg,var(--brand-3),var(--brand-2),var(--brand))!important}.text-brand{color:var(--brand-2)!important}.border-brand{border-color:var(--brand-2)!important}.bg-accent{background:linear-gradient(135deg,#ffd166,var(--brand-3))!important}.text-accent{color:#ffb703!important}
+.section-compact{padding-top:3.6rem!important;padding-bottom:3.6rem!important}.app-shadow{box-shadow:0 22px 60px rgba(124,58,237,.18)!important}.premium-button{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border-radius:999px;font-weight:900;transition:.2s ease;box-shadow:0 14px 30px rgba(255,63,139,.20)!important}.premium-button:hover{transform:translateY(-2px)}
+.hero-slider-container{display:flex;width:500%;height:100%;animation:slide 34s infinite linear}.hero-slide{width:20%;height:100%;background-size:cover;background-position:center}@keyframes slide{0%,16%{transform:translateX(0%)}20%,36%{transform:translateX(-20%)}40%,56%{transform:translateX(-40%)}60%,76%{transform:translateX(-60%)}80%,96%{transform:translateX(-80%)}100%{transform:translateX(0%)}}@keyframes fadeIn{0%{opacity:0;transform:translateY(-10px)}100%{opacity:1;transform:translateY(0)}}.animate-fade-in{animation:fadeIn .35s ease-out forwards}
+#beranda{min-height:78vh!important;background:linear-gradient(135deg,#ff7a18 0%,#ff3f8b 34%,#7c3aed 65%,#18a8ff 100%)!important;border-bottom:0!important}#beranda .absolute.inset-0.bg-gradient-to-r{background:linear-gradient(90deg,rgba(255,122,24,.65),rgba(255,63,139,.48),rgba(24,168,255,.22))!important}#beranda .absolute.inset-y-0{background:linear-gradient(90deg,rgba(124,58,237,.44),rgba(255,63,139,.18),transparent)!important}#beranda .absolute.inset-0.bg-\[radial-gradient\(circle_at_18\%_20\%\,rgba\(245\,179\,1\,\.22\)\,transparent_24\%\)\,radial-gradient\(circle_at_80\%_35\%\,rgba\(18\,184\,95\,\.20\)\,transparent_28\%\)\]{background:radial-gradient(circle at 18% 20%,rgba(255,255,255,.30),transparent 24%),radial-gradient(circle at 80% 35%,rgba(34,211,238,.22),transparent 28%)!important}#beranda h1{color:white!important;text-shadow:0 10px 26px rgba(16,32,51,.32)!important}#beranda p{color:#fff7fb!important;text-shadow:0 5px 18px rgba(16,32,51,.20)!important}#beranda .bg-white\/97,#beranda .bg-white\/95{background:rgba(255,255,255,.94)!important;color:var(--ink)!important;border:1px solid rgba(255,255,255,.70)!important;box-shadow:0 28px 80px rgba(124,58,237,.23)!important}#beranda .bg-white\/97 h3,#beranda .bg-white\/97 span,#beranda .bg-white\/97 p,#beranda .bg-white\/97 div{color:var(--ink)!important;text-shadow:none!important}.premium-button.bg-white\/14{background:rgba(255,255,255,.92)!important;color:var(--brand)!important;border:1px solid rgba(255,255,255,.70)!important}
+.fresh-card,.soft-card,#tentang>div>div,#kontak>div>div,#garansi .bg-white,#admin-garansi-view{background:rgba(255,255,255,.94)!important;color:var(--ink)!important;border:1px solid rgba(24,168,255,.16)!important;box-shadow:0 18px 50px rgba(24,48,88,.12)!important}.fresh-card:hover,.soft-card:hover{transform:translateY(-4px)!important;border-color:rgba(255,63,139,.34)!important;box-shadow:0 28px 75px rgba(255,63,139,.16)!important}.fresh-card h1,.fresh-card h2,.fresh-card h3,.soft-card h1,.soft-card h2,.soft-card h3,#tentang h2,#produk h2,#produk h3,#layanan h2,#layanan h3,#garansi h2,#garansi h3,#kontak h3,#kontak label,#garansi label{color:var(--ink)!important}.fresh-card p,.soft-card p,#tentang p,#produk p,#layanan p,#garansi p,#kontak p,.text-gray-600,.text-gray-500,.text-gray-700{color:var(--muted)!important}#tentang h4,#garansi h4{color:var(--brand-2)!important}
+#tentang{background:linear-gradient(135deg,#fff7ed 0%,#fff1f8 50%,#eef7ff 100%)!important}#produk{background:linear-gradient(135deg,#eef7ff 0%,#ffffff 45%,#fff1f8 100%)!important}#layanan{background:linear-gradient(135deg,#ecfeff 0%,#f3e8ff 50%,#fff7ed 100%)!important;border-color:rgba(124,58,237,.14)!important}#garansi{background:linear-gradient(135deg,#fff7ed 0%,#ffffff 44%,#eaf7ff 100%)!important}#kontak{background:linear-gradient(135deg,#f3e8ff 0%,#eaf7ff 55%,#ecfeff 100%)!important}#produk .h-48,#produk .bg-gray-50,#produk .bg-gray-100{background:linear-gradient(135deg,#fff,#eef7ff)!important}.product-link,a[href="#kontak"].bg-brand,button.bg-brand,#g_submit_btn{background:linear-gradient(135deg,var(--brand-3),var(--brand-2),var(--brand))!important;color:#fff!important;box-shadow:0 16px 34px rgba(255,63,139,.24)!important}.product-link:hover,#g_submit_btn:hover{filter:brightness(1.06)!important;transform:translateY(-1px)!important}
+#layanan .w-14.h-14{background:linear-gradient(135deg,var(--brand-3),var(--brand-2),var(--brand))!important;color:#fff!important}#garansi input,#garansi select,#garansi textarea,#kontak input,#kontak textarea,.input-clean{background:#fff!important;color:var(--ink)!important;border:1px solid rgba(124,58,237,.18)!important;box-shadow:0 8px 22px rgba(24,48,88,.06)!important}#garansi input:focus,#garansi select:focus,#garansi textarea:focus,#kontak input:focus,#kontak textarea:focus{border-color:var(--brand-2)!important;box-shadow:0 0 0 4px rgba(255,63,139,.13)!important;outline:none!important}#garansi .bg-gradient-to-br.from-green-100,#garansi .shadow-inner{background:linear-gradient(135deg,#fff7ed,#ecfeff)!important;border-color:rgba(255,63,139,.18)!important}#garansi .bg-green-50{background:#eafff7!important;color:#067a4c!important;border-color:rgba(22,199,132,.22)!important}#garansi .bg-red-50{background:#fff1f2!important;color:#b91c1c!important;border-color:#fecdd3!important}#admin-garansi-view thead tr,#admin-garansi-view .p-6.bg-gradient-to-r from-orange-400 via-pink-500 to-violet-500{background:linear-gradient(90deg,var(--brand),var(--accent))!important;color:#fff!important}#admin-garansi-view tbody tr:hover{background:#fff1f8!important}
+section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--brand-2),var(--brand),var(--accent))!important;border:0!important}section.py-10.md\:py-14 h3,section.py-10.md\:py-14 p{color:#fff!important}footer{background:linear-gradient(135deg,#5b21b6 0%,#d946ef 45%,#0ea5e9 100%)!important;color:#fff!important;border-top:0!important}footer h3,footer h4,footer p,footer a,footer li,footer div,footer span{color:#fff!important}footer a:hover{color:#ffd166!important}.wa-float{background:linear-gradient(135deg,#22c55e,#06b6d4)!important;box-shadow:0 18px 38px rgba(6,182,212,.28)!important}
+.bottom-app-nav{display:none}@media(max-width:767px){body{padding-bottom:74px}.section-compact{padding-top:2.4rem!important;padding-bottom:2.4rem!important}#beranda{min-height:70vh!important}.bottom-app-nav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:10px;right:10px;bottom:10px;z-index:60;background:rgba(255,255,255,.94)!important;backdrop-filter:blur(16px);border:1px solid rgba(255,63,139,.18)!important;border-radius:18px;padding:7px;box-shadow:0 18px 45px rgba(24,48,88,.18)!important}.bottom-app-nav a{color:var(--ink)!important;text-align:center;font-size:10px;font-weight:800;padding:7px 3px;border-radius:13px}.bottom-app-nav a i{display:block;font-size:16px;margin-bottom:2px;color:var(--brand-2)!important}.bottom-app-nav a:hover,.bottom-app-nav a:active{background:linear-gradient(135deg,var(--brand-3),var(--brand-2),var(--brand))!important;color:#fff!important}.bottom-app-nav a:hover i,.bottom-app-nav a:active i{color:#fff!important}.wa-float{bottom:88px!important;width:52px!important;height:52px!important;font-size:24px!important}#mobile-menu>div{background:rgba(255,255,255,.96)!important;border-color:rgba(255,63,139,.18)!important;box-shadow:0 20px 50px rgba(24,48,88,.18)!important}#mobile-menu a{color:var(--ink)!important}#mobile-menu a:hover{background:#fff1f8!important;color:var(--brand-2)!important}}
 
-        * { -webkit-tap-highlight-color: transparent; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #e8efe9; }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #087333, #12b85f); border-radius: 999px; }
 
-        body {
-            background: #edf6ee;
-            color: var(--ink);
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: -1;
-            background:
-                radial-gradient(circle at 7% 4%, rgba(18,184,95,.26), transparent 28%),
-                radial-gradient(circle at 93% 9%, rgba(245,179,1,.25), transparent 26%),
-                linear-gradient(135deg, #e8f7eb 0%, #fff8df 46%, #edf7ef 100%);
-        }
-
-        .glass-nav {
-            background: linear-gradient(90deg, rgba(255,255,255,.98), rgba(240,255,245,.94));
-            backdrop-filter: blur(14px);
-            border-bottom: 1px solid rgba(8,115,51,.18);
-            box-shadow: 0 10px 30px rgba(8, 73, 38, .10);
-        }
-
-        .nav-link { position: relative; }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -8px;
-            width: 0;
-            height: 3px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, var(--brand), var(--accent));
-            transition: width .2s ease;
-        }
-        .nav-link:hover::after { width: 100%; }
-
-        .fresh-card,
-        .soft-card {
-            background: linear-gradient(180deg, #ffffff, #f9fffb);
-            border: 1px solid rgba(8,115,51,.16);
-            box-shadow: 0 16px 42px rgba(8,73,38,.12), 0 2px 0 rgba(245,179,1,.08) inset;
-        }
-
-        .fresh-card:hover {
-            transform: translateY(-3px);
-            border-color: rgba(8,115,51,.36);
-            box-shadow: 0 24px 58px rgba(8,73,38,.18), 0 0 0 4px rgba(245,179,1,.08);
-        }
-
-        .section-compact { padding-top: 5rem; padding-bottom: 5rem; }
-        .app-shadow { box-shadow: 0 20px 55px rgba(6,78,43,.24); }
-
-        .input-clean {
-            transition: border-color .2s ease, box-shadow .2s ease;
-            background: #fff;
-        }
-        .input-clean:focus {
-            border-color: var(--brand-2);
-            box-shadow: 0 0 0 4px rgba(18,184,95,.16), 0 10px 26px rgba(8,73,38,.10);
-        }
-
-        .hero-slider-container {
-            display: flex;
-            width: 500%;
-            height: 100%;
-            animation: slide 28s infinite linear;
-        }
-        .hero-slide {
-            width: 20%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .bottom-app-nav { display: none; }
-
-        .premium-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: .55rem;
-            border-radius: 999px;
-            font-weight: 800;
-            transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-        }
-        .premium-button:hover { transform: translateY(-1px); }
-
-        .bg-brand { background-color: var(--brand) !important; }
-        .hover\:bg-brand:hover { background-color: var(--brand-2) !important; }
-        .hover\:bg-brand-dark:hover { background-color: var(--brand-3) !important; }
-        .text-brand { color: var(--brand) !important; }
-        .border-brand { border-color: var(--brand) !important; }
-        .bg-accent { background-color: var(--accent) !important; }
-        .text-accent { color: var(--accent-2) !important; }
-
-        @media (max-width: 767px) {
-            body { padding-bottom: 74px; }
-            .section-compact { padding-top: 3.25rem; padding-bottom: 3.25rem; }
-            .hero-slider-container { animation-duration: 32s; }
-
-            .bottom-app-nav {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                position: fixed;
-                left: 10px;
-                right: 10px;
-                bottom: 10px;
-                z-index: 60;
-                background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(238,255,244,.96));
-                backdrop-filter: blur(16px);
-                border: 1px solid rgba(8,115,51,.2);
-                border-radius: 18px;
-                padding: 7px;
-                box-shadow: 0 12px 34px rgba(8,73,38,.25);
-            }
-            .bottom-app-nav a {
-                color: #214432;
-                text-align: center;
-                font-size: 10px;
-                font-weight: 800;
-                padding: 7px 3px;
-                border-radius: 13px;
-            }
-            .bottom-app-nav a i { display: block; font-size: 16px; margin-bottom: 2px; color: var(--brand); }
-            .bottom-app-nav a:active, .bottom-app-nav a:hover { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: white; }
-            .bottom-app-nav a:active i, .bottom-app-nav a:hover i { color: white; }
-            .wa-float { bottom: 88px !important; width: 52px !important; height: 52px !important; font-size: 24px !important; }
-        }
-
-        /* ==============================
-           PREMIUM DARK INDUSTRIAL OVERRIDE
-           Struktur HTML & fungsi tidak diubah.
-           Hanya memperkuat visual agar tidak pucat.
-        ============================== */
-        body {
-            background: #07130c !important;
-            color: #f8fafc;
-        }
-
-        body::before {
-            background:
-                radial-gradient(circle at 9% 5%, rgba(18,184,95,.24), transparent 26%),
-                radial-gradient(circle at 92% 6%, rgba(245,179,1,.22), transparent 24%),
-                linear-gradient(145deg, #05110a 0%, #092516 42%, #101827 100%) !important;
-        }
-
-        .glass-nav {
-            background: linear-gradient(90deg, rgba(5,17,10,.96), rgba(9,37,22,.92)) !important;
-            border-bottom: 1px solid rgba(245,179,1,.25) !important;
-            box-shadow: 0 18px 45px rgba(0,0,0,.34) !important;
-        }
-
-        .glass-nav span,
-        .glass-nav a,
-        .glass-nav button { color: #f8fafc !important; }
-        .glass-nav .nav-link:hover { color: var(--accent-2) !important; }
-        .glass-nav img { border-color: rgba(245,179,1,.55) !important; background: #fff !important; border-radius: 9999px !important; }
-        .glass-nav .bg-gray-100 { background: rgba(255,255,255,.10) !important; }
-
-        #mobile-menu > div {
-            background: #07130c !important;
-            border-color: rgba(245,179,1,.30) !important;
-            box-shadow: 0 20px 50px rgba(0,0,0,.45) !important;
-        }
-
-        #mobile-menu a { color: #f8fafc !important; }
-        #mobile-menu a:hover { background: rgba(245,179,1,.12) !important; color: #ffcf33 !important; }
-
-        #beranda {
-            border-bottom: 1px solid rgba(245,179,1,.25);
-        }
-
-        #beranda .bg-white\/97,
-        #beranda .bg-white\/95 {
-            background: linear-gradient(180deg, rgba(11,18,32,.94), rgba(6,78,43,.82)) !important;
-            color: #f8fafc !important;
-            border-color: rgba(245,179,1,.35) !important;
-        }
-
-        #beranda .bg-white\/97 h3,
-        #beranda .bg-white\/97 span,
-        #beranda .bg-white\/97 p,
-        #beranda .bg-white\/97 div,
-        #beranda .bg-white\/95 h3,
-        #beranda .bg-white\/95 span,
-        #beranda .bg-white\/95 p,
-        #beranda .bg-white\/95 div { color: #f8fafc !important; }
-
-        #beranda .bg-white\/97 .border,
-        #beranda .bg-white\/95 .border {
-            background: rgba(255,255,255,.08) !important;
-            border-color: rgba(255,255,255,.14) !important;
-        }
-
-        .fresh-card,
-        .soft-card {
-            background: linear-gradient(180deg, #0b1f14, #07130c) !important;
-            color: #f8fafc !important;
-            border: 1px solid rgba(245,179,1,.25) !important;
-            box-shadow: 0 22px 60px rgba(0,0,0,.34), 0 0 0 1px rgba(18,184,95,.16) inset !important;
-        }
-
-        .fresh-card:hover,
-        .soft-card:hover {
-            border-color: rgba(255,207,51,.55) !important;
-            box-shadow: 0 28px 70px rgba(0,0,0,.44), 0 0 0 4px rgba(245,179,1,.08) !important;
-        }
-
-        .fresh-card h1,
-        .fresh-card h2,
-        .fresh-card h3,
-        .soft-card h1,
-        .soft-card h2,
-        .soft-card h3 { color: #ffffff !important; }
-
-        .fresh-card p,
-        .soft-card p,
-        .fresh-card .text-gray-600,
-        .soft-card .text-gray-600,
-        .fresh-card .text-gray-500,
-        .soft-card .text-gray-500 { color: #cbd5e1 !important; }
-
-        #tentang {
-            background: linear-gradient(180deg, #07130c, #0b1f14) !important;
-        }
-
-        #tentang > div > div {
-            background: linear-gradient(135deg, #0b1f14, #111827) !important;
-            border-color: rgba(245,179,1,.30) !important;
-            box-shadow: 0 28px 80px rgba(0,0,0,.38) !important;
-        }
-
-        #tentang h2,
-        #tentang h4 { color: #ffffff !important; }
-        #tentang h4 { color: #ffcf33 !important; }
-        #tentang p { color: #d1d5db !important; }
-
-        #produk {
-            background: linear-gradient(180deg, #0b1f14 0%, #07130c 58%, #111827 100%) !important;
-        }
-
-        #produk h2,
-        #produk h3 { color: #ffffff !important; }
-        #produk > div > div:first-child p { color: #d1d5db !important; }
-        #produk .h-48,
-        #produk .bg-gray-50,
-        #produk .bg-gray-100 {
-            background: linear-gradient(135deg, #e5e7eb, #ffffff) !important;
-        }
-
-        #layanan {
-            background: linear-gradient(135deg, #07130c, #0b2b19 45%, #141006) !important;
-            border-color: rgba(245,179,1,.25) !important;
-        }
-
-        #layanan h2 { color: #ffffff !important; }
-        #layanan h3 { color: #ffffff !important; }
-        #layanan p { color: #cbd5e1 !important; }
-
-        #garansi {
-            background: linear-gradient(135deg, #06130b 0%, #0c2b18 48%, #231b05 100%) !important;
-        }
-
-        #garansi h2,
-        #garansi h3 { color: #ffffff !important; }
-        #garansi h4 { color: #ffcf33 !important; }
-        #garansi p { color: #cbd5e1 !important; }
-
-        #garansi .soft-card,
-        #garansi .bg-white {
-            background: linear-gradient(180deg, #0f2418, #07130c) !important;
-            border-color: rgba(245,179,1,.28) !important;
-            color: #f8fafc !important;
-        }
-
-        #garansi label,
-        #garansi .text-gray-700,
-        #garansi .text-gray-900,
-        #garansi strong { color: #f8fafc !important; }
-
-        #garansi input,
-        #garansi select,
-        #garansi textarea {
-            background: rgba(255,255,255,.94) !important;
-            color: #0b1220 !important;
-            border-color: rgba(245,179,1,.35) !important;
-        }
-
-        #garansi input::placeholder,
-        #garansi textarea::placeholder { color: #64748b !important; }
-
-        #garansi .bg-gradient-to-br.from-green-100,
-        #garansi .shadow-inner {
-            background: linear-gradient(135deg, rgba(8,115,51,.32), rgba(245,179,1,.16)) !important;
-            border-color: rgba(245,179,1,.35) !important;
-        }
-
-        #garansi .bg-green-50 {
-            background: rgba(18,184,95,.14) !important;
-            color: #dcfce7 !important;
-            border-color: rgba(18,184,95,.35) !important;
-        }
-
-        #garansi .bg-red-50 {
-            background: rgba(127,29,29,.22) !important;
-            color: #fecaca !important;
-            border-color: rgba(248,113,113,.35) !important;
-        }
-
-        #admin-garansi-view,
-        #admin-garansi-view .bg-white {
-            background: #0b1220 !important;
-            color: #f8fafc !important;
-        }
-
-        #admin-garansi-view thead tr {
-            background: #052e1a !important;
-            color: #f8fafc !important;
-        }
-
-        #admin-garansi-view tbody tr {
-            border-color: rgba(255,255,255,.10) !important;
-        }
-
-        #admin-garansi-view tbody tr:hover {
-            background: rgba(18,184,95,.12) !important;
-        }
-
-        #galeri {
-            background: linear-gradient(135deg, #020617 0%, #052e1a 45%, #111827 100%) !important;
-        }
-
-        #galeri h4 { color: #ffcf33 !important; }
-        #galeri .relative.h-56 {
-            border-color: rgba(245,179,1,.28) !important;
-            box-shadow: 0 18px 45px rgba(0,0,0,.35) !important;
-        }
-
-        section.py-10.md\:py-14 {
-            background: linear-gradient(90deg, #07130c, #0b2b19, #191305) !important;
-            border-color: rgba(245,179,1,.28) !important;
-        }
-
-        section.py-10.md\:py-14 h3 { color: #ffffff !important; }
-
+        /* FINAL OVERRIDE - HILANGKAN WARNA HITAM BAGIAN BAWAH */
         #kontak {
-            background: linear-gradient(180deg, #111827, #07130c) !important;
+            background: linear-gradient(180deg, #f8fbff 0%, #fff7ed 42%, #fdf2f8 100%) !important;
         }
-
         #kontak > div > div {
-            background: linear-gradient(135deg, #0b1220, #07130c) !important;
-            border-color: rgba(245,179,1,.28) !important;
+            background: #ffffff !important;
+            border: 1px solid rgba(236, 72, 153, .16) !important;
+            box-shadow: 0 24px 70px rgba(59, 130, 246, .14) !important;
         }
-
-        #kontak .lg\:w-7\/12 {
-            background: #0b1f14 !important;
-        }
-
-        #kontak h3,
-        #kontak label { color: #ffffff !important; }
-        #kontak p { color: #cbd5e1 !important; }
-
-        #kontak input,
-        #kontak textarea {
-            background: rgba(255,255,255,.95) !important;
-            color: #0b1220 !important;
-            border-color: rgba(245,179,1,.32) !important;
-        }
-
-        footer {
-            background: linear-gradient(135deg, #020617 0%, #052e1a 46%, #000000 100%) !important;
-            border-top-color: rgba(245,179,1,.25) !important;
-        }
-
-        .bottom-app-nav {
-            background: linear-gradient(180deg, rgba(7,19,12,.98), rgba(5,46,26,.96)) !important;
-            border-color: rgba(245,179,1,.28) !important;
-            box-shadow: 0 18px 45px rgba(0,0,0,.45) !important;
-        }
-
-        .bottom-app-nav a { color: #d1d5db !important; }
-        .bottom-app-nav a i { color: #ffcf33 !important; }
-        .bottom-app-nav a:hover,
-        .bottom-app-nav a:active {
-            background: linear-gradient(135deg, var(--brand), var(--brand-2)) !important;
+        #kontak .contact-info-panel,
+        #kontak .bg-gradient-to-br from-orange-400 via-pink-500 to-sky-400,
+        #kontak .bg-gradient-to-r from-orange-400 via-pink-500 to-violet-500 {
+            background: linear-gradient(135deg, #fb923c 0%, #ec4899 42%, #8b5cf6 72%, #38bdf8 100%) !important;
             color: #ffffff !important;
         }
-
-        /* ==============================
-           SPACING & COLOR TUNING
-           Rapatkan antar halaman + kurangi pekat warna dasar.
-           Struktur coding tidak diubah.
-        ============================== */
-        .section-compact {
-            padding-top: 3.5rem !important;
-            padding-bottom: 3.5rem !important;
+        #kontak .contact-info-panel p,
+        #kontak .contact-info-panel h4,
+        #kontak .contact-info-panel div,
+        #kontak .contact-info-panel span,
+        #kontak .bg-gradient-to-br from-orange-400 via-pink-500 to-sky-400 p,
+        #kontak .bg-gradient-to-br from-orange-400 via-pink-500 to-sky-400 h4,
+        #kontak .bg-gradient-to-br from-orange-400 via-pink-500 to-sky-400 div {
+            color: #ffffff !important;
         }
-
-        #beranda {
-            min-height: 74vh !important;
-            padding-bottom: 3.25rem !important;
+        #kontak .contact-info-panel .bg-white\/10,
+        #kontak .bg-gradient-to-br from-orange-400 via-pink-500 to-sky-400 .bg-white\/10 {
+            background: rgba(255,255,255,.22) !important;
+            color: #ffffff !important;
         }
-
-        body {
-            background: #102316 !important;
+        .btn-wargahub,
+        .product-link,
+        #kontak button,
+        a.bg-gradient-to-br from-orange-400 via-pink-500 to-sky-400,
+        button.bg-gradient-to-br from-orange-400 via-pink-500 to-sky-400 {
+            background: linear-gradient(135deg, #fb923c 0%, #ec4899 45%, #8b5cf6 100%) !important;
+            color: #ffffff !important;
+            border: 0 !important;
+            box-shadow: 0 14px 32px rgba(236, 72, 153, .24) !important;
         }
-
-        body::before {
-            background:
-                radial-gradient(circle at 10% 5%, rgba(18,184,95,.16), transparent 25%),
-                radial-gradient(circle at 92% 8%, rgba(245,179,1,.15), transparent 24%),
-                linear-gradient(145deg, #102316 0%, #143520 45%, #182238 100%) !important;
+        .btn-wargahub:hover,
+        .product-link:hover,
+        #kontak button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 18px 40px rgba(139, 92, 246, .28) !important;
         }
-
-        .glass-nav {
-            background: linear-gradient(90deg, rgba(13,39,24,.94), rgba(18,54,32,.90)) !important;
+        footer,
+        .footer-wargahub {
+            background: linear-gradient(135deg, #ffffff 0%, #fff7ed 30%, #fdf2f8 62%, #e0f2fe 100%) !important;
+            color: #334155 !important;
+            border-top: 1px solid rgba(236,72,153,.14) !important;
         }
-
-        #beranda .absolute.inset-0.bg-gradient-to-r {
-            background: linear-gradient(90deg, rgba(12,54,29,.84), rgba(17,24,39,.66), rgba(0,0,0,.34)) !important;
+        footer h3,
+        footer h4 {
+            color: #0f172a !important;
         }
+        footer p,
+        footer li,
+        footer a,
+        footer div,
+        footer span {
+            color: #475569 !important;
+        }
+        footer a:hover {
+            color: #ec4899 !important;
+        }
+        footer .border-t {
+            border-color: rgba(236,72,153,.16) !important;
+        }
+        .bottom-app-nav {
+            background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,247,237,.96)) !important;
+            border-color: rgba(236,72,153,.18) !important;
+            box-shadow: 0 16px 42px rgba(236,72,153,.16) !important;
+        }
+        .bottom-app-nav a { color: #475569 !important; }
+        .bottom-app-nav a i { color: #ec4899 !important; }
+        .bottom-app-nav a:hover,
+        .bottom-app-nav a:active {
+            background: linear-gradient(135deg, #fb923c, #ec4899, #8b5cf6) !important;
+            color: #ffffff !important;
+        }
+        .bottom-app-nav a:hover i,
+        .bottom-app-nav a:active i { color: #ffffff !important; }
 
+    
+
+        /* ANTI HITAM TOTAL - semua panel gelap dipaksa ikut warna WargaHub */
+        .bg-gray-950,
+        .bg-gray-900,
+        .bg-gray-800,
+        .bg-slate-950,
+        .bg-slate-900,
+        .bg-black,
+        [class*="bg-black"],
+        [class*="from-black"],
+        [class*="to-black"],
+        [class*="via-gray-950"],
+        [class*="from-gray-950"],
+        [class*="to-gray-950"] {
+            background: linear-gradient(135deg, #fb923c 0%, #ec4899 42%, #8b5cf6 72%, #38bdf8 100%) !important;
+            color: #ffffff !important;
+        }
+        #beranda .absolute.inset-0.bg-gradient-to-r,
         #beranda .absolute.inset-y-0 {
-            background: linear-gradient(90deg, rgba(5,15,9,.58), rgba(18,83,43,.22), transparent) !important;
+            background: linear-gradient(90deg, rgba(251,146,60,.68), rgba(236,72,153,.42), rgba(56,189,248,.20)) !important;
         }
-
-        #tentang,
-        #produk,
-        #layanan,
-        #garansi,
-        #galeri,
-        #kontak {
-            scroll-margin-top: 72px;
+        #beranda .bg-gradient-to-br,
+        #admin-slider-panel,
+        #admin-garansi-view .p-6,
+        #garansi button[type="submit"],
+        #kontak button[type="submit"],
+        #kontak .contact-info-panel {
+            background: linear-gradient(135deg, #fb923c 0%, #ec4899 45%, #8b5cf6 78%, #38bdf8 100%) !important;
+            color: #ffffff !important;
         }
-
-        #tentang {
-            background: linear-gradient(180deg, #102316, #12351f) !important;
+        .text-gray-950,
+        .text-gray-900 {
+            color: #17324d !important;
         }
-
-        #produk {
-            background: linear-gradient(180deg, #12351f 0%, #102316 55%, #182238 100%) !important;
+        .text-white.text-gray-950,
+        .bg-accent.text-gray-950 {
+            color: #17324d !important;
         }
-
-        #layanan {
-            background: linear-gradient(135deg, #102316, #143e25 48%, #2b230b) !important;
-        }
-
-        #garansi {
-            background: linear-gradient(135deg, #102316 0%, #164326 48%, #35290b 100%) !important;
-        }
-
-        #galeri {
-            background: linear-gradient(135deg, #0d1b14 0%, #143c24 48%, #182238 100%) !important;
-        }
-
-        #kontak {
-            background: linear-gradient(180deg, #182238, #102316) !important;
-        }
-
-        .fresh-card,
-        .soft-card {
-            background: linear-gradient(180deg, #12351f, #102316) !important;
-            box-shadow: 0 16px 42px rgba(0,0,0,.26), 0 0 0 1px rgba(18,184,95,.12) inset !important;
-        }
-
-        #tentang > div > div,
-        #kontak > div > div {
-            box-shadow: 0 20px 56px rgba(0,0,0,.28) !important;
-        }
-
-        #admin-garansi-view {
-            margin-top: 2.5rem !important;
-        }
-
+        footer,
+        #kontak,
         section.py-10.md\:py-14 {
-            padding-top: 2.25rem !important;
-            padding-bottom: 2.25rem !important;
-            background: linear-gradient(90deg, #102316, #143e25, #2b230b) !important;
+            background: linear-gradient(135deg, #fff7ed 0%, #fdf2f8 40%, #e0f2fe 100%) !important;
+            color: #17324d !important;
+        }
+        footer *,
+        #kontak h3,
+        #kontak p,
+        #kontak label {
+            color: #17324d !important;
         }
 
-        footer {
-            padding-top: 2.75rem !important;
-            padding-bottom: 2.75rem !important;
-            background: linear-gradient(135deg, #0b1220 0%, #12351f 48%, #07130c 100%) !important;
+    
+
+        /* KONTAK FINAL CERIA - hapus total kesan hitam di Hubungi Kami */
+        #kontak.kontak-fun-bg,
+        #kontak {
+            background:
+                radial-gradient(circle at 12% 15%, rgba(255,214,102,.55), transparent 24%),
+                radial-gradient(circle at 88% 20%, rgba(56,189,248,.42), transparent 25%),
+                radial-gradient(circle at 55% 85%, rgba(236,72,153,.28), transparent 28%),
+                linear-gradient(135deg, #fff7ed 0%, #fff1f8 38%, #e0f2fe 72%, #ecfeff 100%) !important;
+            color: #17324d !important;
+        }
+        #kontak .kontak-fun-card {
+            background: rgba(255,255,255,.78) !important;
+            border: 1px solid rgba(236,72,153,.18) !important;
+            box-shadow: 0 28px 80px rgba(59,130,246,.16), 0 12px 28px rgba(236,72,153,.10) !important;
+            backdrop-filter: blur(14px) !important;
+        }
+        #kontak .kontak-fun-panel,
+        #kontak .contact-info-panel {
+            background:
+                radial-gradient(circle at 20% 12%, rgba(255,255,255,.48), transparent 28%),
+                radial-gradient(circle at 88% 82%, rgba(255,255,255,.38), transparent 26%),
+                linear-gradient(135deg, #ffd166 0%, #fb923c 25%, #ff4fa3 55%, #8b5cf6 78%, #38bdf8 100%) !important;
+            color: #ffffff !important;
+            position: relative !important;
+        }
+        #kontak .kontak-fun-panel::before,
+        #kontak .contact-info-panel::before {
+            content: '';
+            position: absolute;
+            inset: 16px;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,.32);
+            pointer-events: none;
+        }
+        #kontak .contact-info-panel h3,
+        #kontak .contact-info-panel h4,
+        #kontak .contact-info-panel p,
+        #kontak .contact-info-panel div,
+        #kontak .contact-info-panel span {
+            color: #ffffff !important;
+            text-shadow: 0 5px 16px rgba(96,41,120,.16) !important;
+        }
+        #kontak .contact-info-panel p {
+            color: rgba(255,255,255,.92) !important;
+        }
+        #kontak .contact-info-panel .w-12.h-12,
+        #kontak .contact-info-panel .bg-white\/10 {
+            background: rgba(255,255,255,.30) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255,255,255,.40) !important;
+            box-shadow: 0 12px 28px rgba(255,255,255,.16) !important;
+        }
+        #kontak .contact-info-panel i {
+            color: #ffffff !important;
+        }
+        #kontak .contact-info-panel .bg-brand,
+        #kontak .contact-info-panel .bg-gradient-to-r {
+            background: linear-gradient(90deg, #fff3b0, #ffffff, #bae6fd) !important;
+            opacity: .90 !important;
+        }
+        #kontak .kontak-form-panel {
+            background:
+                linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,247,237,.94)) !important;
+            color: #17324d !important;
+        }
+        #kontak .kontak-form-panel h3,
+        #kontak .kontak-form-panel label {
+            color: #17324d !important;
+        }
+        #kontak .kontak-form-panel input,
+        #kontak .kontak-form-panel textarea {
+            background: #ffffff !important;
+            color: #17324d !important;
+            border: 1px solid rgba(236,72,153,.20) !important;
+            box-shadow: 0 10px 24px rgba(59,130,246,.08) !important;
+        }
+        #kontak .kontak-form-panel input:focus,
+        #kontak .kontak-form-panel textarea:focus {
+            border-color: #ff4fa3 !important;
+            box-shadow: 0 0 0 4px rgba(255,79,163,.15), 0 14px 30px rgba(139,92,246,.10) !important;
+        }
+        #kontak button[type="submit"] {
+            background: linear-gradient(135deg, #fb923c 0%, #ff4fa3 45%, #8b5cf6 100%) !important;
+            color: #ffffff !important;
+            box-shadow: 0 18px 38px rgba(236,72,153,.28) !important;
         }
 
-        @media (max-width: 767px) {
-            .section-compact {
-                padding-top: 2.35rem !important;
-                padding-bottom: 2.35rem !important;
-            }
+    
 
-            #beranda {
-                min-height: 68vh !important;
-                padding-bottom: 2.5rem !important;
-            }
+/* FORCE FINAL: HUBUNGI KAMI TANPA HITAM */
+#kontak, #kontak * { box-shadow: revert-layer; }
+#kontak { background: radial-gradient(circle at 12% 12%, rgba(255,209,102,.62), transparent 24%), radial-gradient(circle at 88% 18%, rgba(56,189,248,.50), transparent 26%), radial-gradient(circle at 54% 86%, rgba(255,79,163,.30), transparent 30%), linear-gradient(135deg, #fff7ed 0%, #fff1f8 38%, #e0f2fe 72%, #ecfeff 100%) !important; }
+#kontak .lg\:w-5\/12 { background: linear-gradient(135deg, #ffd166 0%, #fb923c 25%, #ff4fa3 54%, #8b5cf6 78%, #38bdf8 100%) !important; color:#fff !important; }
+#kontak .lg\:w-7\/12 { background: linear-gradient(180deg,#ffffff,#fff7ed) !important; color:#17324d !important; }
+#kontak h3, #kontak h4, #kontak p, #kontak div, #kontak span, #kontak i { border-color: rgba(255,255,255,.35) !important; }
+#kontak .lg\:w-5\/12 h3, #kontak .lg\:w-5\/12 h4, #kontak .lg\:w-5\/12 p, #kontak .lg\:w-5\/12 i { color:#fff !important; }
+#kontak .lg\:w-7\/12 h3, #kontak .lg\:w-7\/12 label { color:#17324d !important; }
+#kontak [class*="bg-gray"], #kontak [class*="bg-black"], #kontak [class*="from-black"], #kontak [class*="to-black"], #kontak [class*="bg-slate"], #kontak [class*="bg-zinc"], #kontak [class*="bg-neutral"] { background: transparent !important; }
+</style>
 
-            #admin-garansi-view {
-                margin-top: 1.75rem !important;
-            }
-        }
-    </style>
 </head>
 <body class="font-sans text-gray-800 antialiased selection:bg-brand selection:text-white relative">
-
-    <!-- Cloud Sync Toast Notification (Untuk Admin) -->
-    <div id="cloud-toast" class="fixed top-5 left-1/2 -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-full shadow-2xl z-50 transform -translate-y-32 transition-transform duration-300 flex items-center gap-3 font-bold">
-        <i class="fas fa-cloud-upload-alt text-xl animate-bounce"></i> 
-        <span id="toast-msg">Tersimpan Permanen di Server</span>
-    </div>
-
-    <!-- Tombol WhatsApp Mengambang -->
-    <a href="https://wa.me/6285150973789" target="_blank" rel="noopener noreferrer" 
-       class="wa-float fixed bottom-6 right-6 bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50 group">
-        <i class="fab fa-whatsapp"></i>
-        <span class="absolute right-20 bg-white text-gray-800 text-sm px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none font-semibold">
+<!-- Cloud Sync Toast Notification (Untuk Admin) -->
+<div class="fixed top-5 left-1/2 -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-full shadow-2xl z-50 transform -translate-y-32 transition-transform duration-300 flex items-center gap-3 font-bold" id="cloud-toast">
+<i class="fas fa-cloud-upload-alt text-xl animate-bounce"></i>
+<span id="toast-msg">Tersimpan Permanen di Server</span>
+</div>
+<!-- Tombol WhatsApp Mengambang -->
+<a class="wa-float fixed bottom-6 right-6 bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50 group" href="https://wa.me/6285150973789" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<span class="absolute right-20 bg-white text-gray-800 text-sm px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none font-semibold">
             Hubungi Kami via WA!
         </span>
-    </a>
+</a>
+<!-- Header / Navbar -->
+<header class="fixed w-full top-0 glass-nav z-40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16 md:h-18">
+<div class="flex-shrink-0 flex items-center gap-3 relative group">
+<!-- Logo Perusahaan -->
+<img alt="Logo PT Kalimaja" class="h-10 w-10 md:h-11 md:w-11 rounded-full object-cover shadow-sm border-2 border-white bg-white p-0.5" decoding="async" id="logo-img" loading="eager" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 96 96%27%3E%3Ccircle cx=%2748%27 cy=%2748%27 r=%2744%27 fill=%27%23087333%27/%3E%3Ccircle cx=%2748%27 cy=%2748%27 r=%2734%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2748%27 y=%2756%27 font-size=%2726%27 text-anchor=%27middle%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27%23087333%27%3EKSA%3C/text%3E%3C/svg%3E'; document.getElementById('loading-logo')?.classList.add('hidden')" onload="document.getElementById('loading-logo')?.classList.add('hidden')" src="Logo Kalimaja1.jpg"/>
+<span class="font-extrabold text-base md:text-lg tracking-tight text-gray-900 hidden sm:block">PT Kalimaja Surya Alam</span>
+<!-- Alat Admin untuk Upload Logo -->
+<div class="absolute -bottom-8 left-0 z-50 hidden admin-tools flex-col gap-2">
+<label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1 rounded shadow text-[10px] font-bold border border-white/20 whitespace-nowrap">
+<i class="fas fa-camera"></i> Ganti Logo <input accept="image/*" class="hidden" onchange="uploadLogo(event)" type="file"/>
+</label>
+</div>
+<!-- Loading Overlay Logo -->
+<div class="absolute inset-0 bg-pink-600/80 hidden flex-col items-center justify-center z-50 text-white rounded-full w-11 h-11 pointer-events-none" id="loading-logo">
+<i class="fas fa-spinner fa-spin text-xs text-brand"></i>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm">
+<a class="nav-link text-gray-700 hover:text-brand font-medium transition-colors" href="#beranda">Beranda</a>
+<a class="nav-link text-gray-700 hover:text-brand font-medium transition-colors" href="#tentang">Tentang Kami</a>
+<a class="nav-link text-gray-700 hover:text-brand font-medium transition-colors" href="#produk">Produk</a>
+<a class="nav-link text-gray-700 hover:text-brand font-medium transition-colors" href="#layanan">Layanan</a>
+<a class="nav-link text-gray-700 hover:text-brand font-medium transition-colors" href="#garansi">Garansi</a>
 
-    <!-- Header / Navbar -->
-    <header class="fixed w-full top-0 glass-nav z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 md:h-18">
-                <div class="flex-shrink-0 flex items-center gap-3 relative group">
-                    <!-- Logo Perusahaan -->
-                    <img id="logo-img" class="h-10 w-10 md:h-11 md:w-11 rounded-full object-cover shadow-sm border-2 border-white bg-white p-0.5" src="Logo Kalimaja1.jpg" loading="eager" decoding="async" onload="document.getElementById('loading-logo')?.classList.add('hidden')" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 96 96%27%3E%3Ccircle cx=%2748%27 cy=%2748%27 r=%2744%27 fill=%27%23087333%27/%3E%3Ccircle cx=%2748%27 cy=%2748%27 r=%2734%27 fill=%27%23ffffff%27/%3E%3Ctext x=%2748%27 y=%2756%27 font-size=%2726%27 text-anchor=%27middle%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27%23087333%27%3EKSA%3C/text%3E%3C/svg%3E'; document.getElementById('loading-logo')?.classList.add('hidden')" alt="Logo PT Kalimaja">
-                    <span class="font-extrabold text-base md:text-lg tracking-tight text-gray-900 hidden sm:block">PT Kalimaja Surya Alam</span>
-                    
-                    <!-- Alat Admin untuk Upload Logo -->
-                    <div class="absolute -bottom-8 left-0 z-50 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1 rounded shadow text-[10px] font-bold border border-white/20 whitespace-nowrap">
-                            <i class="fas fa-camera"></i> Ganti Logo <input type="file" accept="image/*" class="hidden" onchange="uploadLogo(event)">
-                        </label>
-                    </div>
-                    <!-- Loading Overlay Logo -->
-                    <div id="loading-logo" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-50 text-white rounded-full w-11 h-11 pointer-events-none">
-                        <i class="fas fa-spinner fa-spin text-xs text-brand"></i>
-                    </div>
-                </div>
-                
-                <nav class="hidden md:flex items-center gap-6 text-sm">
-                    <a href="#beranda" class="nav-link text-gray-700 hover:text-brand font-medium transition-colors">Beranda</a>
-                    <a href="#tentang" class="nav-link text-gray-700 hover:text-brand font-medium transition-colors">Tentang Kami</a>
-                    <a href="#produk" class="nav-link text-gray-700 hover:text-brand font-medium transition-colors">Produk</a>
-                    <a href="#layanan" class="nav-link text-gray-700 hover:text-brand font-medium transition-colors">Layanan</a>
-                    <a href="#garansi" class="nav-link text-gray-700 hover:text-brand font-medium transition-colors">Garansi</a>
-                    <a href="#galeri" class="nav-link text-gray-700 hover:text-brand font-medium transition-colors">Galeri</a>
-                    <a href="#kontak" class="nav-link text-gray-700 hover:text-brand font-medium transition-colors">Kontak</a>
-                </nav>
-                
-                <div class="hidden md:flex">
-                    <a href="#kontak" class="bg-brand text-white px-5 py-2 rounded-full font-bold hover:bg-brand-dark transition-colors shadow-md text-sm">
+<a class="nav-link text-gray-700 hover:text-brand font-medium transition-colors" href="#kontak">Kontak</a>
+</nav>
+<div class="hidden md:flex">
+<a class="bg-brand text-white px-5 py-2 rounded-full font-bold hover:bg-brand-dark transition-colors shadow-md text-sm" href="#kontak">
                         Dapatkan Penawaran
                     </a>
-                </div>
+</div>
+<button aria-label="Buka menu" class="md:hidden w-11 h-11 rounded-full bg-gray-100 text-gray-800 flex items-center justify-center hover:bg-brand hover:text-white transition-all" onclick="toggleMobileMenu()">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+<div class="hidden md:hidden pb-5 animate-fade-in" id="mobile-menu">
+<div class="bg-white rounded-2xl border border-gray-100 shadow-xl p-4 flex flex-col gap-2">
+<a class="px-4 py-3 rounded-2xl font-semibold hover:bg-brand/10 hover:text-brand" href="#beranda" onclick="toggleMobileMenu(false)">Beranda</a>
+<a class="px-4 py-3 rounded-2xl font-semibold hover:bg-brand/10 hover:text-brand" href="#tentang" onclick="toggleMobileMenu(false)">Tentang Kami</a>
+<a class="px-4 py-3 rounded-2xl font-semibold hover:bg-brand/10 hover:text-brand" href="#produk" onclick="toggleMobileMenu(false)">Produk</a>
+<a class="px-4 py-3 rounded-2xl font-semibold hover:bg-brand/10 hover:text-brand" href="#layanan" onclick="toggleMobileMenu(false)">Layanan</a>
+<a class="px-4 py-3 rounded-2xl font-semibold hover:bg-brand/10 hover:text-brand" href="#garansi" onclick="toggleMobileMenu(false)">Garansi</a>
 
-                <button onclick="toggleMobileMenu()" class="md:hidden w-11 h-11 rounded-full bg-gray-100 text-gray-800 flex items-center justify-center hover:bg-brand hover:text-white transition-all" aria-label="Buka menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-
-            <div id="mobile-menu" class="hidden md:hidden pb-5 animate-fade-in">
-                <div class="bg-white rounded-2xl border border-gray-100 shadow-xl p-4 flex flex-col gap-2">
-                    <a href="#beranda" onclick="toggleMobileMenu(false)" class="px-4 py-3 rounded-2xl font-semibold hover:bg-brand/10 hover:text-brand">Beranda</a>
-                    <a href="#tentang" onclick="toggleMobileMenu(false)" class="px-4 py-3 rounded-2xl font-semibold hover:bg-brand/10 hover:text-brand">Tentang Kami</a>
-                    <a href="#produk" onclick="toggleMobileMenu(false)" class="px-4 py-3 rounded-2xl font-semibold hover:bg-brand/10 hover:text-brand">Produk</a>
-                    <a href="#layanan" onclick="toggleMobileMenu(false)" class="px-4 py-3 rounded-2xl font-semibold hover:bg-brand/10 hover:text-brand">Layanan</a>
-                    <a href="#garansi" onclick="toggleMobileMenu(false)" class="px-4 py-3 rounded-2xl font-semibold hover:bg-brand/10 hover:text-brand">Garansi</a>
-                    <a href="#galeri" onclick="toggleMobileMenu(false)" class="px-4 py-3 rounded-2xl font-semibold hover:bg-brand/10 hover:text-brand">Galeri</a>
-                    <a href="#kontak" onclick="toggleMobileMenu(false)" class="px-4 py-3 rounded-2xl font-semibold bg-brand text-white text-center">Dapatkan Penawaran</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="beranda" class="relative pt-16 pb-14 md:pb-20 min-h-[82vh] flex items-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <!-- 5 Slot Animasi Slider -->
-            <div class="hero-slider-container">
-                <div class="hero-slide" id="hero-slide-1" style="background-image: url('1.jpg');"></div>
-                <div class="hero-slide" id="hero-slide-2" style="background-image: url('2.jpg');"></div>
-                <div class="hero-slide" id="hero-slide-3" style="background-image: url('3.png');"></div>
-                <div class="hero-slide" id="hero-slide-4" style="background-image: url('4.jpeg');"></div>
-                <div class="hero-slide" id="hero-slide-5" style="background-image: url('5.jpeg');"></div>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-r from-green-950/92 via-gray-950/78 to-black/48"></div>
-            <div class="absolute inset-y-0 left-0 w-full md:w-3/4 bg-gradient-to-r from-black/72 via-green-950/32 to-transparent"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(245,179,1,.22),transparent_24%),radial-gradient(circle_at_80%_35%,rgba(18,184,95,.20),transparent_28%)]"></div>
-        </div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="grid lg:grid-cols-[1.05fr_.75fr] gap-8 items-center">
-                <div class="text-left max-w-3xl">
-                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-[.98] mb-5 tracking-tight">
-                        Solusi Total Mekanisasi Pertanian
-                    </h1>
-                    <p class="text-base md:text-xl text-gray-200 max-w-2xl mb-8 leading-relaxed">
-                        PT Kalimaja Surya Alam mendukung kebutuhan pompa irigasi, alat berat, sistem hidrolik, spare part, dan layanan garansi digital dengan data penerima dan lokasi unit.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-3 mb-8">
-                        <a href="#produk" class="premium-button bg-brand text-white px-7 py-3.5 shadow-lg shadow-green-900/35"><i class="fas fa-box-open"></i> Lihat Produk</a>
-                        <a href="#garansi" class="premium-button bg-accent text-gray-950 px-7 py-3.5 shadow-lg shadow-yellow-900/25"><i class="fas fa-shield-alt text-brand"></i> Aktivasi Garansi</a>
-                        <a href="#kontak" class="premium-button bg-white/14 text-white px-7 py-3.5 border border-white/35 backdrop-blur-md shadow-lg shadow-black/20"><i class="fab fa-whatsapp"></i> Konsultasi</a>
-                    </div>
-                    <div class="grid grid-cols-3 gap-3 max-w-2xl">
-                        <div class="border-l-4 border-brand bg-green-500/16 backdrop-blur-md px-4 py-3 text-white shadow-lg shadow-black/10">
-                            <div class="text-2xl font-black">01</div>
-                            <div class="text-xs md:text-sm text-gray-200 font-semibold">Produk Siap Lapangan</div>
-                        </div>
-                        <div class="border-l-4 border-accent bg-yellow-400/18 backdrop-blur-md px-4 py-3 text-white shadow-lg shadow-black/10">
-                            <div class="text-2xl font-black">02</div>
-                            <div class="text-xs md:text-sm text-gray-200 font-semibold">Data Unit</div>
-                        </div>
-                        <div class="border-l-4 border-white bg-white/16 backdrop-blur-md px-4 py-3 text-white shadow-lg shadow-black/10">
-                            <div class="text-2xl font-black">03</div>
-                            <div class="text-xs md:text-sm text-gray-200 font-semibold">Garansi Digital</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hidden lg:block">
-                    <div class="bg-white/97 rounded-[2rem] p-6 app-shadow border border-green-200/80">
-                        <div class="flex items-center gap-4 mb-5">
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-600 to-green-400 text-white flex items-center justify-center text-2xl shadow-lg shadow-green-900/20"><i class="fas fa-industry"></i></div>
-                            <div>
-                                <h3 class="font-black text-gray-950 text-xl">Kalimaja Supply Desk</h3>
-                                <p class="text-sm text-gray-500">Pengadaan unit, spare part, dan purna jual</p>
-                            </div>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="flex items-center justify-between border rounded-2xl px-4 py-3">
-                                <span class="font-bold text-gray-700">Pompa Irigasi</span><i class="fas fa-check-circle text-brand"></i>
-                            </div>
-                            <div class="flex items-center justify-between border rounded-2xl px-4 py-3">
-                                <span class="font-bold text-gray-700">Alat Berat & Hidrolik</span><i class="fas fa-check-circle text-brand"></i>
-                            </div>
-                            <div class="flex items-center justify-between border rounded-2xl px-4 py-3">
-                                <span class="font-bold text-gray-700">Spare Part Industri</span><i class="fas fa-check-circle text-brand"></i>
-                            </div>
-                            <div class="bg-gradient-to-br from-green-950 to-gray-950 text-white rounded-2xl p-4 mt-5 border border-green-700/30">
-                                <div class="text-xs text-gray-300 mb-1">Status layanan</div>
-                                <div class="font-black text-lg"><span class="inline-block w-2 h-2 rounded-full bg-green-400 mr-2"></span>Siap menerima permintaan</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ADMIN PANEL UNTUK SLIDER UTAMA (HANYA MUNCUL JIKA ADMIN LOGIN) -->
-    <section id="admin-slider-panel" class="hidden admin-tools relative z-30 -mt-10 mx-4 sm:mx-6 lg:mx-8 bg-gray-900 rounded-2xl shadow-xl max-w-7xl xl:mx-auto p-6 mb-8 border border-gray-700">
-        <h3 class="text-white font-bold mb-4 flex items-center gap-2"><i class="fas fa-images text-brand"></i> Panel Admin: Ubah 5 Foto Slider Utama</h3>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-            
-            <!-- Slot 1 -->
-            <div class="relative bg-gray-800 rounded-xl overflow-hidden h-32 border border-gray-700">
-                <img id="admin-hero-thumb-1" src="1.jpg" class="w-full h-full object-cover opacity-50">
-                <div class="absolute inset-0 flex flex-col items-center justify-center p-2">
-                    <span class="text-xs font-bold text-gray-300 mb-2 bg-black/50 px-2 py-1 rounded">Slider 1</span>
-                    <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold">
-                        Upload <input type="file" accept="image/*" class="hidden" onchange="uploadHeroSlide(event, 1)">
-                    </label>
-                </div>
-                <div id="loading-hero-1" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                    <i class="fas fa-spinner fa-spin text-xl text-brand mb-1"></i><span id="progress-hero-1" class="text-[10px]">Menyimpan...</span>
-                </div>
-            </div>
-
-            <!-- Slot 2 -->
-            <div class="relative bg-gray-800 rounded-xl overflow-hidden h-32 border border-gray-700">
-                <img id="admin-hero-thumb-2" src="2.jpg" class="w-full h-full object-cover opacity-50">
-                <div class="absolute inset-0 flex flex-col items-center justify-center p-2">
-                    <span class="text-xs font-bold text-gray-300 mb-2 bg-black/50 px-2 py-1 rounded">Slider 2</span>
-                    <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold">
-                        Upload <input type="file" accept="image/*" class="hidden" onchange="uploadHeroSlide(event, 2)">
-                    </label>
-                </div>
-                <div id="loading-hero-2" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                    <i class="fas fa-spinner fa-spin text-xl text-brand mb-1"></i><span id="progress-hero-2" class="text-[10px]">Menyimpan...</span>
-                </div>
-            </div>
-
-            <!-- Slot 3 -->
-            <div class="relative bg-gray-800 rounded-xl overflow-hidden h-32 border border-gray-700">
-                <img id="admin-hero-thumb-3" src="3.png" class="w-full h-full object-cover opacity-50">
-                <div class="absolute inset-0 flex flex-col items-center justify-center p-2">
-                    <span class="text-xs font-bold text-gray-300 mb-2 bg-black/50 px-2 py-1 rounded">Slider 3</span>
-                    <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold">
-                        Upload <input type="file" accept="image/*" class="hidden" onchange="uploadHeroSlide(event, 3)">
-                    </label>
-                </div>
-                <div id="loading-hero-3" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                    <i class="fas fa-spinner fa-spin text-xl text-brand mb-1"></i><span id="progress-hero-3" class="text-[10px]">Menyimpan...</span>
-                </div>
-            </div>
-
-            <!-- Slot 4 -->
-            <div class="relative bg-gray-800 rounded-xl overflow-hidden h-32 border border-gray-700">
-                <img id="admin-hero-thumb-4" src="4.jpeg" class="w-full h-full object-cover opacity-50">
-                <div class="absolute inset-0 flex flex-col items-center justify-center p-2">
-                    <span class="text-xs font-bold text-gray-300 mb-2 bg-black/50 px-2 py-1 rounded">Slider 4</span>
-                    <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold">
-                        Upload <input type="file" accept="image/*" class="hidden" onchange="uploadHeroSlide(event, 4)">
-                    </label>
-                </div>
-                <div id="loading-hero-4" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                    <i class="fas fa-spinner fa-spin text-xl text-brand mb-1"></i><span id="progress-hero-4" class="text-[10px]">Menyimpan...</span>
-                </div>
-            </div>
-
-            <!-- Slot 5 -->
-            <div class="relative bg-gray-800 rounded-xl overflow-hidden h-32 border border-gray-700">
-                <img id="admin-hero-thumb-5" src="5.jpeg" class="w-full h-full object-cover opacity-50">
-                <div class="absolute inset-0 flex flex-col items-center justify-center p-2">
-                    <span class="text-xs font-bold text-gray-300 mb-2 bg-black/50 px-2 py-1 rounded">Slider 5</span>
-                    <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold">
-                        Upload <input type="file" accept="image/*" class="hidden" onchange="uploadHeroSlide(event, 5)">
-                    </label>
-                </div>
-                <div id="loading-hero-5" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                    <i class="fas fa-spinner fa-spin text-xl text-brand mb-1"></i><span id="progress-hero-5" class="text-[10px]">Menyimpan...</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Fitur Keunggulan -->
-    <section class="-mt-8 md:-mt-12 relative z-20 mx-4 sm:mx-6 lg:mx-8 max-w-7xl xl:mx-auto">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
-            <div class="fresh-card rounded-2xl p-4 md:p-6 transition-all border-t-4 border-green-700">
-                <div class="text-brand text-2xl mb-3"><i class="fas fa-shield-alt"></i></div>
-                <h3 class="font-black text-gray-900 text-base md:text-xl mb-1">Durabilitas</h3>
-                <p class="text-gray-600 text-xs md:text-sm leading-relaxed">Peralatan tangguh untuk kebutuhan lapangan.</p>
-            </div>
-            <div class="fresh-card rounded-2xl p-4 md:p-6 transition-all border-t-4 border-yellow-600">
-                <div class="text-yellow-600 text-2xl mb-3"><i class="fas fa-tools"></i></div>
-                <h3 class="font-black text-gray-900 text-base md:text-xl mb-1">Service</h3>
-                <p class="text-gray-600 text-xs md:text-sm leading-relaxed">Teknisi dan spare part siap mendukung.</p>
-            </div>
-            <div class="fresh-card rounded-2xl p-4 md:p-6 transition-all border-t-4 border-gray-900">
-                <div class="text-gray-900 text-2xl mb-3"><i class="fas fa-cogs"></i></div>
-                <h3 class="font-black text-gray-900 text-base md:text-xl mb-1">Hidrolik</h3>
-                <p class="text-gray-600 text-xs md:text-sm leading-relaxed">Sistem presisi untuk tenaga dan kendali.</p>
-            </div>
-            <div class="fresh-card rounded-2xl p-4 md:p-6 transition-all border-t-4 border-green-700">
-                <div class="text-brand text-2xl mb-3"><i class="fas fa-file-signature"></i></div>
-                <h3 class="font-black text-gray-900 text-base md:text-xl mb-1">Data Unit</h3>
-                <p class="text-gray-600 text-xs md:text-sm leading-relaxed">Data penerima dan lokasi lebih lengkap.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tentang Kami -->
-    <section id="tentang" class="section-compact bg-transparent">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 bg-white rounded-[1.75rem] p-5 md:p-8 border border-gray-200 shadow-xl shadow-gray-900/5">
-                <div class="lg:w-1/2">
-                    <h4 class="text-brand font-bold uppercase tracking-wider mb-2">Tentang Kami</h4>
-                    <h2 class="text-2xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">Penyedia Pompa Air, Alat Berat & Sistem Hidrolik Berkualitas</h2>
-                    <p class="text-gray-600 text-sm md:text-base mb-4 text-justify leading-relaxed">
-                        Kami hadir sebagai mitra terpercaya dalam penyediaan pompa air irigasi, alat berat, sistem hidrolik, dan suku cadang industri untuk mendukung produktivitas proyek dan pertanian Anda. PT Kalimaja Surya Alam berkomitmen menghadirkan solusi yang tangguh dan tepat guna.
-                    </p>
-                    <p class="text-gray-600 text-sm md:text-base mb-5 text-justify leading-relaxed">
-                        Dengan dukungan teknis profesional dan suku cadang terlengkap, kami selalu siap memastikan kelancaran operasional dan kemajuan bisnis Anda di seluruh Indonesia.
-                    </p>
-                    <a href="#kontak" class="inline-flex items-center bg-gray-950 text-white px-5 py-3 rounded-full font-black text-sm hover:bg-brand transition-all">
+<a class="px-4 py-3 rounded-2xl font-semibold bg-brand text-white text-center" href="#kontak" onclick="toggleMobileMenu(false)">Dapatkan Penawaran</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-16 pb-14 md:pb-20 min-h-[82vh] flex items-center overflow-hidden" id="beranda">
+<div class="absolute inset-0 z-0">
+<!-- 5 Slot Animasi Slider -->
+<div class="hero-slider-container">
+<div class="hero-slide" id="hero-slide-1" style="background-image: url('1.jpg');"></div>
+<div class="hero-slide" id="hero-slide-2" style="background-image: url('2.jpg');"></div>
+<div class="hero-slide" id="hero-slide-3" style="background-image: url('3.png');"></div>
+<div class="hero-slide" id="hero-slide-4" style="background-image: url('4.jpeg');"></div>
+<div class="hero-slide" id="hero-slide-5" style="background-image: url('5.jpeg');"></div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-orange-400/72 via-pink-500/55 to-sky-300/38"></div>
+<div class="absolute inset-y-0 left-0 w-full md:w-3/4 bg-gradient-to-r from-violet-500/48 via-pink-400/22 to-transparent"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(245,179,1,.22),transparent_24%),radial-gradient(circle_at_80%_35%,rgba(18,184,95,.20),transparent_28%)]"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="grid lg:grid-cols-[1.05fr_.75fr] gap-8 items-center">
+<div class="text-left max-w-3xl">
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-[.98] mb-5 tracking-tight">Spesialis Pompa Air Irigasi</h1>
+<p class="text-base md:text-xl text-gray-200 max-w-2xl mb-8 leading-relaxed">PT Kalimaja Surya Alam fokus menyediakan pompa air untuk irigasi sawah, perkebunan, proyek lapangan, dan kebutuhan suplai air berdebit besar.</p>
+<div class="flex flex-col sm:flex-row gap-3 mb-8">
+<a class="premium-button bg-brand text-white px-7 py-3.5 shadow-lg shadow-green-900/35" href="#produk"><i class="fas fa-box-open"></i> Lihat Produk</a>
+<a class="premium-button bg-accent text-gray-950 px-7 py-3.5 shadow-lg shadow-yellow-900/25" href="#garansi"><i class="fas fa-shield-alt text-brand"></i> Aktivasi Garansi</a>
+<a class="premium-button bg-white/14 text-white px-7 py-3.5 border border-white/35 backdrop-blur-md shadow-lg shadow-pink-500/20" href="#kontak"><i class="fab fa-whatsapp"></i> Konsultasi</a>
+</div>
+<div class="grid grid-cols-3 gap-3 max-w-2xl">
+<div class="border-l-4 border-brand bg-green-500/16 backdrop-blur-md px-4 py-3 text-white shadow-lg shadow-pink-500/10">
+<div class="text-2xl font-black">01</div>
+<div class="text-xs md:text-sm text-gray-200 font-semibold">Pompa Siap Lapangan</div>
+</div>
+<div class="border-l-4 border-accent bg-yellow-400/18 backdrop-blur-md px-4 py-3 text-white shadow-lg shadow-pink-500/10">
+<div class="text-2xl font-black">02</div>
+<div class="text-xs md:text-sm text-gray-200 font-semibold">Debit Besar</div>
+</div>
+<div class="border-l-4 border-white bg-white/16 backdrop-blur-md px-4 py-3 text-white shadow-lg shadow-pink-500/10">
+<div class="text-2xl font-black">03</div>
+<div class="text-xs md:text-sm text-gray-200 font-semibold">Garansi Digital</div>
+</div>
+</div>
+</div>
+<div class="hidden lg:block">
+<div class="bg-white/97 rounded-[2rem] p-6 app-shadow border border-green-200/80">
+<div class="flex items-center gap-4 mb-5">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-600 to-green-400 text-white flex items-center justify-center text-2xl shadow-lg shadow-green-900/20"><i class="fas fa-industry"></i></div>
+<div>
+<h3 class="font-black text-gray-950 text-xl">Kalimaja Supply Desk</h3>
+<p class="text-sm text-gray-500">Konsultasi kebutuhan pompa dan purna jual</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between border rounded-2xl px-4 py-3">
+<span class="font-bold text-gray-700">Pompa Irigasi 3 Inch</span><i class="fas fa-check-circle text-brand"></i>
+</div>
+<div class="flex items-center justify-between border rounded-2xl px-4 py-3">
+<span class="font-bold text-gray-700">Pompa Irigasi 4 Inch</span><i class="fas fa-check-circle text-brand"></i>
+</div>
+<div class="flex items-center justify-between border rounded-2xl px-4 py-3">
+<span class="font-bold text-gray-700">Pompa Irigasi 6 Inch</span><i class="fas fa-check-circle text-brand"></i>
+</div>
+<div class="bg-gradient-to-br from-orange-400 via-pink-500 to-sky-400 text-white rounded-2xl p-4 mt-5 border border-green-700/30">
+<div class="text-xs text-gray-300 mb-1">Status layanan</div>
+<div class="font-black text-lg"><span class="inline-block w-2 h-2 rounded-full bg-green-400 mr-2"></span>Siap menerima permintaan</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ADMIN PANEL UNTUK SLIDER UTAMA (HANYA MUNCUL JIKA ADMIN LOGIN) -->
+<section class="hidden admin-tools relative z-30 -mt-10 mx-4 sm:mx-6 lg:mx-8 bg-gradient-to-r from-orange-400 via-pink-500 to-violet-500 rounded-2xl shadow-xl max-w-7xl xl:mx-auto p-6 mb-8 border border-gray-700" id="admin-slider-panel">
+<h3 class="text-white font-bold mb-4 flex items-center gap-2"><i class="fas fa-images text-brand"></i> Panel Admin: Ubah 5 Foto Slider Utama</h3>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<!-- Slot 1 -->
+<div class="relative bg-gradient-to-br from-orange-400 via-pink-500 to-violet-500 rounded-xl overflow-hidden h-32 border border-gray-700">
+<img class="w-full h-full object-cover opacity-50" id="admin-hero-thumb-1" src="1.jpg"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-2">
+<span class="text-xs font-bold text-gray-300 mb-2 bg-pink-600/70 px-2 py-1 rounded">Slider 1</span>
+<label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold">
+                        Upload <input accept="image/*" class="hidden" onchange="uploadHeroSlide(event, 1)" type="file"/>
+</label>
+</div>
+<div class="absolute inset-0 bg-pink-600/80 hidden flex-col items-center justify-center z-40 text-white" id="loading-hero-1">
+<i class="fas fa-spinner fa-spin text-xl text-brand mb-1"></i><span class="text-[10px]" id="progress-hero-1">Menyimpan...</span>
+</div>
+</div>
+<!-- Slot 2 -->
+<div class="relative bg-gradient-to-br from-orange-400 via-pink-500 to-violet-500 rounded-xl overflow-hidden h-32 border border-gray-700">
+<img class="w-full h-full object-cover opacity-50" id="admin-hero-thumb-2" src="2.jpg"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-2">
+<span class="text-xs font-bold text-gray-300 mb-2 bg-pink-600/70 px-2 py-1 rounded">Slider 2</span>
+<label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold">
+                        Upload <input accept="image/*" class="hidden" onchange="uploadHeroSlide(event, 2)" type="file"/>
+</label>
+</div>
+<div class="absolute inset-0 bg-pink-600/80 hidden flex-col items-center justify-center z-40 text-white" id="loading-hero-2">
+<i class="fas fa-spinner fa-spin text-xl text-brand mb-1"></i><span class="text-[10px]" id="progress-hero-2">Menyimpan...</span>
+</div>
+</div>
+<!-- Slot 3 -->
+<div class="relative bg-gradient-to-br from-orange-400 via-pink-500 to-violet-500 rounded-xl overflow-hidden h-32 border border-gray-700">
+<img class="w-full h-full object-cover opacity-50" id="admin-hero-thumb-3" src="3.png"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-2">
+<span class="text-xs font-bold text-gray-300 mb-2 bg-pink-600/70 px-2 py-1 rounded">Slider 3</span>
+<label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold">
+                        Upload <input accept="image/*" class="hidden" onchange="uploadHeroSlide(event, 3)" type="file"/>
+</label>
+</div>
+<div class="absolute inset-0 bg-pink-600/80 hidden flex-col items-center justify-center z-40 text-white" id="loading-hero-3">
+<i class="fas fa-spinner fa-spin text-xl text-brand mb-1"></i><span class="text-[10px]" id="progress-hero-3">Menyimpan...</span>
+</div>
+</div>
+<!-- Slot 4 -->
+<div class="relative bg-gradient-to-br from-orange-400 via-pink-500 to-violet-500 rounded-xl overflow-hidden h-32 border border-gray-700">
+<img class="w-full h-full object-cover opacity-50" id="admin-hero-thumb-4" src="4.jpeg"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-2">
+<span class="text-xs font-bold text-gray-300 mb-2 bg-pink-600/70 px-2 py-1 rounded">Slider 4</span>
+<label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold">
+                        Upload <input accept="image/*" class="hidden" onchange="uploadHeroSlide(event, 4)" type="file"/>
+</label>
+</div>
+<div class="absolute inset-0 bg-pink-600/80 hidden flex-col items-center justify-center z-40 text-white" id="loading-hero-4">
+<i class="fas fa-spinner fa-spin text-xl text-brand mb-1"></i><span class="text-[10px]" id="progress-hero-4">Menyimpan...</span>
+</div>
+</div>
+<!-- Slot 5 -->
+<div class="relative bg-gradient-to-br from-orange-400 via-pink-500 to-violet-500 rounded-xl overflow-hidden h-32 border border-gray-700">
+<img class="w-full h-full object-cover opacity-50" id="admin-hero-thumb-5" src="5.jpeg"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-2">
+<span class="text-xs font-bold text-gray-300 mb-2 bg-pink-600/70 px-2 py-1 rounded">Slider 5</span>
+<label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold">
+                        Upload <input accept="image/*" class="hidden" onchange="uploadHeroSlide(event, 5)" type="file"/>
+</label>
+</div>
+<div class="absolute inset-0 bg-pink-600/80 hidden flex-col items-center justify-center z-40 text-white" id="loading-hero-5">
+<i class="fas fa-spinner fa-spin text-xl text-brand mb-1"></i><span class="text-[10px]" id="progress-hero-5">Menyimpan...</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Fitur Keunggulan -->
+<section class="-mt-8 md:-mt-12 relative z-20 mx-4 sm:mx-6 lg:mx-8 max-w-7xl xl:mx-auto">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
+<div class="fresh-card rounded-2xl p-4 md:p-6 transition-all border-t-4 border-green-700">
+<div class="text-brand text-2xl mb-3"><i class="fas fa-water"></i></div>
+<h3 class="font-black text-gray-900 text-base md:text-xl mb-1">Debit Besar</h3>
+<p class="text-gray-600 text-xs md:text-sm leading-relaxed">Pompa untuk pengairan sawah, perkebunan, kolam, dan kebutuhan suplai air proyek.</p>
+</div>
+<div class="fresh-card rounded-2xl p-4 md:p-6 transition-all border-t-4 border-yellow-600">
+<div class="text-yellow-600 text-2xl mb-3"><i class="fas fa-gas-pump"></i></div>
+<h3 class="font-black text-gray-900 text-base md:text-xl mb-1">Mesin Tangguh</h3>
+<p class="text-gray-600 text-xs md:text-sm leading-relaxed">Pilihan mesin bensin atau diesel yang siap dipakai untuk kerja lapangan.</p>
+</div>
+<div class="fresh-card rounded-2xl p-4 md:p-6 transition-all border-t-4 border-pink-500">
+<div class="text-pink-600 text-2xl mb-3"><i class="fas fa-tools"></i></div>
+<h3 class="font-black text-gray-900 text-base md:text-xl mb-1">Service Pompa</h3>
+<p class="text-gray-600 text-xs md:text-sm leading-relaxed">Dukungan teknis, pengecekan, dan perawatan agar unit tetap optimal.</p>
+</div>
+<div class="fresh-card rounded-2xl p-4 md:p-6 transition-all border-t-4 border-green-700">
+<div class="text-brand text-2xl mb-3"><i class="fas fa-file-signature"></i></div>
+<h3 class="font-black text-gray-900 text-base md:text-xl mb-1">Data Unit</h3>
+<p class="text-gray-600 text-xs md:text-sm leading-relaxed">Pendaftaran garansi digital dengan data pemilik, nomor engine, dan lokasi unit.</p>
+</div>
+</div>
+</section>
+<!-- Tentang Kami -->
+<section class="section-compact bg-transparent" id="tentang">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 bg-white rounded-[1.75rem] p-5 md:p-8 border border-gray-200 shadow-xl shadow-pink-500/10">
+<div class="w-full max-w-4xl mx-auto text-center">
+<h4 class="text-brand font-bold uppercase tracking-wider mb-2">Tentang Kami</h4>
+<h2 class="text-2xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">Penyedia Pompa Air Irigasi Bensin untuk Kebutuhan Lapangan</h2>
+<p class="text-gray-600 text-sm md:text-base mb-4 leading-relaxed">PT Kalimaja Surya Alam kini berfokus pada penjualan pompa air irigasi bensin. Kami menyediakan solusi pompa untuk sawah, perkebunan, kolam, proyek konstruksi, dan kebutuhan pemindahan air berdebit besar.</p>
+<p class="text-gray-600 text-sm md:text-base mb-5 leading-relaxed">Fokus kami adalah membantu pelanggan memilih kapasitas pompa yang tepat, menyesuaikan ukuran selang, kebutuhan debit, tipe mesin, serta dukungan garansi dan layanan purna jual.</p>
+<a class="inline-flex items-center btn-wargahub text-white px-5 py-3 rounded-full font-black text-sm transition-all" href="#kontak">
                         Mari Berkolaborasi Bersama Kami <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-                <div class="lg:w-1/2 relative group">
-                    <!-- Alat Admin untuk Upload -->
-                    <div class="absolute top-4 right-4 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-4 py-2 rounded-lg shadow-lg text-sm font-bold border border-white/20 transition-all flex items-center gap-2">
-                            <i class="fas fa-camera"></i> Ganti Foto Profil
-                            <input type="file" accept="image/*" class="hidden" onchange="uploadTentangKami(event)">
-                        </label>
-                    </div>
-                    
-                    <!-- Loading Overlay -->
-                    <div id="loading-tentang" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white rounded-2xl">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i>
-                        <span id="progress-tentang" class="text-[10px]">Menyimpan...</span>
-                    </div>
+</a>
+</div>
 
-                    <!-- Foto Profile Perusahaan Memakai 1.jpg dengan proporsi asli agar tidak terpotong -->
-                    <img id="img-tentang" src="1.jpg" alt="Kegiatan Kalimaja" class="rounded-[1.5rem] app-shadow w-full h-auto object-cover max-h-[420px]">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Produk Katalog -->
-    <section id="produk" class="section-compact bg-gradient-to-b from-white to-[#f0f8f1]">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-9">
-                <h2 class="text-2xl md:text-4xl font-black text-gray-900">Produk & Solusi Utama</h2>
-                <p class="text-gray-600 mt-3 max-w-2xl mx-auto text-sm md:text-base">Pilih unit terbaik, cek detail cepat, lalu hubungi tim kami untuk kebutuhan proyek Anda.</p>
-            </div>
-            
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                <!-- Produk 1: Pompa Irigasi -->
-                <div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all">
-                    <div class="h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
-                        <img src="M.jpg" alt="Pompa Irigasi" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-4 md:p-5 flex flex-col flex-grow">
-                        <h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa Air Irigasi</h3>
-                        <p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Daya hisap dan dorong kuat berkapasitas besar untuk pengairan sawah, perkebunan, dan kebutuhan debit air industri.</p>
-                        <a href="https://manajemenportal-maker.github.io/enersia/" target="_blank" rel="noopener noreferrer" class="product-link block text-center py-2.5 bg-gray-950 text-white font-black rounded-full hover:bg-brand transition-colors text-sm">Lihat Detail</a>
-                    </div>
-                </div>
-                <!-- Produk 2: Alat Berat -->
-                <div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all">
-                    <div class="h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
-                        <img src="N.jpg" alt="Alat Berat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-4 md:p-5 flex flex-col flex-grow">
-                        <h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Alat Berat</h3>
-                        <p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Ekskavator, loader, dan alat berat tangguh lainnya untuk segala medan berat dan pekerjaan konstruksi skala besar.</p>
-                        <a href="javascript:void(0)" class="product-link block text-center py-2.5 bg-gray-950 text-white font-black rounded-full hover:bg-brand transition-colors text-sm">Lihat Detail</a>
-                    </div>
-                </div>
-                <!-- Produk 3: Hydraulic System -->
-                <div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all">
-                    <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-50 p-2">
-                        <img src="O.jpeg" alt="Hydraulic System" class="w-full h-full object-contain group-hover:scale-110 transition-all">
-                    </div>
-                    <div class="p-4 md:p-5 flex flex-col flex-grow">
-                        <h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Hydraulic System</h3>
-                        <p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Sistem dan komponen hidrolik berpresisi tinggi untuk memaksimalkan tenaga, efisiensi, dan kendali mesin Anda.</p>
-                        <a href="javascript:void(0)" class="product-link block text-center py-2.5 bg-gray-950 text-white font-black rounded-full hover:bg-brand transition-colors text-sm">Lihat Detail</a>
-                    </div>
-                </div>
-                <!-- Produk 4: Spare Part Industri -->
-                <div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all">
-                    <div class="h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
-                        <img src="P.jpeg" alt="Spare Part Industri" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-4 md:p-5 flex flex-col flex-grow">
-                        <h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Spare Part Industri</h3>
-                        <p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Penyediaan suku cadang orisinal untuk menjamin keawetan dan performa mesin industri serta alat berat Anda.</p>
-                        <a href="javascript:void(0)" class="product-link block text-center py-2.5 bg-gray-950 text-white font-black rounded-full hover:bg-brand transition-colors text-sm">Lihat Detail</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Layanan -->
-    <section id="layanan" class="section-compact bg-gradient-to-br from-[#e5f5e8] via-[#fff7d9] to-[#eef8ef] border-y border-green-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl md:text-4xl font-black text-gray-900 mb-8">Layanan Cepat & Praktis</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                <div class="fresh-card p-6 rounded-2xl transition-all">
-                    <div class="w-14 h-14 bg-brand rounded-xl text-white flex items-center justify-center text-2xl mb-6 mx-auto shadow-md"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h3 class="text-xl font-bold mb-4">Konsultasi & Instalasi</h3>
-                    <p class="text-gray-600 text-sm">Konsultasi teknis dan pemasangan unit agar sistem hidrolik & alat berat Anda berjalan optimal.</p>
-                </div>
-                <div class="fresh-card p-6 rounded-2xl transition-all">
-                    <div class="w-14 h-14 bg-accent rounded-xl text-white flex items-center justify-center text-2xl mb-6 mx-auto shadow-md"><i class="fas fa-wrench"></i></div>
-                    <h3 class="text-xl font-bold mb-4">Repair & Service</h3>
-                    <p class="text-gray-600 text-sm">Teknisi ahli yang siap memberikan perawatan dan perbaikan komponen secara cepat.</p>
-                </div>
-                <div class="fresh-card p-6 rounded-2xl transition-all">
-                    <div class="w-14 h-14 bg-gray-800 rounded-xl text-white flex items-center justify-center text-2xl mb-6 mx-auto shadow-md"><i class="fas fa-cogs"></i></div>
-                    <h3 class="text-xl font-bold mb-4">Suku Cadang Asli</h3>
-                    <p class="text-gray-600 text-sm">Penyediaan suku cadang industri dan alat berat yang lengkap untuk kelancaran operasional.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registrasi & Cek Garansi Section -->
-    <section id="garansi" class="section-compact bg-gradient-to-br from-[#dff4e4] via-white to-[#fff0bd] relative">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-8">
-                <h4 class="text-brand font-bold uppercase tracking-wider mb-2">Layanan Purna Jual</h4>
-                <h2 class="text-2xl md:text-4xl font-black text-gray-900">Portal Garansi Kalimaja</h2>
-            </div>
-
-            <!-- PORTAL CEK STATUS (Tanpa Akun) -->
-            <div class="bg-white rounded-[1.75rem] soft-card p-5 md:p-7 mb-6 border border-gray-200 max-w-4xl mx-auto flex flex-col md:flex-row gap-5 items-center relative overflow-hidden">
-                <div class="absolute -top-10 -right-10 w-32 h-32 bg-accent rounded-full opacity-10 blur-2xl"></div>
-                <div class="md:w-5/12 z-10">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2"><i class="fas fa-search text-brand"></i> Cek Status</h3>
-                    <p class="text-gray-600 text-sm">Masukkan <strong class="text-gray-900">Kode Akses</strong> yang Anda terima saat pendaftaran untuk melihat Kartu Garansi Digital Anda.</p>
-                </div>
-                <div class="md:w-7/12 w-full z-10">
-                    <form onsubmit="cekGaransi(event)" class="flex gap-2">
-                        <input type="text" id="c_kode" required placeholder="Ketik Kode (Misal: KSA-ABC12)" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand outline-none transition-shadow font-mono uppercase text-sm font-bold placeholder:font-sans placeholder:font-normal">
-                        <button type="submit" class="bg-gray-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 transition-all shadow-md"><i class="fas fa-chevron-right"></i></button>
-                    </form>
-                    <!-- Hasil Cek Tampil Di Sini -->
-                    <div id="cek-result" class="w-full mt-2"></div>
-                </div>
-            </div>
-
-            <!-- FORM REGISTRASI GARANSI BARU -->
-            <div class="bg-white rounded-[1.75rem] soft-card p-5 md:p-8 border border-gray-200 max-w-4xl mx-auto">
-                <h3 class="text-lg md:text-xl font-black text-gray-900 mb-5 border-b pb-4"><i class="fas fa-plus-circle text-accent mr-2"></i> Pendaftaran Unit Baru</h3>
-                <form onsubmit="submitGaransi(event)" class="space-y-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Jenis Produk</label>
-                            <select id="g_jenis" required class="input-clean w-full px-4 py-3 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-brand outline-none bg-gray-50 text-gray-800 cursor-pointer">
-                                <option value="Pompa Air Irigasi" selected>Pompa Air Irigasi</option>
-                                <option value="Alat Berat">Alat Berat</option>
-                                <option value="Hydraulic System">Hydraulic System</option>
-                                <option value="Spare Part Industri">Spare Part Industri</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Tanggal Pembelian / Pendaftaran</label>
-                            <input type="date" id="g_tanggal" required class="input-clean w-full px-4 py-3 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-brand outline-none transition-shadow text-gray-700 cursor-pointer bg-gray-50">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Spesifikasi / Tipe Produk</label>
-                            <input type="text" id="g_spek" required placeholder="Contoh: Pompa Air Diesel 3 Inch / Excavator PC200" class="input-clean w-full px-4 py-3 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-brand outline-none transition-shadow">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nomor Engine Pompa</label>
-                            <input type="text" id="g_engine" required placeholder="Contoh: EN-2026-KSA-001 / No. mesin pada unit pompa" class="input-clean w-full px-4 py-3 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-brand outline-none transition-shadow uppercase">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Pemilik / Perusahaan / Instansi</label>
-                        <input type="text" id="g_pemilik" required placeholder="Contoh: Dinas Pertanian Kab. Tangerang / PT / Kelompok Tani" class="input-clean w-full px-4 py-3 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-brand outline-none transition-shadow">
-                    </div>
-
-                    <div class="bg-gradient-to-br from-green-100 via-lime-50 to-yellow-50 border border-green-300 rounded-2xl p-4 md:p-5 shadow-inner">
-                        <label class="block text-sm font-bold text-green-900 mb-2">Data Penerima & Lokasi Unit</label>
-                        <textarea id="g_cpcl" required rows="3" placeholder="Contoh: Poktan Makmur Jaya - Desa Dangdang, Kec. Cisauk, Kab. Tangerang - Komoditas Padi - Luas 25 Ha" class="input-clean w-full px-4 py-3 rounded-2xl border border-green-200 focus:ring-2 focus:ring-brand outline-none transition-shadow resize-none bg-white"></textarea>
-                        <p class="text-xs text-green-800 mt-2"><i class="fas fa-info-circle mr-1"></i> Isi data penerima/manfaat dan lokasi penempatan unit secara lengkap.</p>
-                    </div>
-
-                    <div class="pt-4">
-                        <button type="submit" id="g_submit_btn" class="w-full bg-brand text-white font-black py-4 rounded-2xl hover:bg-brand-dark transition-all shadow-lg text-base md:text-lg flex items-center justify-center gap-2 active:scale-[.99]">
-                            <i class="fas fa-shield-check"></i> Daftarkan Garansi
+</div>
+</div>
+</section>
+<!-- Produk Katalog -->
+<section class="section-compact bg-gradient-to-b from-white to-[#f0f8f1]" id="produk">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-9">
+<h2 class="text-2xl md:text-4xl font-black text-gray-900">Katalog Pompa Air</h2>
+<p class="text-gray-600 mt-3 max-w-2xl mx-auto text-sm md:text-base">Pilih pompa sesuai kebutuhan debit, area kerja, dan sumber tenaga. Hubungi tim kami untuk penawaran harga dan ketersediaan unit.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="product-grid"><div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all">
+<div class="h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+<img alt="Pompa Air Irigasi Bensin" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="M.jpg"/>
+</div>
+<div class="p-4 md:p-5 flex flex-col flex-grow">
+<h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa Air Irigasi Bensin</h3>
+<p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Pompa air berkapasitas besar untuk pengairan sawah, perkebunan, kolam, dan kebutuhan suplai air lapangan.</p>
+<a class="product-link block text-center py-2.5 btn-wargahub text-white font-black rounded-full transition-colors text-sm" href="https://manajemenportal-maker.github.io/enersia/" rel="noopener noreferrer" target="_blank">Lihat Detail</a>
+</div>
+</div><div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all">
+<div class="h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+<img alt="Pompa 3 Inch" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="M.jpg"/>
+</div>
+<div class="p-4 md:p-5 flex flex-col flex-grow">
+<h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa 3 Inch</h3>
+<p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Cocok untuk irigasi lahan kecil-menengah, penyedotan air, dan distribusi air dengan mobilitas tinggi.</p>
+<a class="product-link block text-center py-2.5 btn-wargahub text-white font-black rounded-full transition-colors text-sm" href="https://manajemenportal-maker.github.io/enersia/" rel="noopener noreferrer" target="_blank">Lihat Detail</a>
+</div>
+</div><div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all">
+<div class="h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+<img alt="Pompa 4 Inch" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="M.jpg"/>
+</div>
+<div class="p-4 md:p-5 flex flex-col flex-grow">
+<h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa 4 Inch</h3>
+<p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Pilihan seimbang untuk kebutuhan debit lebih besar, pengairan area pertanian, dan pekerjaan lapangan harian.</p>
+<a class="product-link block text-center py-2.5 btn-wargahub text-white font-black rounded-full transition-colors text-sm" href="https://manajemenportal-maker.github.io/enersia/" rel="noopener noreferrer" target="_blank">Lihat Detail</a>
+</div>
+</div><div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all">
+<div class="h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+<img alt="Pompa 6 Inch" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="M.jpg"/>
+</div>
+<div class="p-4 md:p-5 flex flex-col flex-grow">
+<h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa 6 Inch</h3>
+<p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Unit berdebit besar untuk hamparan luas, pekerjaan proyek, pengeringan area, dan kebutuhan suplai air intensif.</p>
+<a class="product-link block text-center py-2.5 btn-wargahub text-white font-black rounded-full transition-colors text-sm" href="https://manajemenportal-maker.github.io/enersia/" rel="noopener noreferrer" target="_blank">Lihat Detail</a>
+</div>
+</div></div>
+</div>
+</section>
+<!-- Layanan -->
+<section class="section-compact bg-gradient-to-br from-[#e5f5e8] via-[#fff7d9] to-[#eef8ef] border-y border-green-200" id="layanan">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-2xl md:text-4xl font-black text-gray-900 mb-8">Layanan Pompa Air</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+<div class="fresh-card p-6 rounded-2xl transition-all">
+<div class="w-14 h-14 bg-brand rounded-xl text-white flex items-center justify-center text-2xl mb-6 mx-auto shadow-md"><i class="fas fa-ruler-combined"></i></div>
+<h3 class="text-xl font-bold mb-4">Konsultasi Kapasitas</h3>
+<p class="text-gray-600 text-sm">Bantu pilih ukuran pompa, debit air, tipe mesin, dan kebutuhan selang sesuai kondisi lapangan.</p>
+</div>
+<div class="fresh-card p-6 rounded-2xl transition-all">
+<div class="w-14 h-14 bg-accent rounded-xl text-white flex items-center justify-center text-2xl mb-6 mx-auto shadow-md"><i class="fas fa-wrench"></i></div>
+<h3 class="text-xl font-bold mb-4">Service &amp; Perawatan</h3>
+<p class="text-gray-600 text-sm">Dukungan perawatan pompa, pengecekan mesin, dan panduan pemakaian agar unit tetap awet.</p>
+</div>
+<div class="fresh-card p-6 rounded-2xl transition-all">
+<div class="w-14 h-14 bg-gradient-to-br from-orange-400 via-pink-500 to-violet-500 rounded-xl text-white flex items-center justify-center text-2xl mb-6 mx-auto shadow-md"><i class="fas fa-cogs"></i></div>
+<h3 class="text-xl font-bold mb-4">Suku Cadang Pompa</h3>
+<p class="text-gray-600 text-sm">Penyediaan spare part pompa dan komponen pendukung untuk menjaga operasional tetap berjalan.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Registrasi & Cek Garansi Section -->
+<section class="section-compact bg-gradient-to-br from-[#dff4e4] via-white to-[#fff0bd] relative" id="garansi">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-8">
+<h4 class="text-brand font-bold uppercase tracking-wider mb-2">Layanan Purna Jual</h4>
+<h2 class="text-2xl md:text-4xl font-black text-gray-900">Portal Garansi Kalimaja</h2>
+</div>
+<!-- PORTAL CEK STATUS (Tanpa Akun) -->
+<div class="bg-white rounded-[1.75rem] soft-card p-5 md:p-7 mb-6 border border-gray-200 max-w-4xl mx-auto flex flex-col md:flex-row gap-5 items-center relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-accent rounded-full opacity-10 blur-2xl"></div>
+<div class="md:w-5/12 z-10">
+<h3 class="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-2"><i class="fas fa-search text-brand"></i> Cek Status</h3>
+<p class="text-gray-600 text-sm">Masukkan <strong class="text-gray-900">Kode Akses</strong> yang Anda terima saat pendaftaran untuk melihat Kartu Garansi Digital Anda.</p>
+</div>
+<div class="md:w-7/12 w-full z-10">
+<form class="flex gap-2" onsubmit="cekGaransi(event)">
+<input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand outline-none transition-shadow font-mono uppercase text-sm font-bold placeholder:font-sans placeholder:font-normal" id="c_kode" placeholder="Ketik Kode (Misal: KSA-ABC12)" required="" type="text"/>
+<button class="bg-gradient-to-r from-orange-400 via-pink-500 to-violet-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-gradient-to-br from-orange-400 via-pink-500 to-violet-500 transition-all shadow-md" type="submit"><i class="fas fa-chevron-right"></i></button>
+</form>
+<!-- Hasil Cek Tampil Di Sini -->
+<div class="w-full mt-2" id="cek-result"></div>
+</div>
+</div>
+<!-- FORM REGISTRASI GARANSI BARU -->
+<div class="bg-white rounded-[1.75rem] soft-card p-5 md:p-8 border border-gray-200 max-w-4xl mx-auto">
+<h3 class="text-lg md:text-xl font-black text-gray-900 mb-5 border-b pb-4"><i class="fas fa-plus-circle text-accent mr-2"></i> Pendaftaran Unit Baru</h3>
+<form class="space-y-4" onsubmit="submitGaransi(event)">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-semibold text-gray-700 mb-2">Jenis Produk</label>
+<select class="input-clean w-full px-4 py-3 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-brand outline-none bg-gray-50 text-gray-800 cursor-pointer" id="g_jenis" required=""><option selected="" value="Pompa Air Irigasi Bensin">Pompa Air Irigasi Bensin</option></select>
+</div>
+<div>
+<label class="block text-sm font-semibold text-gray-700 mb-2">Tanggal Pembelian / Pendaftaran</label>
+<input class="input-clean w-full px-4 py-3 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-brand outline-none transition-shadow text-gray-700 cursor-pointer bg-gray-50" id="g_tanggal" required="" type="date"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-semibold text-gray-700 mb-2">Spesifikasi / Tipe Produk</label>
+<input class="input-clean w-full px-4 py-3 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-brand outline-none transition-shadow" id="g_spek" placeholder="Contoh: Pompa Air Diesel 3 Inch" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-gray-700 mb-2">Nomor Engine Pompa</label>
+<input class="input-clean w-full px-4 py-3 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-brand outline-none transition-shadow uppercase" id="g_engine" placeholder="Contoh: EN-2026-KSA-001 / No. mesin pada unit pompa" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold text-gray-700 mb-2">Nama Pemilik / Perusahaan / Instansi</label>
+<input class="input-clean w-full px-4 py-3 rounded-2xl border border-gray-300 focus:ring-2 focus:ring-brand outline-none transition-shadow" id="g_pemilik" placeholder="Contoh: Dinas Pertanian Kab. Tangerang / PT / Kelompok Tani" required="" type="text"/>
+</div>
+<div class="bg-gradient-to-br from-green-100 via-lime-50 to-yellow-50 border border-green-300 rounded-2xl p-4 md:p-5 shadow-inner">
+<label class="block text-sm font-bold text-green-900 mb-2">Data Penerima &amp; Lokasi Unit</label>
+<textarea class="input-clean w-full px-4 py-3 rounded-2xl border border-green-200 focus:ring-2 focus:ring-brand outline-none transition-shadow resize-none bg-white" id="g_cpcl" placeholder="Contoh: Poktan Makmur Jaya - Desa Dangdang, Kec. Cisauk, Kab. Tangerang - Komoditas Padi - Luas 25 Ha" required="" rows="3"></textarea>
+<p class="text-xs text-green-800 mt-2"><i class="fas fa-info-circle mr-1"></i> Isi data penerima/manfaat dan lokasi penempatan unit secara lengkap.</p>
+</div>
+<div class="pt-4">
+<button class="w-full bg-brand text-white font-black py-4 rounded-2xl hover:bg-brand-dark transition-all shadow-lg text-base md:text-lg flex items-center justify-center gap-2 active:scale-[.99]" id="g_submit_btn" type="submit">
+<i class="fas fa-shield-check"></i> Daftarkan Garansi
                         </button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Tabel Database Garansi (Hanya Untuk Admin) -->
-            <div id="admin-garansi-view" class="mt-16 bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 hidden">
-                <div class="p-6 bg-gray-900 text-white flex flex-col md:flex-row justify-between items-center gap-4">
-                    <h3 class="font-bold text-xl flex items-center gap-3"><i class="fas fa-server text-brand"></i> Database Status Garansi (Khusus Admin)</h3>
-                    <span class="text-sm bg-brand/20 text-brand-light px-4 py-1.5 rounded-full font-semibold border border-brand/50"><i class="fas fa-circle text-[8px] animate-pulse mr-1"></i> Live Update (Server)</span>
-                </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-gray-100 text-gray-700 border-b-2 border-gray-200 whitespace-nowrap">
-                                <th class="px-6 py-4 text-sm font-bold">No</th>
-                                <th class="px-6 py-4 text-sm font-bold">Produk</th>
-                                <th class="px-6 py-4 text-sm font-bold">Spesifikasi / Tipe</th>
-                                <th class="px-6 py-4 text-sm font-bold">No. Engine Pompa</th>
-                                <th class="px-6 py-4 text-sm font-bold">Pemilik / Perusahaan</th>
-                                <th class="px-6 py-4 text-sm font-bold">Penerima & Lokasi</th>
-                                <th class="px-6 py-4 text-sm font-bold">Tanggal</th>
-                                <th class="px-6 py-4 text-sm font-bold text-blue-700">Kode Akses</th>
-                                <th class="px-6 py-4 text-sm font-bold text-center">Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody id="garansi-table-body">
-                            <tr><td colspan="9" class="px-6 py-8 text-center text-gray-500 font-medium">Menghubungkan ke Database...</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
+</div>
+</form>
+</div>
+<!-- Tabel Database Garansi (Hanya Untuk Admin) -->
+<div class="mt-16 bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 hidden" id="admin-garansi-view">
+<div class="p-6 bg-gradient-to-r from-orange-400 via-pink-500 to-violet-500 text-white flex flex-col md:flex-row justify-between items-center gap-4">
+<h3 class="font-bold text-xl flex items-center gap-3"><i class="fas fa-server text-brand"></i> Database Status Garansi (Khusus Admin)</h3>
+<span class="text-sm bg-brand/20 text-brand-light px-4 py-1.5 rounded-full font-semibold border border-brand/50"><i class="fas fa-circle text-[8px] animate-pulse mr-1"></i> Live Update (Server)</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-gray-100 text-gray-700 border-b-2 border-gray-200 whitespace-nowrap">
+<th class="px-6 py-4 text-sm font-bold">No</th>
+<th class="px-6 py-4 text-sm font-bold">Produk</th>
+<th class="px-6 py-4 text-sm font-bold">Spesifikasi / Tipe</th>
+<th class="px-6 py-4 text-sm font-bold">No. Engine Pompa</th>
+<th class="px-6 py-4 text-sm font-bold">Pemilik / Perusahaan</th>
+<th class="px-6 py-4 text-sm font-bold">Penerima &amp; Lokasi</th>
+<th class="px-6 py-4 text-sm font-bold">Tanggal</th>
+<th class="px-6 py-4 text-sm font-bold text-blue-700">Kode Akses</th>
+<th class="px-6 py-4 text-sm font-bold text-center">Aksi</th>
+</tr>
+</thead>
+<tbody id="garansi-table-body">
+<tr><td class="px-6 py-8 text-center text-gray-500 font-medium" colspan="9">Menghubungkan ke Database...</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- Kontak -->
+<section id="kontak" class="section-compact relative" style="background: radial-gradient(circle at 12% 12%, rgba(255,209,102,.62), transparent 24%), radial-gradient(circle at 88% 18%, rgba(56,189,248,.50), transparent 26%), radial-gradient(circle at 54% 86%, rgba(255,79,163,.30), transparent 30%), linear-gradient(135deg, #fff7ed 0%, #fff1f8 38%, #e0f2fe 72%, #ecfeff 100%) !important; color:#17324d !important;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="rounded-[1.75rem] overflow-hidden flex flex-col lg:flex-row" style="background:rgba(255,255,255,.86) !important; border:1px solid rgba(236,72,153,.20) !important; box-shadow:0 30px 80px rgba(59,130,246,.16), 0 12px 30px rgba(236,72,153,.12) !important; backdrop-filter:blur(14px) !important;">
+      <div class="lg:w-5/12 p-6 md:p-10 lg:p-12 relative overflow-hidden" style="background: radial-gradient(circle at 16% 12%, rgba(255,255,255,.55), transparent 28%), radial-gradient(circle at 92% 85%, rgba(255,255,255,.42), transparent 30%), linear-gradient(135deg, #ffd166 0%, #fb923c 25%, #ff4fa3 54%, #8b5cf6 78%, #38bdf8 100%) !important; color:#ffffff !important;">
+        <div style="position:absolute; top:-70px; right:-70px; width:210px; height:210px; background:rgba(255,255,255,.28); border-radius:999px; filter:blur(22px);"></div>
+        <div style="position:absolute; left:24px; right:24px; bottom:0; height:5px; background:linear-gradient(90deg,#fff3b0,#ffffff,#bae6fd); border-radius:999px;"></div>
+        <h3 class="text-3xl font-black mb-8 relative z-10" style="color:#ffffff !important; text-shadow:0 8px 18px rgba(96,41,120,.18);">Hubungi Kami</h3>
+        <p class="mb-10 text-lg relative z-10 leading-relaxed" style="color:rgba(255,255,255,.94) !important; text-shadow:0 5px 14px rgba(96,41,120,.14);">Dapatkan konsultasi khusus dan penawaran harga terbaik yang disesuaikan dengan kebutuhan proyek pompa Anda.</p>
+        <div class="space-y-8 relative z-10">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl mr-4" style="background:rgba(255,255,255,.32) !important; border:1px solid rgba(255,255,255,.45); color:#ffffff !important;"><i class="fas fa-map-marker-alt"></i></div>
+            <div><h4 class="font-bold text-lg mb-1" style="color:#ffffff !important;">Alamat Kantor</h4><p class="leading-relaxed text-sm" style="color:rgba(255,255,255,.92) !important;">Jl. Mekar Wangi, Dangdang Cisauk<br/>Kabupaten Tangerang, 15324</p></div>
+          </div>
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl mr-4" style="background:rgba(255,255,255,.32) !important; border:1px solid rgba(255,255,255,.45); color:#ffffff !important;"><i class="fas fa-phone-alt"></i></div>
+            <div><h4 class="font-bold text-lg mb-1" style="color:#ffffff !important;">Telepon &amp; WA</h4><p class="text-sm" style="color:rgba(255,255,255,.92) !important;">+62 851 5097 3789</p></div>
+          </div>
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-xl mr-4" style="background:rgba(255,255,255,.32) !important; border:1px solid rgba(255,255,255,.45); color:#ffffff !important;"><i class="fas fa-envelope"></i></div>
+            <div><h4 class="font-bold text-lg mb-1" style="color:#ffffff !important;">Email</h4><p class="text-sm" style="color:rgba(255,255,255,.92) !important;">kalimajasuryaalam@gmail.com</p></div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="lg:w-7/12 p-6 md:p-10 lg:p-12" style="background:linear-gradient(180deg, rgba(255,255,255,.99), rgba(255,247,237,.95)) !important; color:#17324d !important;">
+        <h3 class="text-2xl font-black mb-6" style="color:#17324d !important;">Kirim Pesan Langsung</h3>
+        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah terkirim.');">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div><label class="block text-sm font-bold mb-2" style="color:#17324d !important;">Nama Lengkap</label><input class="w-full px-4 py-3 rounded-lg outline-none" style="background:#ffffff !important; color:#17324d !important; border:1px solid rgba(236,72,153,.22) !important; box-shadow:0 10px 24px rgba(59,130,246,.08) !important;" placeholder="Nama Anda" required type="text"/></div>
+            <div><label class="block text-sm font-bold mb-2" style="color:#17324d !important;">Nomor Telepon</label><input class="w-full px-4 py-3 rounded-lg outline-none" style="background:#ffffff !important; color:#17324d !important; border:1px solid rgba(236,72,153,.22) !important; box-shadow:0 10px 24px rgba(59,130,246,.08) !important;" placeholder="08xxxxxxx" required type="tel"/></div>
+          </div>
+          <div><label class="block text-sm font-bold mb-2" style="color:#17324d !important;">Pesan Anda</label><textarea class="w-full px-4 py-3 rounded-lg outline-none resize-none" style="background:#ffffff !important; color:#17324d !important; border:1px solid rgba(236,72,153,.22) !important; box-shadow:0 10px 24px rgba(59,130,246,.08) !important;" placeholder="Ceritakan kebutuhan pompa, ukuran inch, area kerja, dan lokasi Anda..." required rows="4"></textarea></div>
+          <button class="w-full text-white font-black py-4 rounded-full transition-all shadow-lg text-lg" style="background:linear-gradient(135deg,#fb923c 0%,#ff4fa3 45%,#8b5cf6 100%) !important; color:#ffffff !important; box-shadow:0 18px 38px rgba(236,72,153,.28) !important;" type="submit">Kirim Pesan Sekarang <i class="fas fa-paper-plane ml-2"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="footer-wargahub text-slate-700 py-12 border-t border-pink-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+<div>
+<h3 class="text-xl font-bold text-slate-900 mb-6">PT Kalimaja Surya Alam</h3>
+<p class="text-sm text-slate-600 leading-relaxed">Spesialis pompa air irigasi bensin untuk pertanian, perkebunan, proyek lapangan, dan kebutuhan suplai air berdebit besar.</p>
+</div>
+<div>
+<h4 class="text-lg font-bold text-slate-900 mb-6">Tautan Cepat</h4>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-brand transition-colors" href="#beranda">Beranda</a></li>
+<li><a class="hover:text-brand transition-colors" href="#tentang">Tentang Kami</a></li>
+<li><a class="hover:text-brand transition-colors" href="#produk">Katalog Produk</a></li>
+<li><a class="hover:text-brand transition-colors" href="#garansi">Aktivasi Garansi</a></li>
 
-    <!-- 12 SLOT FIX GALERI KEGIATAN PERUSAHAAN (SESUAI REQUEST ALFABET) -->
-    <section id="galeri" class="section-compact bg-gradient-to-br from-[#061b12] via-[#102219] to-[#111827] text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4">
-                <div>
-                    <h4 class="text-brand font-bold uppercase tracking-wider mb-2">Dokumentasi Kalimaja</h4>
-                    <h2 class="text-2xl md:text-4xl font-black text-white">Galeri Kegiatan Perusahaan</h2>
-                </div>
-            </div>
-            
-            <!-- 12 Bingkai Statis yang Siap Di-Upload -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                
-                <!-- Slot Galeri 1-4 -->
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 1)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-1" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-1" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-1" src="a.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-1" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(1, this.innerText)">Rapat & Koordinasi Tim</h3>
-                    </div>
-                </div>
-
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 2)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-2" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-2" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-2" src="b.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-2" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(2, this.innerText)">Kegiatan Perusahaan 2</h3>
-                    </div>
-                </div>
-
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 3)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-3" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-3" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-3" src="c.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-3" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(3, this.innerText)">Kegiatan Perusahaan 3</h3>
-                    </div>
-                </div>
-
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 4)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-4" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-4" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-4" src="d.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-4" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(4, this.innerText)">Kegiatan Perusahaan 4</h3>
-                    </div>
-                </div>
-
-                <!-- Slot Galeri 5-8 -->
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 5)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-5" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-5" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-5" src="e.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-5" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(5, this.innerText)">Kegiatan Perusahaan 5</h3>
-                    </div>
-                </div>
-
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 6)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-6" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-6" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-6" src="f.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-6" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(6, this.innerText)">Kegiatan Perusahaan 6</h3>
-                    </div>
-                </div>
-
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 7)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-7" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-7" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-7" src="g.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-7" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(7, this.innerText)">Kegiatan Perusahaan 7</h3>
-                    </div>
-                </div>
-
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 8)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-8" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-8" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-8" src="h.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-8" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(8, this.innerText)">Kegiatan Perusahaan 8</h3>
-                    </div>
-                </div>
-
-                <!-- Slot Galeri 9-12 -->
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 9)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-9" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-9" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-9" src="i.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-9" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(9, this.innerText)">Kegiatan Perusahaan 9</h3>
-                    </div>
-                </div>
-
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 10)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-10" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-10" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-10" src="j.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-10" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(10, this.innerText)">Kegiatan Perusahaan 10</h3>
-                    </div>
-                </div>
-
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 11)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-11" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-11" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-11" src="k.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-11" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(11, this.innerText)">Kegiatan Perusahaan 11</h3>
-                    </div>
-                </div>
-
-                <div class="relative h-56 rounded-2xl overflow-hidden group bg-gray-800 shadow-md border border-gray-700">
-                    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-                        <label class="cursor-pointer bg-brand hover:bg-brand-dark text-white px-3 py-1.5 rounded shadow text-xs font-bold border border-white/20">
-                            Upload <input type="file" accept="image/*" class="hidden" onchange="uploadFixedGallery(event, 12)">
-                        </label>
-                    </div>
-                    <div id="loading-gal-12" class="absolute inset-0 bg-black/80 hidden flex-col items-center justify-center z-40 text-white">
-                        <i class="fas fa-spinner fa-spin text-3xl text-brand mb-2"></i><span id="progress-gal-12" class="text-xs font-bold">Menyimpan...</span>
-                    </div>
-                    <img id="gal-img-12" src="l.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent p-5 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 id="gal-title-12" class="font-bold text-sm text-white outline-none" contenteditable="false" onblur="updateFixedGalleryTitle(12, this.innerText)">Kegiatan Perusahaan 12</h3>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <!-- Mitra Dinamis (CMS) -->
-    <section class="py-10 md:py-14 bg-gradient-to-r from-white via-[#effaf1] to-[#fff7d9] border-b border-green-200">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="flex flex-col md:flex-row justify-center items-end mb-12 gap-4">
-                <h3 class="text-xl font-bold text-gray-900 uppercase tracking-widest">Mitra Kerjasama</h3>
-                <div class="admin-tools hidden">
-                    <button onclick="addPartnerItem()" class="bg-brand hover:bg-brand-dark text-white px-4 py-1.5 rounded-full text-[10px] font-bold shadow-md">
-                        <i class="fas fa-plus"></i> Tambah Mitra Ekstra
+</ul>
+<!-- Tombol Login Admin (Yakin537@) -->
+<button class="mt-8 text-[10px] text-gray-700 hover:text-brand font-bold uppercase tracking-widest transition-all text-left flex items-center gap-2" id="admin-btn" onclick="toggleAdminMode()">
+<i class="fas fa-user-shield"></i> Akses Admin Perusahaan
                     </button>
-                </div>
-            </div>
+</div>
+<div>
+<h4 class="text-lg font-bold text-slate-900 mb-6">Ikuti Kami</h4>
+<div class="flex space-x-5 text-2xl">
+<a class="hover:text-brand transition-colors" href="#"><i class="fab fa-facebook-f"></i></a>
+<a class="hover:text-brand transition-colors" href="#"><i class="fab fa-instagram"></i></a>
+<a class="hover:text-brand transition-colors" href="#"><i class="fab fa-youtube"></i></a>
+<a class="hover:text-brand transition-colors" href="#"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</div>
+</div>
+<div class="text-center text-xs text-slate-500 border-t border-pink-100 pt-8">© 2026 PT Kalimaja Surya Alam. Seluruh Hak Cipta Dilindungi.</div>
+</div>
+</footer>
+<!-- Bottom Navigation Mobile: App Style -->
+<nav aria-label="Navigasi aplikasi mobile" class="bottom-app-nav">
+<a href="#beranda"><i class="fas fa-home"></i>Home</a>
+<a href="#produk"><i class="fas fa-box-open"></i>Produk</a>
+<a href="#garansi"><i class="fas fa-shield-alt"></i>Garansi</a>
 
-            <!-- Mitra Tetap (Bawaan Kode) -->
-            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 mb-4 opacity-90 hover:opacity-100 transition-opacity duration-500">
-                <img src="Desain tanpa judul (5).png" alt="Inti Teknindo Pratama" class="h-20 md:h-28 w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-sm">
-                <img src="ups.png" alt="PT Usaha Pratama Sejahtera" class="h-14 md:h-20 w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-sm">
-                <img src="hengwang.jpg" alt="Hengwang" class="h-20 md:h-28 w-auto object-contain hover:scale-110 transition-transform duration-300 drop-shadow-sm">
-            </div>
-            
-            <!-- Mitra Tambahan (Dari Database) -->
-            <div id="partner-grid" class="flex flex-wrap justify-center items-center gap-12 md:gap-24 mt-8 opacity-80 hover:opacity-100 transition-all duration-500">
-            </div>
-        </div>
-    </section>
-
-    <!-- Kontak -->
-    <section id="kontak" class="section-compact bg-gradient-to-b from-white to-[#eef8ef] relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-[1.75rem] shadow-2xl overflow-hidden border border-gray-200 flex flex-col lg:flex-row">
-                <div class="bg-gray-950 text-white lg:w-5/12 p-6 md:p-10 lg:p-12 relative overflow-hidden">
-                    <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand rounded-full opacity-20 blur-3xl"></div>
-                    <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand to-accent"></div>
-                    <h3 class="text-3xl font-bold mb-8 relative z-10">Hubungi Kami</h3>
-                    <p class="text-gray-300 mb-10 text-lg relative z-10 leading-relaxed">Dapatkan konsultasi khusus dan penawaran harga terbaik yang disesuaikan dengan kebutuhan proyek industri Anda.</p>
-                    <div class="space-y-8 relative z-10">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-brand text-xl mr-4"><i class="fas fa-map-marker-alt"></i></div>
-                            <div><h4 class="font-semibold text-lg mb-1">Alamat Kantor</h4><p class="text-gray-400 leading-relaxed text-sm">Jl. Mekar Wangi, Dangdang Cisauk<br>Kabupaten Tangerang, 15324</p></div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-brand text-xl mr-4"><i class="fas fa-phone-alt"></i></div>
-                            <div><h4 class="font-semibold text-lg mb-1">Telepon & WA</h4><p class="text-gray-400 text-sm">+62 851 5097 3789</p></div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-brand text-xl mr-4"><i class="fas fa-envelope"></i></div>
-                            <div><h4 class="font-semibold text-lg mb-1">Email</h4><p class="text-gray-400 text-sm">kalimajasuryaalam@gmail.com</p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-7/12 p-6 md:p-10 lg:p-12 bg-white">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Kirim Pesan Langsung</h3>
-                    <form onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah terkirim.');" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div><label class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap</label><input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand outline-none" placeholder="Nama Anda"></div>
-                            <div><label class="block text-sm font-medium text-gray-700 mb-2">Nomor Telepon</label><input type="tel" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand outline-none" placeholder="08xxxxxxx"></div>
-                        </div>
-                        <div><label class="block text-sm font-medium text-gray-700 mb-2">Pesan Anda</label><textarea rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand outline-none resize-none" placeholder="Ceritakan kebutuhan unit dan spare part Anda..."></textarea></div>
-                        <button type="submit" class="w-full bg-gray-950 text-white font-black py-4 rounded-full hover:bg-brand transition-all shadow-lg text-lg">Kirim Pesan Sekarang <i class="fas fa-paper-plane ml-2"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gradient-to-br from-gray-950 via-[#052e1a] to-gray-950 text-gray-300 py-12 border-t border-green-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-6">PT Kalimaja Surya Alam</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Solusi Total Pompa Air Irigasi, Alat Berat, Sistem Hidrolik & Suku Cadang. Mewujudkan industri dan pertanian yang efisien serta berdaya saing global melalui perangkat yang andal.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold text-white mb-6">Tautan Cepat</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#beranda" class="hover:text-brand transition-colors">Beranda</a></li>
-                        <li><a href="#tentang" class="hover:text-brand transition-colors">Tentang Kami</a></li>
-                        <li><a href="#produk" class="hover:text-brand transition-colors">Katalog Produk</a></li>
-                        <li><a href="#garansi" class="hover:text-brand transition-colors">Aktivasi Garansi</a></li>
-                        <li><a href="#galeri" class="hover:text-brand transition-colors">Galeri Dokumentasi</a></li>
-                    </ul>
-                    <!-- Tombol Login Admin (Yakin537@) -->
-                    <button id="admin-btn" onclick="toggleAdminMode()" class="mt-8 text-[10px] text-gray-700 hover:text-brand font-bold uppercase tracking-widest transition-all text-left flex items-center gap-2">
-                        <i class="fas fa-user-shield"></i> Akses Admin Perusahaan
-                    </button>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold text-white mb-6">Ikuti Kami</h4>
-                    <div class="flex space-x-5 text-2xl">
-                        <a href="#" class="hover:text-brand transition-colors"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="hover:text-brand transition-colors"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="hover:text-brand transition-colors"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="hover:text-brand transition-colors"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center text-xs text-gray-600 border-t border-gray-800 pt-8">&copy; 2026 PT Kalimaja Surya Alam. Seluruh Hak Cipta Dilindungi.</div>
-        </div>
-    </footer>
-
-    <!-- Bottom Navigation Mobile: App Style -->
-    <nav class="bottom-app-nav" aria-label="Navigasi aplikasi mobile">
-        <a href="#beranda"><i class="fas fa-home"></i>Home</a>
-        <a href="#produk"><i class="fas fa-box-open"></i>Produk</a>
-        <a href="#garansi"><i class="fas fa-shield-alt"></i>Garansi</a>
-        <a href="#galeri"><i class="fas fa-images"></i>Galeri</a>
-        <a href="#kontak"><i class="fas fa-phone"></i>Kontak</a>
-    </nav>
-
-    <!-- SCRIPT TAMPILAN & FIREBASE (Terintegrasi) -->
-    <script type="module">
+<a href="#kontak"><i class="fas fa-phone"></i>Kontak</a>
+</nav>
+<!-- SCRIPT TAMPILAN & FIREBASE (Terintegrasi) -->
+<script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, collection, addDoc, onSnapshot, deleteDoc, doc, updateDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
@@ -1407,7 +870,7 @@
                 <circle cx='1010' cy='650' r='150' fill='rgba(255,255,255,.08)'/>
                 <text x='80' y='390' font-family='Arial, sans-serif' font-size='54' font-weight='800' fill='white'>PT Kalimaja Surya Alam</text>
                 <text x='80' y='465' font-family='Arial, sans-serif' font-size='72' font-weight='900' fill='${accent}'>${safeLabel}</text>
-                <text x='80' y='535' font-family='Arial, sans-serif' font-size='30' font-weight='600' fill='rgba(255,255,255,.82)'>Solusi Total Mekanisasi Pertanian</text>
+                <text x='80' y='535' font-family='Arial, sans-serif' font-size='30' font-weight='600' fill='rgba(255,255,255,.82)'>Solusi Total Pompa Air Irigasi Bensin</text>
             </svg>`;
             return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
         }
@@ -1415,15 +878,15 @@
         const FALLBACK = {
             logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Ccircle cx='48' cy='48' r='44' fill='%23087333'/%3E%3Ccircle cx='48' cy='48' r='34' fill='%23ffffff'/%3E%3Ctext x='48' y='56' font-size='26' text-anchor='middle' font-family='Arial' font-weight='700' fill='%23087333'%3EKSA%3C/text%3E%3C/svg%3E",
             hero1: svgFallback('Pompa Irigasi'),
-            hero2: svgFallback('Alat Berat'),
-            hero3: svgFallback('Sistem Hidrolik'),
-            hero4: svgFallback('Spare Part'),
+            hero2: svgFallback('Pompa 3 Inch'),
+            hero3: svgFallback('Pompa 4 Inch'),
+            hero4: svgFallback('Pompa 6 Inch'),
             hero5: svgFallback('Garansi Digital'),
-            pump: svgFallback('Pompa Air Irigasi'),
-            heavy: svgFallback('Alat Berat'),
-            hydraulic: svgFallback('Hydraulic System'),
-            spare: svgFallback('Spare Part Industri'),
-            gallery: svgFallback('Dokumentasi'),
+            pump: svgFallback('Pompa Air Irigasi Bensin'),
+            heavy: svgFallback('Pompa 3 Inch'),
+            hydraulic: svgFallback('Pompa 4 Inch'),
+            spare: svgFallback('Pompa 6 Inch'),
+            
             partner: svgFallback('Mitra')
         };
 
@@ -1470,7 +933,7 @@
             document.querySelectorAll('img[src="N.jpg"]').forEach(img => setStaticImgSafe(img, FALLBACK.heavy));
             document.querySelectorAll('img[src="O.jpeg"]').forEach(img => setStaticImgSafe(img, FALLBACK.hydraulic));
             document.querySelectorAll('img[src="P.jpeg"]').forEach(img => setStaticImgSafe(img, FALLBACK.spare));
-            document.querySelectorAll('#galeri img').forEach(img => setStaticImgSafe(img, FALLBACK.gallery));
+            document.querySelectorAll('#produk img').forEach(img => setStaticImgSafe(img, FALLBACK.gallery));
             document.querySelectorAll('section.py-10 img').forEach(img => setStaticImgSafe(img, FALLBACK.partner));
             document.querySelectorAll('#admin-slider-panel img').forEach((img, idx) => setStaticImgSafe(img, FALLBACK[`hero${idx + 1}`] || FALLBACK.hero1));
         }
@@ -1573,24 +1036,7 @@
                     console.error(`Error Fetch Slide ${i}:`, error);
                 });
             }
-
-            // 5. Fetch Gambar untuk 12 Slot Fixed Galeri
-            for(let i=1; i<=12; i++) {
-                onSnapshot(doc(db, 'settings', 'gallery_fixed_' + i), (docSnap) => {
-                    if (docSnap.exists()) {
-                        const data = docSnap.data();
-                        if (data.imageUrl) {
-                            setImageSafe('gal-img-' + i, data.imageUrl, FALLBACK.gallery, 'loading-gal-' + i);
-                        }
-                        if (data.title) {
-                            const titleEl = document.getElementById('gal-title-' + i);
-                            if (titleEl) titleEl.innerText = data.title;
-                        }
-                    }
-                });
-            }
-
-            // 6. Fetch Logo Perusahaan
+            // 5. Fetch Logo Perusahaan
             onSnapshot(doc(db, 'settings', 'logo_image'), (docSnap) => {
                 if (docSnap.exists() && docSnap.data().imageUrl) {
                     setImageSafe('logo-img', docSnap.data().imageUrl, FALLBACK.logo, 'loading-logo');
@@ -1734,14 +1180,7 @@
                 });
                 document.getElementById('admin-slider-panel')?.classList.remove('hidden');
                 document.getElementById('admin-garansi-view')?.classList.remove('hidden');
-                
-                // Aktifkan editing judul galeri
-                for(let i=1; i<=12; i++) {
-                    const title = document.getElementById('gal-title-' + i);
-                    if(title) title.contentEditable = true;
-                }
-                
-                // Refresh agar tombol delete muncul di item dinamis
+// Refresh agar tombol delete muncul di item dinamis
                 refreshUI();
             } else {
                 alert("Password salah.");
@@ -1819,25 +1258,6 @@
                 await setDoc(doc(db, 'settings', 'hero_slide_' + slot), { imageUrl: url, updatedAt: Date.now() });
                 showCloudToast("Slider " + slot + " berhasil diperbarui.");
             }
-        };
-
-        window.uploadFixedGallery = async function(event, slot) {
-            const file = event.target.files[0];
-            if (!file) return;
-            const url = await uploadFileToStorage(file, `gallery_fixed_${slot}`, `loading-gal-${slot}`, `progress-gal-${slot}`);
-            if (url) {
-                const currentTitle = document.getElementById('gal-title-' + slot)?.innerText || `Kegiatan Perusahaan ${slot}`;
-                await setDoc(doc(db, 'settings', 'gallery_fixed_' + slot), { imageUrl: url, title: currentTitle, updatedAt: Date.now() }, { merge: true });
-                showCloudToast("Galeri slot " + slot + " berhasil diperbarui.");
-            }
-        };
-
-        window.updateFixedGalleryTitle = async function(slot, title) {
-            if(!window.isAdmin) return;
-            try {
-                await setDoc(doc(db, 'settings', 'gallery_fixed_' + slot), { title: title, updatedAt: Date.now() }, { merge: true });
-                showCloudToast("Judul galeri tersimpan.");
-            } catch (e) { console.error(e); }
         };
 
         window.uploadImageToStorage = async function(event, collectionName, id) {
