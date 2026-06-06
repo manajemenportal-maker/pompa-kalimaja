@@ -147,6 +147,18 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
     filter: saturate(1.08) contrast(1.02) !important;
 }
 
+
+/* === FIX KATALOG PRODUK: GAMBAR UTAMA RAPI, TIDAK AMBIL FOTO DETAIL === */
+#product-img-irigasi,
+#product-img-pompa3,
+#product-img-pompa4,
+#product-img-pompa6 {
+    object-fit: contain !important;
+    object-position: center !important;
+    background: transparent !important;
+    padding: 8px !important;
+}
+
 </style>
 
 </head>
@@ -413,7 +425,7 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
     <div id="loading-product-irigasi" class="absolute inset-0 bg-white/85 hidden flex-col items-center justify-center z-40 text-brand font-black">
         <i class="fas fa-spinner fa-spin text-2xl mb-2"></i><span class="text-xs">Mengupload foto...</span>
     </div>
-    <img id="product-img-irigasi" alt="Pompa Air Irigasi Bensin" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="M.jpg"/>
+    <img id="product-img-irigasi" alt="Pompa Air Irigasi Bensin" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="assets/compact_engine_pump_assembly_on_display.png"/>
 </div>
 <div class="p-4 md:p-5 flex flex-col flex-grow">
 <h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa Air Irigasi Bensin</h3>
@@ -430,7 +442,7 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
     <div id="loading-product-pompa3" class="absolute inset-0 bg-white/85 hidden flex-col items-center justify-center z-40 text-brand font-black">
         <i class="fas fa-spinner fa-spin text-2xl mb-2"></i><span class="text-xs">Mengupload foto...</span>
     </div>
-    <img id="product-img-pompa3" alt="Pompa Air Enersia KSA-80D" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="M.jpg"/>
+    <img id="product-img-pompa3" alt="Pompa Air Enersia KSA-80D" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="assets/b(1).jpeg"/>
 </div>
 <div class="p-4 md:p-5 flex flex-col flex-grow">
 <h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa Air Enersia KSA-80D</h3>
@@ -447,7 +459,7 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
     <div id="loading-product-pompa4" class="absolute inset-0 bg-white/85 hidden flex-col items-center justify-center z-40 text-brand font-black">
         <i class="fas fa-spinner fa-spin text-2xl mb-2"></i><span class="text-xs">Mengupload foto...</span>
     </div>
-    <img id="product-img-pompa4" alt="Pompa Air Enersia KSA-100D" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="M.jpg"/>
+    <img id="product-img-pompa4" alt="Pompa Air Enersia KSA-100D" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="assets/b(1).jpeg"/>
 </div>
 <div class="p-4 md:p-5 flex flex-col flex-grow">
 <h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa Air Enersia KSA-100D</h3>
@@ -796,7 +808,7 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
         const DEFAULT_KSA80D_ARTICLE_2 = 'assets/outhose(1).png';
         const DEFAULT_KSA80D_ARTICLE_3 = 'assets/spiral(1).png';
         const DEFAULT_KSA80D_PUMP = 'assets/3 Inchi Hal 1(1).png';
-        const DEFAULT_IRIGASI_CATALOG = 'assets/ksa-80G(1).png';
+        const DEFAULT_IRIGASI_CATALOG = 'assets/compact_engine_pump_assembly_on_display.png';
         const DEFAULT_KSA80D_CATALOG = 'assets/b(1).jpeg';
         const DEFAULT_IRIGASI_ARTICLE_1 = 'assets/ksa-80GA(5).png';
         const DEFAULT_IRIGASI_ARTICLE_2 = 'assets/outhose(2).png';
