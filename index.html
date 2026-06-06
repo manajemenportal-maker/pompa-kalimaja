@@ -116,14 +116,35 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
 #kontak input,#kontak textarea,#kontak select { background:#fff !important; color:#1f2937 !important; }
 #kontak button,#kontak a[href*="wa.me"] { background:linear-gradient(135deg,#fb923c,#ec4899,#8b5cf6,#38bdf8) !important; color:#fff !important; }
 
-/* === TEKS SPESIFIKASI PRODUK === */
-#article-body p:last-child {
-    background: linear-gradient(135deg,#fff7ad,#ffd6a5,#e0f2fe) !important;
-    border: 1px solid rgba(251,146,60,.35) !important;
-    border-radius: 18px !important;
-    padding: 16px !important;
-    font-weight: 700 !important;
-    color: #1f2937 !important;
+
+/* === FOTO DETAIL PRODUK: KLIK UNTUK PREVIEW BESAR === */
+#artikel-pompa #article-img-1,
+#artikel-pompa #article-img-2,
+#artikel-pompa #article-img-3 {
+    object-fit: contain !important;
+    background: #ffffff !important;
+    transition: transform .18s ease, box-shadow .18s ease !important;
+}
+#artikel-pompa #article-img-1:hover,
+#artikel-pompa #article-img-2:hover,
+#artikel-pompa #article-img-3:hover {
+    transform: scale(1.02) !important;
+    box-shadow: 0 18px 40px rgba(15,23,42,.18) !important;
+}
+#article-body {
+    display: none !important;
+}
+
+
+/* === SEMUA FOTO PRODUK & DETAIL BISA DIKLIK BESAR === */
+#produk img,
+#artikel-pompa img {
+    cursor: zoom-in !important;
+}
+#produk img:hover,
+#artikel-pompa img:hover {
+    transform: scale(1.02) !important;
+    filter: saturate(1.08) contrast(1.02) !important;
 }
 
 </style>
@@ -482,17 +503,17 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
           <div class="relative rounded-2xl overflow-hidden bg-white shadow-lg border border-white h-48">
             <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col"><label class="cursor-pointer btn-wargahub text-white px-3 py-1.5 rounded-full shadow text-[10px] font-black">Upload <input accept="image/*" class="hidden" onchange="uploadArticlePhoto(event, 1)" type="file"/></label></div>
             <div id="loading-article-1" class="absolute inset-0 bg-white/85 hidden flex-col items-center justify-center z-40 text-brand font-black"><i class="fas fa-spinner fa-spin"></i></div>
-            <img id="article-img-1" src="M.jpg" class="w-full h-full object-contain p-3" alt="Foto artikel 1"/>
+            <img id="article-img-1" src="M.jpg" class="w-full h-full object-contain p-3" alt="Foto artikel 1"/ onclick="openImagePreview(this.src)" style="cursor:zoom-in;">
           </div>
           <div class="relative rounded-2xl overflow-hidden bg-white shadow-lg border border-white h-48">
             <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col"><label class="cursor-pointer btn-wargahub text-white px-3 py-1.5 rounded-full shadow text-[10px] font-black">Upload <input accept="image/*" class="hidden" onchange="uploadArticlePhoto(event, 2)" type="file"/></label></div>
             <div id="loading-article-2" class="absolute inset-0 bg-white/85 hidden flex-col items-center justify-center z-40 text-brand font-black"><i class="fas fa-spinner fa-spin"></i></div>
-            <img id="article-img-2" src="M.jpg" class="w-full h-full object-contain p-3" alt="Foto artikel 2"/>
+            <img id="article-img-2" src="M.jpg" class="w-full h-full object-contain p-3" alt="Foto artikel 2"/ onclick="openImagePreview(this.src)" style="cursor:zoom-in;">
           </div>
           <div class="relative rounded-2xl overflow-hidden bg-white shadow-lg border border-white h-48">
             <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col"><label class="cursor-pointer btn-wargahub text-white px-3 py-1.5 rounded-full shadow text-[10px] font-black">Upload <input accept="image/*" class="hidden" onchange="uploadArticlePhoto(event, 3)" type="file"/></label></div>
             <div id="loading-article-3" class="absolute inset-0 bg-white/85 hidden flex-col items-center justify-center z-40 text-brand font-black"><i class="fas fa-spinner fa-spin"></i></div>
-            <img id="article-img-3" src="M.jpg" class="w-full h-full object-contain p-3" alt="Foto artikel 3"/>
+            <img id="article-img-3" src="M.jpg" class="w-full h-full object-contain p-3" alt="Foto artikel 3"/ onclick="openImagePreview(this.src)" style="cursor:zoom-in;">
           </div>
         </div>
 
@@ -1305,7 +1326,7 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
             document.getElementById('article-title').innerText = data.title;
             document.getElementById('article-subtitle').innerText = data.subtitle;
             document.getElementById('article-heading').innerText = 'Detail ' + data.title;
-            document.getElementById('article-body').innerHTML = data.body.map(text => `<p>${escapeHTML(text)}</p>`).join('');
+            document.getElementById('article-body').innerHTML = '';
 
             for (let slot = 1; slot <= 3; slot++) {
                 const saved = window.articleMedia?.[articleId]?.photos?.[slot];
@@ -1463,6 +1484,68 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
                 resultDiv.innerHTML = `<div class="bg-red-50 p-4 rounded-xl mt-4 text-red-700 border border-red-200 text-sm shadow-inner"><i class="fas fa-exclamation-triangle mr-1"></i> Kode tidak valid atau data tidak ditemukan.</div>`;
             }
         };
-    </script>
+    
+        window.openImagePreview = function(src) {
+            const modal = document.getElementById('image-preview-modal');
+            const target = document.getElementById('image-preview-target');
+            if (!modal || !target || !src) return;
+            target.src = src;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        };
+
+        window.closeImagePreview = function() {
+            const modal = document.getElementById('image-preview-modal');
+            const target = document.getElementById('image-preview-target');
+            if (!modal || !target) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            target.src = '';
+            document.body.style.overflow = '';
+        };
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') closeImagePreview();
+        });
+
+
+        window.enableAllProductImagePreview = function() {
+            const images = document.querySelectorAll('#produk img, #artikel-pompa img');
+            images.forEach(img => {
+                img.style.cursor = 'zoom-in';
+                img.setAttribute('title', 'Klik untuk lihat foto besar');
+                if (img.dataset.previewBound === '1') return;
+                img.dataset.previewBound = '1';
+                img.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    openImagePreview(this.src);
+                });
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            enableAllProductImagePreview();
+        });
+
+        const originalOpenPumpArticleForPreview = window.openPumpArticle;
+        if (typeof originalOpenPumpArticleForPreview === 'function') {
+            window.openPumpArticle = function(articleId) {
+                originalOpenPumpArticleForPreview(articleId);
+                setTimeout(enableAllProductImagePreview, 120);
+            };
+        }
+
+</script>
+
+<!-- Preview Foto Besar Produk -->
+<div id="image-preview-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/80 p-3 md:p-8" onclick="closeImagePreview()">
+    <button type="button" class="absolute top-4 right-4 w-11 h-11 rounded-full bg-white text-gray-900 shadow-xl font-black text-xl" onclick="closeImagePreview(); event.stopPropagation();" aria-label="Tutup preview foto">
+        ×
+    </button>
+    <img id="image-preview-target" src="" alt="Preview foto produk" class="max-w-full max-h-full object-contain rounded-2xl bg-white shadow-2xl" onclick="event.stopPropagation();">
+</div>
+
 </body>
 </html>
