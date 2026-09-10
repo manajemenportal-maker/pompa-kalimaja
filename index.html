@@ -535,7 +535,10 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
         <h3 class="text-xl md:text-2xl font-black flex items-center gap-2"><i class="fas fa-sliders-h"></i> Konten Detail Produk</h3>
         <p class="text-sm text-white/90 mt-1">Atur langsung isi kotak Debit Air, Operasional, dan Purna Jual untuk setiap tipe pompa.</p>
       </div>
-      <div class="px-4 py-2 rounded-full bg-white/15 border border-white/30 text-sm font-bold whitespace-nowrap"><i class="fas fa-cloud mr-2"></i>Tersimpan ke Server</div>
+      <div class="flex flex-wrap items-center gap-2">
+        <div class="px-4 py-2 rounded-full bg-white/15 border border-white/30 text-sm font-bold whitespace-nowrap"><i class="fas fa-cloud mr-2"></i>Sinkron Detail Produk</div>
+        <button type="button" onclick="closeAdminProductDashboard()" class="px-4 py-2 rounded-full bg-gray-950/85 text-white text-sm font-black hover:bg-gray-950"><i class="fas fa-xmark mr-1"></i>Tutup</button>
+      </div>
     </div>
 
     <div class="p-5 md:p-7 bg-gradient-to-br from-white via-pink-50/40 to-sky-50/60">
@@ -766,7 +769,10 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
         <h2 id="article-title" class="text-2xl md:text-4xl font-black text-gray-900">Detail Pompa</h2>
         <p id="article-subtitle" class="text-gray-600 mt-2 max-w-3xl">Penjelasan produk, foto lapangan, dan video unit.</p>
       </div>
-      <a href="#produk" class="inline-flex items-center justify-center px-5 py-3 rounded-full font-black text-white btn-wargahub shadow-lg" onclick="closePumpArticle()"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Produk</a>
+      <div class="flex flex-wrap gap-2 justify-end">
+        <button id="admin-edit-current-product" type="button" class="hidden admin-tools items-center justify-center px-5 py-3 rounded-full font-black text-white bg-gray-950 shadow-lg hover:scale-[1.02] transition-transform" onclick="editCurrentProductFeatures()"><i class="fas fa-pen-to-square mr-2"></i>Edit 3 Menu Ini</button>
+        <a href="#produk" class="inline-flex items-center justify-center px-5 py-3 rounded-full font-black text-white btn-wargahub shadow-lg" onclick="closePumpArticle()"><i class="fas fa-arrow-left mr-2"></i> Kembali ke Produk</a>
+      </div>
     </div>
 
     <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-6 items-start">
@@ -1024,6 +1030,10 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
 <div class="text-center text-xs text-gray-600 border-t border-gray-800 pt-8">© 2026 PT Kalimaja Surya Alam. Seluruh Hak Cipta Dilindungi.</div>
 </div>
 </footer>
+<!-- Launcher Dashboard Admin: hanya muncul setelah login admin -->
+<button id="admin-dashboard-launcher" type="button" onclick="openAdminProductDashboard()" class="hidden fixed left-4 bottom-24 md:bottom-6 z-[70] px-5 py-3 rounded-full text-white font-black shadow-2xl bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 hover:scale-105 transition-transform">
+  <i class="fas fa-sliders-h mr-2"></i>Dashboard Detail Produk
+</button>
 <!-- Bottom Navigation Mobile: App Style -->
 <nav aria-label="Navigasi aplikasi mobile" class="bottom-app-nav">
 <a href="#beranda"><i class="fas fa-home"></i>Home</a>
@@ -1460,8 +1470,11 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
                 document.getElementById('admin-slider-panel')?.classList.remove('hidden');
                 document.getElementById('admin-garansi-view')?.classList.remove('hidden');
                 document.getElementById('admin-product-detail-panel')?.classList.remove('hidden');
+                document.getElementById('admin-dashboard-launcher')?.classList.remove('hidden');
                 loadProductFeatureEditor(document.getElementById('admin-detail-product')?.value || 'bensin3');
-// Refresh agar tombol delete muncul di item dinamis
+                // Langsung arahkan admin ke dashboard agar menu edit tidak tersembunyi jauh di atas halaman.
+                setTimeout(() => openAdminProductDashboard(), 150);
+                // Refresh agar tombol delete muncul di item dinamis
                 refreshUI();
             } else {
                 alert("Password salah.");
@@ -1832,6 +1845,32 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
             if (status) status.innerHTML = `<i class="fas fa-edit mr-1"></i>Mengedit: ${escapeHTML(productFeatureNames[articleId] || articleId)}`;
         };
 
+        window.openAdminProductDashboard = function(articleId) {
+            if (!window.isAdmin) {
+                alert('Silakan masuk sebagai Admin terlebih dahulu.');
+                return;
+            }
+            const panel = document.getElementById('admin-product-detail-panel');
+            if (!panel) return;
+            panel.classList.remove('hidden');
+            const select = document.getElementById('admin-detail-product');
+            const target = articleId || activePumpArticle || select?.value || 'bensin3';
+            if (select && productFeatureNames[target]) select.value = target;
+            loadProductFeatureEditor(productFeatureNames[target] ? target : (select?.value || 'bensin3'));
+            panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => document.getElementById('admin-feature-debit-desc')?.focus({ preventScroll: true }), 500);
+        };
+
+        window.closeAdminProductDashboard = function() {
+            const panel = document.getElementById('admin-product-detail-panel');
+            if (panel) panel.classList.add('hidden');
+        };
+
+        window.editCurrentProductFeatures = function() {
+            const articleId = activePumpArticle || 'bensin3';
+            openAdminProductDashboard(articleId);
+        };
+
         window.resetProductFeatureEditor = function() {
             const articleId = document.getElementById('admin-detail-product')?.value || 'bensin3';
             fillFeatureEditor(articleId, true);
@@ -1856,29 +1895,47 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
                 updatedAt: Date.now()
             };
             const status = document.getElementById('admin-feature-save-status');
-            if (status) status.innerHTML = '<i class="fas fa-spinner fa-spin mr-1"></i>Menyimpan ke server...';
+
+            // Terapkan langsung ke halaman agar admin dapat melihat hasil saat itu juga.
+            window.productDetailFeatures[articleId] = payload;
+            try {
+                localStorage.setItem(`ksa_detail_features_${articleId}`, JSON.stringify(payload));
+            } catch (e) { console.warn('Local cache detail produk gagal:', e); }
+            if (activePumpArticle === articleId) renderProductFeatureCards(articleId);
+
+            if (status) status.innerHTML = '<i class="fas fa-spinner fa-spin mr-1"></i>Menyimpan & menyinkronkan...';
             try {
                 await setDoc(doc(db, 'settings', `detail_features_${articleId}`), payload, { merge: true });
-                window.productDetailFeatures[articleId] = payload;
-                if (activePumpArticle === articleId) renderProductFeatureCards(articleId);
-                if (status) status.innerHTML = '<span class="text-green-700"><i class="fas fa-check-circle mr-1"></i>Berhasil disimpan permanen.</span>';
-                showCloudToast('Konten detail produk berhasil disimpan.');
+                if (status) status.innerHTML = '<span class="text-green-700"><i class="fas fa-check-circle mr-1"></i>Berhasil disimpan ke server.</span>';
+                showCloudToast('Konten detail produk berhasil disimpan ke server.');
             } catch (error) {
-                console.error('Gagal menyimpan detail produk:', error);
-                if (status) status.innerHTML = '<span class="text-red-600"><i class="fas fa-exclamation-circle mr-1"></i>Gagal menyimpan. Coba lagi.</span>';
-                alert('Gagal menyimpan konten detail produk.');
+                console.error('Gagal sinkron detail produk ke server:', error);
+                if (status) status.innerHTML = '<span class="text-amber-700"><i class="fas fa-triangle-exclamation mr-1"></i>Perubahan sudah tampil & tersimpan di browser, tetapi sinkron server gagal. Periksa Firestore Rules/koneksi.</span>';
+                alert('Perubahan sudah diterapkan di browser ini, tetapi server belum menerima data. Cek koneksi atau Firestore Rules.');
             }
         };
 
         function watchProductDetailFeatures() {
             editableProductFeatureIds.forEach(articleId => {
+                // Muat cache browser lebih dulu agar editor selalu berfungsi meski koneksi Firestore lambat/gagal.
+                try {
+                    const cached = localStorage.getItem(`ksa_detail_features_${articleId}`);
+                    if (cached) window.productDetailFeatures[articleId] = normalizeProductFeatures(JSON.parse(cached), articleId);
+                } catch (e) { console.warn('Cache detail produk tidak dapat dibaca:', e); }
+                if (!window.productDetailFeatures[articleId]) window.productDetailFeatures[articleId] = getDefaultProductFeatures(articleId);
+
                 onSnapshot(doc(db, 'settings', `detail_features_${articleId}`), (docSnap) => {
-                    window.productDetailFeatures[articleId] = docSnap.exists() ? docSnap.data() : getDefaultProductFeatures(articleId);
+                    if (docSnap.exists()) {
+                        const serverData = normalizeProductFeatures(docSnap.data(), articleId);
+                        window.productDetailFeatures[articleId] = serverData;
+                        try { localStorage.setItem(`ksa_detail_features_${articleId}`, JSON.stringify(serverData)); } catch (e) {}
+                    }
                     if (activePumpArticle === articleId) renderProductFeatureCards(articleId);
                     fillFeatureEditor(articleId, false);
                 }, (error) => {
                     console.error(`Error Fetch Detail Features ${articleId}:`, error);
-                    if (!window.productDetailFeatures[articleId]) window.productDetailFeatures[articleId] = getDefaultProductFeatures(articleId);
+                    if (activePumpArticle === articleId) renderProductFeatureCards(articleId);
+                    fillFeatureEditor(articleId, false);
                 });
             });
         }
@@ -1929,6 +1986,8 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
             document.getElementById('article-heading').innerText = 'Detail ' + data.title;
             document.getElementById('article-body').innerHTML = '';
             renderProductFeatureCards(articleId);
+            const currentEditBtn = document.getElementById('admin-edit-current-product');
+            if (currentEditBtn && window.isAdmin) { currentEditBtn.classList.remove('hidden'); currentEditBtn.classList.add('flex'); }
 
             for (let slot = 1; slot <= 3; slot++) {
                 const saved = window.articleMedia?.[articleId]?.photos?.[slot];
