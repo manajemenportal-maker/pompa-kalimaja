@@ -198,6 +198,117 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
     background: #ffffff !important;
 }
 
+
+/* === PRODUK BARU: 3 KATEGORI UTAMA + MENU TURUNAN === */
+.product-category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1.25rem;
+  align-items:start;
+}
+.product-category-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:28px;
+  border:1px solid rgba(124,58,237,.14);
+  background:rgba(255,255,255,.96);
+  box-shadow:0 20px 55px rgba(24,48,88,.12);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.product-category-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 30px 80px rgba(24,48,88,.18);
+  border-color:rgba(255,63,139,.32);
+}
+.product-category-cover{
+  position:relative;
+  min-height:190px;
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  color:#fff;
+  isolation:isolate;
+}
+.product-category-cover::before,
+.product-category-cover::after{
+  content:'';
+  position:absolute;
+  border-radius:999px;
+  z-index:-1;
+  filter:blur(1px);
+}
+.product-category-cover::before{
+  width:150px;height:150px;right:-36px;top:-42px;
+  background:rgba(255,255,255,.20);
+}
+.product-category-cover::after{
+  width:88px;height:88px;left:-22px;bottom:-30px;
+  background:rgba(255,255,255,.14);
+}
+.product-category-card.bensin .product-category-cover{background:linear-gradient(135deg,#ff7a18 0%,#ff3f8b 52%,#7c3aed 100%)}
+.product-category-card.diesel .product-category-cover{background:linear-gradient(135deg,#172554 0%,#4338ca 48%,#7c3aed 100%)}
+.product-category-card.lainnya .product-category-cover{background:linear-gradient(135deg,#0369a1 0%,#0891b2 45%,#16a34a 100%)}
+.product-category-icon{
+  width:64px;height:64px;border-radius:20px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.17);
+  border:1px solid rgba(255,255,255,.30);
+  backdrop-filter:blur(10px);
+  font-size:30px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+.product-category-title{font-size:1.35rem;font-weight:900;line-height:1.15;margin-top:18px;color:#fff!important}
+.product-category-desc{font-size:.88rem;line-height:1.55;margin-top:8px;color:rgba(255,255,255,.88)!important}
+.product-category-meta{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:.76rem;font-weight:800;color:#fff}
+.product-category-meta span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.20)}
+.product-category-toggle{
+  width:100%;border:0;cursor:pointer;padding:15px 18px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:#fff;color:var(--ink);font-weight:900;font-size:.92rem;
+  border-top:1px solid rgba(124,58,237,.10);
+  transition:background .2s ease,color .2s ease;
+}
+.product-category-toggle:hover{background:#fff6fb;color:var(--brand-2)}
+.product-category-toggle .chevron{transition:transform .25s ease}
+.product-category-card.open .product-category-toggle .chevron{transform:rotate(180deg)}
+.product-submenu{display:none;padding:0 16px 16px;background:#fff}
+.product-category-card.open .product-submenu{display:block;animation:fadeIn .25s ease-out both}
+.product-subitem{
+  display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;
+  padding:13px 12px;margin-top:10px;border-radius:18px;
+  border:1px solid rgba(124,58,237,.10);
+  background:linear-gradient(135deg,#ffffff,#f8fbff);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.product-subitem:hover{transform:translateX(3px);border-color:rgba(255,63,139,.30);box-shadow:0 12px 28px rgba(24,48,88,.08)}
+.product-subicon{
+  width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:18px;background:linear-gradient(135deg,var(--brand-3),var(--brand-2),var(--brand));
+  box-shadow:0 8px 18px rgba(255,63,139,.18);
+}
+.product-category-card.diesel .product-subicon{background:linear-gradient(135deg,#1d4ed8,#4338ca,#7c3aed)}
+.product-category-card.lainnya .product-subicon{background:linear-gradient(135deg,#0284c7,#0891b2,#16a34a)}
+.product-subitem h4{font-size:.93rem;font-weight:900;color:var(--ink)!important;line-height:1.25;margin:0}
+.product-subitem p{font-size:.75rem;color:var(--muted)!important;line-height:1.35;margin-top:3px}
+.product-detail-btn{
+  border:0;cursor:pointer;white-space:nowrap;padding:9px 12px;border-radius:999px;
+  font-size:.73rem;font-weight:900;color:#fff;
+  background:linear-gradient(135deg,var(--brand-3),var(--brand-2),var(--brand));
+  box-shadow:0 8px 18px rgba(255,63,139,.16);transition:transform .18s ease,filter .18s ease;
+}
+.product-detail-btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.product-section-badge{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
+  font-size:.75rem;font-weight:900;color:var(--brand);background:#fff;border:1px solid rgba(124,58,237,.12);
+  box-shadow:0 8px 20px rgba(24,48,88,.07);margin-bottom:12px;
+}
+@media(max-width:1023px){.product-category-grid{grid-template-columns:1fr}.product-category-cover{min-height:170px}}
+@media(max-width:640px){
+  .product-category-cover{min-height:160px;padding:20px}.product-category-icon{width:56px;height:56px;font-size:25px}
+  .product-subitem{grid-template-columns:42px 1fr}.product-detail-btn{grid-column:2;justify-self:start;margin-top:2px}
+}
+
 </style>
 
 </head>
@@ -282,9 +393,6 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
 <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 <div class="grid lg:grid-cols-[1.05fr_.75fr] gap-8 items-center">
 <div class="text-left max-w-3xl">
-<div class="mb-5 hero-logo-wrap">
-  <img src="assets/enersia-kalimaja-logo-transparent.png" alt="ENERSIA KALIMAJA" class="hero-brand-logo w-full max-w-[240px] sm:max-w-[340px] md:max-w-[460px] lg:max-w-[560px] h-auto drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)]" />
-</div>
 <p class="text-base md:text-xl text-gray-200 max-w-2xl mb-8 leading-relaxed">PT Kalimaja Surya Alam fokus menyediakan pompa air untuk irigasi sawah, perkebunan, proyek lapangan, dan kebutuhan suplai air berdebit besar.</p>
 <div class="flex flex-col sm:flex-row gap-3 mb-8">
 <a class="premium-button bg-brand text-white px-7 py-3.5 shadow-lg shadow-green-900/35" href="#produk"><i class="fas fa-box-open"></i> Lihat Produk</a>
@@ -450,82 +558,106 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
 </section>
 <!-- Produk Katalog -->
 <section class="section-compact bg-gradient-to-b from-white to-[#f0f8f1]" id="produk">
-<div class="max-w-7xl mx-auto px-4">
-<div class="text-center mb-9">
-<h2 class="text-2xl md:text-4xl font-black text-gray-900">Katalog Pompa Air</h2>
-<p class="text-gray-600 mt-3 max-w-2xl mx-auto text-sm md:text-base">Pilih pompa sesuai kebutuhan debit, area kerja, dan sumber tenaga. Hubungi tim kami untuk penawaran harga dan ketersediaan unit.</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="product-grid">
-<div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all" id="card-irigasi">
-<div class="relative h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
-    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-        <label class="cursor-pointer btn-wargahub text-white px-3 py-1.5 rounded-full shadow text-[10px] font-black">
-            <i class="fas fa-camera"></i> Upload Foto <input accept="image/*" class="hidden" onchange="uploadProductMainPhoto(event, 'irigasi')" type="file"/>
-        </label>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-9">
+      <div class="product-section-badge"><i class="fas fa-layer-group"></i> 3 Kategori Utama • 8 Varian Pompa</div>
+      <h2 class="text-2xl md:text-4xl font-black text-gray-900">Katalog Pompa Air</h2>
+      <p class="text-gray-600 mt-3 max-w-3xl mx-auto text-sm md:text-base">Pilih kategori pompa sesuai sumber tenaga dan kebutuhan lapangan. Klik <b>Lihat Varian</b> untuk membuka menu turunannya.</p>
     </div>
-    <div id="loading-product-irigasi" class="absolute inset-0 bg-white/85 hidden flex-col items-center justify-center z-40 text-brand font-black">
-        <i class="fas fa-spinner fa-spin text-2xl mb-2"></i><span class="text-xs">Mengupload foto...</span>
+
+    <div class="product-category-grid" id="product-grid">
+      <!-- BLOK 1: POMPA BENSIN -->
+      <article class="product-category-card bensin open" id="group-bensin">
+        <div class="product-category-cover">
+          <div>
+            <div class="product-category-icon"><i class="fas fa-gas-pump"></i></div>
+            <h3 class="product-category-title">Pompa Air Irigasi Bensin</h3>
+            <p class="product-category-desc">Ringkas, mudah dipindahkan, dan cocok untuk area pertanian atau proyek yang membutuhkan mobilitas tinggi.</p>
+          </div>
+          <div class="product-category-meta"><span><i class="fas fa-water mr-1"></i> 2 Varian</span><span><i class="fas fa-bolt mr-1"></i> Mobilitas Tinggi</span></div>
+        </div>
+        <button class="product-category-toggle" type="button" onclick="toggleProductGroup('group-bensin', this)" aria-expanded="true">
+          <span><i class="fas fa-list-ul mr-2 text-brand"></i>Lihat Varian Bensin</span><i class="fas fa-chevron-down chevron"></i>
+        </button>
+        <div class="product-submenu">
+          <div class="product-subitem">
+            <div class="product-subicon"><i class="fas fa-water"></i></div>
+            <div><h4>Pompa Air Irigasi Bensin 3 Inch</h4><p>Untuk irigasi sawah, kebun, kolam, dan kebutuhan suplai air lapangan.</p></div>
+            <button class="product-detail-btn" onclick="openPumpArticle('bensin3')" type="button">Lihat Detail</button>
+          </div>
+          <div class="product-subitem">
+            <div class="product-subicon"><i class="fas fa-water"></i></div>
+            <div><h4>Pompa Air Irigasi Bensin 4 Inch</h4><p>Untuk kebutuhan debit lebih besar dan jangkauan area kerja yang lebih luas.</p></div>
+            <button class="product-detail-btn" onclick="openPumpArticle('bensin4')" type="button">Lihat Detail</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- BLOK 2: POMPA DIESEL -->
+      <article class="product-category-card diesel" id="group-diesel">
+        <div class="product-category-cover">
+          <div>
+            <div class="product-category-icon"><i class="fas fa-industry"></i></div>
+            <h3 class="product-category-title">Pompa Irigasi Diesel</h3>
+            <p class="product-category-desc">Tangguh untuk jam kerja lebih panjang, debit besar, dan kebutuhan operasional lapangan yang intensif.</p>
+          </div>
+          <div class="product-category-meta"><span><i class="fas fa-cogs mr-1"></i> 3 Varian</span><span><i class="fas fa-shield-alt mr-1"></i> Heavy Duty</span></div>
+        </div>
+        <button class="product-category-toggle" type="button" onclick="toggleProductGroup('group-diesel', this)" aria-expanded="false">
+          <span><i class="fas fa-list-ul mr-2 text-brand"></i>Lihat Varian Diesel</span><i class="fas fa-chevron-down chevron"></i>
+        </button>
+        <div class="product-submenu">
+          <div class="product-subitem">
+            <div class="product-subicon"><i class="fas fa-tint"></i></div>
+            <div><h4>Pompa Irigasi Diesel 3 Inch</h4><p>Varian ringkas untuk irigasi, distribusi air, dan pekerjaan lapangan harian.</p></div>
+            <button class="product-detail-btn" onclick="openPumpArticle('diesel3')" type="button">Lihat Detail</button>
+          </div>
+          <div class="product-subitem">
+            <div class="product-subicon"><i class="fas fa-tint"></i></div>
+            <div><h4>Pompa Irigasi Diesel 4 Inch</h4><p>Debit lebih besar untuk area pertanian, perkebunan, dan pengurasan.</p></div>
+            <button class="product-detail-btn" onclick="openPumpArticle('diesel4')" type="button">Lihat Detail</button>
+          </div>
+          <div class="product-subitem">
+            <div class="product-subicon"><i class="fas fa-water"></i></div>
+            <div><h4>Pompa Irigasi Diesel 6 Inch</h4><p>Untuk hamparan luas, proyek, dewatering, dan suplai air berkapasitas besar.</p></div>
+            <button class="product-detail-btn" onclick="openPumpArticle('diesel6')" type="button">Lihat Detail</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- BLOK 3: POMPA LAINNYA -->
+      <article class="product-category-card lainnya" id="group-lainnya">
+        <div class="product-category-cover">
+          <div>
+            <div class="product-category-icon"><i class="fas fa-bolt"></i></div>
+            <h3 class="product-category-title">Pompa Jenis Lainnya</h3>
+            <p class="product-category-desc">Pilihan sumber tenaga modern untuk lokasi dengan listrik, energi surya, atau kebutuhan sistem kombinasi.</p>
+          </div>
+          <div class="product-category-meta"><span><i class="fas fa-leaf mr-1"></i> 3 Varian</span><span><i class="fas fa-solar-panel mr-1"></i> Energi Modern</span></div>
+        </div>
+        <button class="product-category-toggle" type="button" onclick="toggleProductGroup('group-lainnya', this)" aria-expanded="false">
+          <span><i class="fas fa-list-ul mr-2 text-brand"></i>Lihat Varian Lainnya</span><i class="fas fa-chevron-down chevron"></i>
+        </button>
+        <div class="product-submenu">
+          <div class="product-subitem">
+            <div class="product-subicon"><i class="fas fa-plug"></i></div>
+            <div><h4>Pompa Elektrik</h4><p>Operasional halus dan praktis untuk area yang memiliki suplai listrik stabil.</p></div>
+            <button class="product-detail-btn" onclick="openPumpArticle('elektrik')" type="button">Lihat Detail</button>
+          </div>
+          <div class="product-subitem">
+            <div class="product-subicon"><i class="fas fa-solar-panel"></i></div>
+            <div><h4>Pompa Solar Panel</h4><p>Memanfaatkan tenaga surya untuk membantu pengairan di lokasi terpencil.</p></div>
+            <button class="product-detail-btn" onclick="openPumpArticle('solar')" type="button">Lihat Detail</button>
+          </div>
+          <div class="product-subitem">
+            <div class="product-subicon"><i class="fas fa-arrows-rotate"></i></div>
+            <div><h4>Pompa Hybrid</h4><p>Sistem kombinasi sumber tenaga agar operasional lebih fleksibel dan adaptif.</p></div>
+            <button class="product-detail-btn" onclick="openPumpArticle('hybrid')" type="button">Lihat Detail</button>
+          </div>
+        </div>
+      </article>
     </div>
-    <img id="product-img-irigasi" alt="Pompa Air Irigasi Bensin" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="assets/compact_engine_pump_assembly_on_display.png"/>
-</div>
-<div class="p-4 md:p-5 flex flex-col flex-grow">
-<h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa Air Irigasi Bensin</h3>
-<p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Pompa air mobilitas tinggi untuk sawah, kebun, kolam, proyek lapangan, dan suplai air berdebit besar.</p>
-<button class="product-link block text-center py-2.5 btn-wargahub text-white font-black rounded-full transition-colors text-sm" onclick="openPumpArticle('irigasi')" type="button">Lihat Detail</button>
-</div>
-</div><div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all" id="card-pompa3">
-<div class="relative h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
-    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-        <label class="cursor-pointer btn-wargahub text-white px-3 py-1.5 rounded-full shadow text-[10px] font-black">
-            <i class="fas fa-camera"></i> Upload Foto <input accept="image/*" class="hidden" onchange="uploadProductMainPhoto(event, 'pompa3')" type="file"/>
-        </label>
-    </div>
-    <div id="loading-product-pompa3" class="absolute inset-0 bg-white/85 hidden flex-col items-center justify-center z-40 text-brand font-black">
-        <i class="fas fa-spinner fa-spin text-2xl mb-2"></i><span class="text-xs">Mengupload foto...</span>
-    </div>
-    <img id="product-img-pompa3" alt="Pompa Air Enersia KSA-80D" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="assets/b(1).jpeg"/>
-</div>
-<div class="p-4 md:p-5 flex flex-col flex-grow">
-<h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa Air Enersia KSA-80D</h3>
-<p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Cocok untuk irigasi lahan kecil-menengah, penyedotan air, dan distribusi air dengan mobilitas tinggi.</p>
-<button class="product-link block text-center py-2.5 btn-wargahub text-white font-black rounded-full transition-colors text-sm" onclick="openPumpArticle('pompa3')" type="button">Lihat Detail</button>
-</div>
-</div><div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all" id="card-pompa4">
-<div class="relative h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
-    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-        <label class="cursor-pointer btn-wargahub text-white px-3 py-1.5 rounded-full shadow text-[10px] font-black">
-            <i class="fas fa-camera"></i> Upload Foto <input accept="image/*" class="hidden" onchange="uploadProductMainPhoto(event, 'pompa4')" type="file"/>
-        </label>
-    </div>
-    <div id="loading-product-pompa4" class="absolute inset-0 bg-white/85 hidden flex-col items-center justify-center z-40 text-brand font-black">
-        <i class="fas fa-spinner fa-spin text-2xl mb-2"></i><span class="text-xs">Mengupload foto...</span>
-    </div>
-    <img id="product-img-pompa4" alt="Pompa Air Enersia KSA-100D" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="assets/b(1).jpeg"/>
-</div>
-<div class="p-4 md:p-5 flex flex-col flex-grow">
-<h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa Air Enersia KSA-100D</h3>
-<p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Pilihan seimbang untuk kebutuhan debit lebih besar, pengairan area pertanian, dan pekerjaan lapangan harian.</p>
-<button class="product-link block text-center py-2.5 btn-wargahub text-white font-black rounded-full transition-colors text-sm" onclick="openPumpArticle('pompa4')" type="button">Lihat Detail</button>
-</div>
-</div><div class="fresh-card rounded-2xl overflow-hidden group relative flex flex-col transition-all" id="card-pompa6">
-<div class="relative h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
-    <div class="absolute top-3 right-3 z-30 hidden admin-tools flex-col gap-2">
-        <label class="cursor-pointer btn-wargahub text-white px-3 py-1.5 rounded-full shadow text-[10px] font-black">
-            <i class="fas fa-camera"></i> Upload Foto <input accept="image/*" class="hidden" onchange="uploadProductMainPhoto(event, 'pompa6')" type="file"/>
-        </label>
-    </div>
-    <div id="loading-product-pompa6" class="absolute inset-0 bg-white/85 hidden flex-col items-center justify-center z-40 text-brand font-black">
-        <i class="fas fa-spinner fa-spin text-2xl mb-2"></i><span class="text-xs">Mengupload foto...</span>
-    </div>
-    <img id="product-img-pompa6" alt="Pompa Air Enersia KSA-160D" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" src="M.jpg"/>
-</div>
-<div class="p-4 md:p-5 flex flex-col flex-grow">
-<h3 class="font-black text-sm md:text-lg mb-1 content-editable" contenteditable="false">Pompa Air Enersia KSA-160D</h3>
-<p class="text-xs md:text-sm text-gray-600 mb-4 content-editable flex-grow leading-relaxed" contenteditable="false">Unit berdebit besar untuk hamparan luas, proyek, pengeringan area, dan suplai air intensif.</p>
-<button class="product-link block text-center py-2.5 btn-wargahub text-white font-black rounded-full transition-colors text-sm" onclick="openPumpArticle('pompa6')" type="button">Lihat Detail</button>
-</div>
-</div></div>
-</div>
+  </div>
 </section>
 
 <!-- Artikel Detail Produk Pompa: Internal, Tidak Terhubung ke GitHub Lain -->
@@ -726,7 +858,7 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
 </div>
 <div class="flex items-start">
 <div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-brand text-xl mr-4"><i class="fas fa-phone-alt"></i></div>
-<div><h4 class="font-semibold text-lg mb-1">Telepon &amp; WA</h4><p class="text-gray-400 text-sm">+62 851 5097 3789</p></div>
+<div><h4 class="font-semibold text-lg mb-1">Telepon &amp; WA</h4><p class="text-gray-400 text-sm">+62 851 5097 3789</p><p class="text-gray-400 text-sm">+62 851 1103 3789</p></div>
 </div>
 <div class="flex items-start">
 <div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-brand text-xl mr-4"><i class="fas fa-envelope"></i></div>
@@ -1316,6 +1448,78 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
                     'Spesifikasi KSA-80G: tipe mesin SFE220FI, daya kerja maksimum 7,5 HP/3600 RPM, kapasitas silinder 212 cc, debit air maksimum 60 m³/jam, diameter buangan 80 mm/3 inch, diameter hisap 80 mm/3 inch, tinggi dorong 30 m, tinggi hisap 8 m, dimensi 52 x 39 x 47 cm, berat bersih 29,5 kg.'
                 ]
             },
+            bensin3: {
+                title: 'Pompa Air Irigasi Bensin 3 Inch',
+                subtitle: 'Pompa bensin portabel untuk irigasi sawah, kebun, kolam, dan suplai air lapangan.',
+                body: [
+                    'Pompa air irigasi bensin 3 inch cocok untuk pekerjaan yang membutuhkan unit ringkas, mudah dipindahkan, dan tidak bergantung pada jaringan listrik.',
+                    'Varian ini dapat digunakan untuk irigasi sawah, kebun, kolam, distribusi air, maupun kebutuhan proyek lapangan. Pemilihan selang, tinggi hisap, jarak dorong, dan kondisi sumber air perlu disesuaikan dengan lokasi kerja.',
+                    'Hubungi tim Kalimaja untuk menyesuaikan kapasitas mesin, kebutuhan debit, konfigurasi selang, dan dukungan purna jual.'
+                ]
+            },
+            bensin4: {
+                title: 'Pompa Air Irigasi Bensin 4 Inch',
+                subtitle: 'Pilihan pompa bensin dengan jalur air lebih besar untuk kebutuhan debit dan area kerja yang lebih luas.',
+                body: [
+                    'Pompa air irigasi bensin 4 inch ditujukan untuk pekerjaan yang membutuhkan aliran air lebih besar namun tetap mengutamakan mobilitas unit di lapangan.',
+                    'Cocok untuk area pertanian, perkebunan, kolam, pemindahan air, dan pekerjaan proyek. Performa aktual dipengaruhi oleh tinggi hisap, total head, panjang selang, dan kondisi instalasi.',
+                    'Tim Kalimaja dapat membantu menentukan konfigurasi pompa dan aksesorinya agar sesuai dengan kebutuhan operasional.'
+                ]
+            },
+            diesel3: {
+                title: 'Pompa Irigasi Diesel 3 Inch',
+                subtitle: 'Pompa diesel 3 inch untuk irigasi dan suplai air lapangan dengan karakter kerja tangguh.',
+                body: [
+                    'Pompa irigasi diesel 3 inch cocok untuk kebutuhan kerja lapangan yang memerlukan durasi operasional lebih panjang dan efisiensi bahan bakar yang baik.',
+                    'Varian ini dapat digunakan untuk irigasi, penyedotan, distribusi air, serta kebutuhan lapangan dengan mobilitas tinggi.',
+                    'Untuk pemilihan unit yang tepat, perhatikan debit yang dibutuhkan, tinggi hisap, jarak dorong, ukuran selang, dan lama operasi harian.'
+                ]
+            },
+            diesel4: {
+                title: 'Pompa Irigasi Diesel 4 Inch',
+                subtitle: 'Pompa diesel 4 inch untuk debit lebih besar pada pertanian, perkebunan, dan pekerjaan lapangan.',
+                body: [
+                    'Pompa irigasi diesel 4 inch menawarkan jalur air lebih besar untuk kebutuhan distribusi dan pengairan area yang lebih luas.',
+                    'Cocok digunakan pada sawah, perkebunan, proyek, pengurasan area, dan suplai air lapangan yang membutuhkan performa stabil.',
+                    'Konfigurasi mesin, selang, head, dan tata letak instalasi sebaiknya disesuaikan agar debit kerja tetap optimal.'
+                ]
+            },
+            diesel6: {
+                title: 'Pompa Irigasi Diesel 6 Inch',
+                subtitle: 'Pompa diesel 6 inch berkapasitas besar untuk hamparan luas, proyek, dan dewatering.',
+                body: [
+                    'Pompa irigasi diesel 6 inch ditujukan untuk kebutuhan debit besar seperti pengairan hamparan luas, suplai air proyek, dan pengurasan area.',
+                    'Ukuran pipa yang lebih besar memungkinkan volume pemindahan air tinggi, dengan tetap memperhatikan kemampuan mesin, total head, tinggi hisap, dan kondisi sumber air.',
+                    'Sebelum penggunaan, pastikan pemilihan selang, sambungan, strainer, dan posisi pompa sesuai dengan kondisi lapangan.'
+                ]
+            },
+            elektrik: {
+                title: 'Pompa Elektrik',
+                subtitle: 'Pompa bertenaga listrik untuk area dengan suplai daya stabil dan kebutuhan operasional yang lebih senyap.',
+                body: [
+                    'Pompa elektrik cocok untuk instalasi tetap maupun semi-portabel di lokasi yang memiliki jaringan listrik memadai.',
+                    'Keunggulannya antara lain start yang praktis, tingkat kebisingan lebih rendah, dan perawatan sumber penggerak yang relatif sederhana.',
+                    'Pemilihan daya motor, tegangan, panel kontrol, proteksi listrik, dan kapasitas pompa harus disesuaikan dengan kebutuhan debit dan head.'
+                ]
+            },
+            solar: {
+                title: 'Pompa Solar Panel',
+                subtitle: 'Sistem pompa dengan sumber energi surya untuk mendukung pengairan di lokasi tanpa jaringan listrik.',
+                body: [
+                    'Pompa solar panel memanfaatkan energi matahari sebagai sumber daya utama, sehingga menarik untuk area pertanian atau perkebunan yang jauh dari jaringan listrik.',
+                    'Sistem biasanya terdiri dari panel surya, kontroler atau inverter sesuai tipe pompa, penggerak pompa, serta instalasi pendukung.',
+                    'Kapasitas sistem harus dihitung berdasarkan kebutuhan debit, head, jam operasi, intensitas matahari, dan kapasitas panel yang tersedia.'
+                ]
+            },
+            hybrid: {
+                title: 'Pompa Hybrid',
+                subtitle: 'Sistem pompa dengan kombinasi sumber tenaga untuk meningkatkan fleksibilitas operasional di lapangan.',
+                body: [
+                    'Pompa hybrid dirancang untuk memanfaatkan lebih dari satu sumber tenaga, misalnya mesin dan listrik, atau listrik dan energi surya, sesuai rancangan sistem.',
+                    'Konsep ini memberi fleksibilitas ketika salah satu sumber tenaga tidak tersedia atau ketika pengguna ingin menyesuaikan mode operasi dengan kondisi lapangan.',
+                    'Desain sistem hybrid perlu memperhatikan kesesuaian daya penggerak, kopling, panel kontrol, proteksi, dan karakter beban pompa agar aman dan efisien.'
+                ]
+            },
             pompa3: {
                 title: 'Pompa Air Enersia KSA-80D',
                 subtitle: 'Pompa air diesel Enersia KSA-80D untuk kebutuhan irigasi, suplai air, dan pekerjaan lapangan berdebit besar.',
@@ -1375,6 +1579,14 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
             }
         }
 
+        window.toggleProductGroup = function(groupId, button) {
+            const card = document.getElementById(groupId);
+            if (!card) return;
+            const willOpen = !card.classList.contains('open');
+            card.classList.toggle('open', willOpen);
+            if (button) button.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        };
+
         window.openPumpArticle = function(articleId) {
             activePumpArticle = articleId;
             const data = pumpArticles[articleId] || pumpArticles.irigasi;
@@ -1389,22 +1601,25 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
                 setImageSafe(
                     `article-img-${slot}`,
                     saved || (
-                        articleId === 'irigasi' && slot === 1 ? DEFAULT_IRIGASI_ARTICLE_1 :
-                        articleId === 'irigasi' && slot === 2 ? DEFAULT_IRIGASI_ARTICLE_2 :
-                        articleId === 'irigasi' && slot === 3 ? DEFAULT_IRIGASI_ARTICLE_3 :
-                        articleId === 'pompa3' && slot === 1 ? DEFAULT_KSA80D_PUMP :
-                        articleId === 'pompa3' && slot === 2 ? DEFAULT_KSA80D_ARTICLE_2 :
-                        articleId === 'pompa3' && slot === 3 ? DEFAULT_KSA80D_ARTICLE_3 :
-                        articleId === 'pompa4' && slot === 1 ? DEFAULT_KSA100D_PUMP :
-                        articleId === 'pompa6' && slot === 1 ? DEFAULT_KSA160D_PUMP :
+                        (articleId === 'irigasi' || articleId === 'bensin3' || articleId === 'bensin4') && slot === 1 ? DEFAULT_IRIGASI_ARTICLE_1 :
+                        (articleId === 'irigasi' || articleId === 'bensin3' || articleId === 'bensin4') && slot === 2 ? DEFAULT_IRIGASI_ARTICLE_2 :
+                        (articleId === 'irigasi' || articleId === 'bensin3' || articleId === 'bensin4') && slot === 3 ? DEFAULT_IRIGASI_ARTICLE_3 :
+                        (articleId === 'pompa3' || articleId === 'diesel3') && slot === 1 ? DEFAULT_KSA80D_PUMP :
+                        (articleId === 'pompa3' || articleId === 'diesel3') && slot === 2 ? DEFAULT_KSA80D_ARTICLE_2 :
+                        (articleId === 'pompa3' || articleId === 'diesel3') && slot === 3 ? DEFAULT_KSA80D_ARTICLE_3 :
+                        (articleId === 'pompa4' || articleId === 'diesel4') && slot === 1 ? DEFAULT_KSA100D_PUMP :
+                        (articleId === 'pompa6' || articleId === 'diesel6') && slot === 1 ? DEFAULT_KSA160D_PUMP :
                         'M.jpg'
                     ),
                     (
-                        articleId === 'irigasi' && (slot === 1 || slot === 2 || slot === 3) ? FALLBACK.pump :
-                        articleId === 'pompa3' && (slot === 1 || slot === 2 || slot === 3) ? FALLBACK.heavy :
-                        articleId === 'pompa4' && slot === 1 ? FALLBACK.hydraulic :
-                        articleId === 'pompa6' && slot === 1 ? FALLBACK.spare :
-                        FALLBACK.pump
+                        (articleId === 'irigasi' || articleId === 'bensin3' || articleId === 'bensin4') ? svgFallback('Pompa Bensin') :
+                        (articleId === 'pompa3' || articleId === 'diesel3') ? svgFallback('Pompa Diesel 3 Inch','#1e3a8a','#60a5fa') :
+                        (articleId === 'pompa4' || articleId === 'diesel4') ? svgFallback('Pompa Diesel 4 Inch','#312e81','#a78bfa') :
+                        (articleId === 'pompa6' || articleId === 'diesel6') ? svgFallback('Pompa Diesel 6 Inch','#172554','#818cf8') :
+                        articleId === 'elektrik' ? svgFallback('Pompa Elektrik','#075985','#22d3ee') :
+                        articleId === 'solar' ? svgFallback('Pompa Solar Panel','#166534','#facc15') :
+                        articleId === 'hybrid' ? svgFallback('Pompa Hybrid','#0f766e','#38bdf8') :
+                        svgFallback('Pompa Air')
                     ),
                     `loading-article-${slot}`
                 );
@@ -1451,7 +1666,7 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
         };
 
         function fetchPumpProductMedia() {
-            ['irigasi','pompa3','pompa4','pompa6'].forEach(articleId => {
+            ['irigasi','pompa3','pompa4','pompa6','bensin3','bensin4','diesel3','diesel4','diesel6','elektrik','solar','hybrid'].forEach(articleId => {
                 window.articleMedia[articleId] = window.articleMedia[articleId] || { photos: {}, video: '' };
                 onSnapshot(doc(db, 'settings', `product_main_${articleId}`), (docSnap) => {
                     if (docSnap.exists() && docSnap.data().imageUrl) {
