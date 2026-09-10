@@ -282,6 +282,16 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
   transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
 }
 .product-subitem:hover{transform:translateX(3px);border-color:rgba(255,63,139,.30);box-shadow:0 12px 28px rgba(24,48,88,.08)}
+.product-subitem.with-photo{grid-template-columns:84px 1fr auto;padding:11px 12px}
+.product-subthumb-wrap{
+  width:84px;height:66px;border-radius:15px;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#ffffff,#eef5ff);border:1px solid rgba(67,56,202,.14);
+  box-shadow:0 8px 20px rgba(24,48,88,.09);position:relative;
+}
+.product-subthumb-wrap::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.75)}
+.product-subthumb{width:100%;height:100%;object-fit:contain;object-position:center;padding:4px;transition:transform .22s ease}
+.product-subitem.with-photo:hover .product-subthumb{transform:scale(1.07)}
+.product-size-badge{position:absolute;left:5px;bottom:5px;z-index:2;padding:3px 6px;border-radius:999px;background:rgba(15,23,42,.84);color:#fff!important;font-size:9px;font-weight:900;letter-spacing:.02em;backdrop-filter:blur(5px)}
 .product-subicon{
   width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;
   color:#fff;font-size:18px;background:linear-gradient(135deg,var(--brand-3),var(--brand-2),var(--brand));
@@ -307,6 +317,7 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
 @media(max-width:640px){
   .product-category-cover{min-height:160px;padding:20px}.product-category-icon{width:56px;height:56px;font-size:25px}
   .product-subitem{grid-template-columns:42px 1fr}.product-detail-btn{grid-column:2;justify-self:start;margin-top:2px}
+  .product-subitem.with-photo{grid-template-columns:72px 1fr}.product-subthumb-wrap{width:72px;height:58px}.product-subitem.with-photo .product-detail-btn{grid-column:2}
 }
 
 </style>
@@ -607,18 +618,27 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
           <span><i class="fas fa-list-ul mr-2 text-brand"></i>Lihat Varian Diesel</span><i class="fas fa-chevron-down chevron"></i>
         </button>
         <div class="product-submenu">
-          <div class="product-subitem">
-            <div class="product-subicon"><i class="fas fa-tint"></i></div>
+          <div class="product-subitem with-photo">
+            <div class="product-subthumb-wrap">
+              <img id="product-img-diesel3" class="product-subthumb" src="assets/3 Inchi Hal 1.png" alt="Pompa Irigasi Diesel 3 Inch" loading="lazy" onerror="this.onerror=null;this.src='assets/b(1).jpeg'"/>
+              <span class="product-size-badge">3 INCH</span>
+            </div>
             <div><h4>Pompa Irigasi Diesel 3 Inch</h4><p>Varian ringkas untuk irigasi, distribusi air, dan pekerjaan lapangan harian.</p></div>
             <button class="product-detail-btn" onclick="openPumpArticle('diesel3')" type="button">Lihat Detail</button>
           </div>
-          <div class="product-subitem">
-            <div class="product-subicon"><i class="fas fa-tint"></i></div>
+          <div class="product-subitem with-photo">
+            <div class="product-subthumb-wrap">
+              <img id="product-img-diesel4" class="product-subthumb" src="assets/4 inchi 1.png" alt="Pompa Irigasi Diesel 4 Inch" loading="lazy" onerror="this.onerror=null;this.src='assets/4 inchi 3.png'"/>
+              <span class="product-size-badge">4 INCH</span>
+            </div>
             <div><h4>Pompa Irigasi Diesel 4 Inch</h4><p>Debit lebih besar untuk area pertanian, perkebunan, dan pengurasan.</p></div>
             <button class="product-detail-btn" onclick="openPumpArticle('diesel4')" type="button">Lihat Detail</button>
           </div>
-          <div class="product-subitem">
-            <div class="product-subicon"><i class="fas fa-water"></i></div>
+          <div class="product-subitem with-photo">
+            <div class="product-subthumb-wrap">
+              <img id="product-img-diesel6" class="product-subthumb" src="assets/Diesel water pump 6.png" alt="Pompa Irigasi Diesel 6 Inch" loading="lazy" onerror="this.onerror=null;this.src='assets/Diesel water pump 61.png'"/>
+              <span class="product-size-badge">6 INCH</span>
+            </div>
             <div><h4>Pompa Irigasi Diesel 6 Inch</h4><p>Untuk hamparan luas, proyek, dewatering, dan suplai air berkapasitas besar.</p></div>
             <button class="product-detail-btn" onclick="openPumpArticle('diesel6')" type="button">Lihat Detail</button>
           </div>
@@ -988,6 +1008,20 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
         const DEFAULT_IRIGASI_ARTICLE_3 = 'assets/spiral(2).png';
         const DEFAULT_TRANSPARENT_PUMP = 'assets/ksa-80G(1).png';
 
+        // FOTO PRODUK SESUAI FILE ASSETS GITHUB: 3 / 4 / 6 INCH DIESEL
+        const DEFAULT_DIESEL3_CATALOG = 'assets/3 Inchi Hal 1.png';
+        const DEFAULT_DIESEL3_ARTICLE_1 = 'assets/3 Inchi Hal 1(2).png';
+        const DEFAULT_DIESEL3_ARTICLE_2 = 'assets/3 Inchi Hal 2.png';
+        const DEFAULT_DIESEL3_ARTICLE_3 = 'assets/3-3.png';
+        const DEFAULT_DIESEL4_CATALOG = 'assets/4 inchi 1.png';
+        const DEFAULT_DIESEL4_ARTICLE_1 = 'assets/4 inchi 1.png';
+        const DEFAULT_DIESEL4_ARTICLE_2 = 'assets/4 inchi 2.png';
+        const DEFAULT_DIESEL4_ARTICLE_3 = 'assets/4 inchi 3.png';
+        const DEFAULT_DIESEL6_CATALOG = 'assets/Diesel water pump 6.png';
+        const DEFAULT_DIESEL6_ARTICLE_1 = 'assets/Diesel water pump 61.png';
+        const DEFAULT_DIESEL6_ARTICLE_2 = 'assets/Diesel water pump 62.png';
+        const DEFAULT_DIESEL6_ARTICLE_3 = 'assets/Diesel water pump 63.png';
+
         const FALLBACK = {
             logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Ccircle cx='48' cy='48' r='44' fill='%23087333'/%3E%3Ccircle cx='48' cy='48' r='34' fill='%23ffffff'/%3E%3Ctext x='48' y='56' font-size='26' text-anchor='middle' font-family='Arial' font-weight='700' fill='%23087333'%3EKSA%3C/text%3E%3C/svg%3E",
             hero1: svgFallback('Pompa Irigasi'),
@@ -1077,6 +1111,13 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
                 ksa160dMain.src = DEFAULT_KSA160D_PUMP;
                 setStaticImgSafe(ksa160dMain, FALLBACK.spare);
             }
+
+            const diesel3Main = document.getElementById('product-img-diesel3');
+            if (diesel3Main) { diesel3Main.src = DEFAULT_DIESEL3_CATALOG; setStaticImgSafe(diesel3Main, FALLBACK.heavy); }
+            const diesel4Main = document.getElementById('product-img-diesel4');
+            if (diesel4Main) { diesel4Main.src = DEFAULT_DIESEL4_CATALOG; setStaticImgSafe(diesel4Main, FALLBACK.hydraulic); }
+            const diesel6Main = document.getElementById('product-img-diesel6');
+            if (diesel6Main) { diesel6Main.src = DEFAULT_DIESEL6_CATALOG; setStaticImgSafe(diesel6Main, FALLBACK.spare); }
 
             document.querySelectorAll('img[src="M.jpg"]').forEach(img => setStaticImgSafe(img, FALLBACK.pump));
             document.querySelectorAll('img[src="N.jpg"]').forEach(img => setStaticImgSafe(img, FALLBACK.heavy));
@@ -1604,11 +1645,20 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
                         (articleId === 'irigasi' || articleId === 'bensin3' || articleId === 'bensin4') && slot === 1 ? DEFAULT_IRIGASI_ARTICLE_1 :
                         (articleId === 'irigasi' || articleId === 'bensin3' || articleId === 'bensin4') && slot === 2 ? DEFAULT_IRIGASI_ARTICLE_2 :
                         (articleId === 'irigasi' || articleId === 'bensin3' || articleId === 'bensin4') && slot === 3 ? DEFAULT_IRIGASI_ARTICLE_3 :
-                        (articleId === 'pompa3' || articleId === 'diesel3') && slot === 1 ? DEFAULT_KSA80D_PUMP :
-                        (articleId === 'pompa3' || articleId === 'diesel3') && slot === 2 ? DEFAULT_KSA80D_ARTICLE_2 :
-                        (articleId === 'pompa3' || articleId === 'diesel3') && slot === 3 ? DEFAULT_KSA80D_ARTICLE_3 :
-                        (articleId === 'pompa4' || articleId === 'diesel4') && slot === 1 ? DEFAULT_KSA100D_PUMP :
-                        (articleId === 'pompa6' || articleId === 'diesel6') && slot === 1 ? DEFAULT_KSA160D_PUMP :
+                        articleId === 'diesel3' && slot === 1 ? DEFAULT_DIESEL3_ARTICLE_1 :
+                        articleId === 'diesel3' && slot === 2 ? DEFAULT_DIESEL3_ARTICLE_2 :
+                        articleId === 'diesel3' && slot === 3 ? DEFAULT_DIESEL3_ARTICLE_3 :
+                        articleId === 'diesel4' && slot === 1 ? DEFAULT_DIESEL4_ARTICLE_1 :
+                        articleId === 'diesel4' && slot === 2 ? DEFAULT_DIESEL4_ARTICLE_2 :
+                        articleId === 'diesel4' && slot === 3 ? DEFAULT_DIESEL4_ARTICLE_3 :
+                        articleId === 'diesel6' && slot === 1 ? DEFAULT_DIESEL6_ARTICLE_1 :
+                        articleId === 'diesel6' && slot === 2 ? DEFAULT_DIESEL6_ARTICLE_2 :
+                        articleId === 'diesel6' && slot === 3 ? DEFAULT_DIESEL6_ARTICLE_3 :
+                        articleId === 'pompa3' && slot === 1 ? DEFAULT_KSA80D_PUMP :
+                        articleId === 'pompa3' && slot === 2 ? DEFAULT_KSA80D_ARTICLE_2 :
+                        articleId === 'pompa3' && slot === 3 ? DEFAULT_KSA80D_ARTICLE_3 :
+                        articleId === 'pompa4' && slot === 1 ? DEFAULT_KSA100D_PUMP :
+                        articleId === 'pompa6' && slot === 1 ? DEFAULT_KSA160D_PUMP :
                         'M.jpg'
                     ),
                     (
