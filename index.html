@@ -525,6 +525,83 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
 </div>
 </div>
 </section>
+
+<!-- DASHBOARD ADMIN: EDIT KONTEN DETAIL PRODUK -->
+<section class="hidden relative z-30 mx-4 sm:mx-6 lg:mx-8 max-w-7xl xl:mx-auto mb-8" id="admin-product-detail-panel">
+  <div class="rounded-[1.75rem] overflow-hidden border border-fuchsia-200 bg-white shadow-2xl">
+    <div class="p-5 md:p-6 bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 text-white flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+      <div>
+        <div class="text-xs font-black uppercase tracking-[.18em] opacity-90 mb-1">Dashboard Admin</div>
+        <h3 class="text-xl md:text-2xl font-black flex items-center gap-2"><i class="fas fa-sliders-h"></i> Konten Detail Produk</h3>
+        <p class="text-sm text-white/90 mt-1">Atur langsung isi kotak Debit Air, Operasional, dan Purna Jual untuk setiap tipe pompa.</p>
+      </div>
+      <div class="px-4 py-2 rounded-full bg-white/15 border border-white/30 text-sm font-bold whitespace-nowrap"><i class="fas fa-cloud mr-2"></i>Tersimpan ke Server</div>
+    </div>
+
+    <div class="p-5 md:p-7 bg-gradient-to-br from-white via-pink-50/40 to-sky-50/60">
+      <div class="grid lg:grid-cols-[.78fr_1.22fr] gap-6 items-start">
+        <div class="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <label for="admin-detail-product" class="block text-sm font-black text-gray-800 mb-2">Pilih Produk yang Akan Diedit</label>
+          <select id="admin-detail-product" onchange="loadProductFeatureEditor(this.value)" class="w-full px-4 py-3 rounded-xl border border-gray-300 bg-white text-gray-900 font-bold outline-none focus:ring-4 focus:ring-pink-100 focus:border-pink-400">
+            <optgroup label="Pompa Air Irigasi Bensin">
+              <option value="bensin3">Pompa Air Irigasi Bensin 3 Inch</option>
+              <option value="bensin4">Pompa Air Irigasi Bensin 4 Inch</option>
+            </optgroup>
+            <optgroup label="Pompa Irigasi Diesel">
+              <option value="diesel3">Pompa Irigasi Diesel 3 Inch</option>
+              <option value="diesel4">Pompa Irigasi Diesel 4 Inch</option>
+              <option value="diesel6">Pompa Irigasi Diesel 6 Inch</option>
+            </optgroup>
+            <optgroup label="Pompa Jenis Lainnya">
+              <option value="elektrik">Pompa Elektrik</option>
+              <option value="solar">Pompa Solar Panel</option>
+              <option value="hybrid">Pompa Hybrid</option>
+            </optgroup>
+          </select>
+
+          <div class="mt-5 rounded-2xl bg-gray-950 text-white p-4">
+            <div class="text-xs uppercase tracking-wider text-gray-400 font-black mb-1">Sedang diedit</div>
+            <div id="admin-detail-selected-name" class="font-black text-lg">Pompa Air Irigasi Bensin 3 Inch</div>
+            <p class="text-xs text-gray-300 mt-2 leading-relaxed">Perubahan hanya berlaku pada produk yang dipilih. Produk lain tetap menggunakan data masing-masing.</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="rounded-2xl border border-pink-200 bg-white p-4 shadow-sm">
+            <div class="w-11 h-11 rounded-xl bg-pink-50 text-pink-500 flex items-center justify-center text-xl mb-4"><i class="fas fa-water"></i></div>
+            <label class="block text-xs font-black uppercase tracking-wider text-gray-500 mb-1">Judul Menu</label>
+            <input id="admin-feature-debit-title" maxlength="40" class="w-full px-3 py-2.5 rounded-xl border border-gray-200 font-black text-gray-900 outline-none focus:border-pink-400" value="Debit Air" />
+            <label class="block text-xs font-black uppercase tracking-wider text-gray-500 mt-4 mb-1">Isi / Keterangan</label>
+            <textarea id="admin-feature-debit-desc" rows="6" maxlength="350" class="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-700 outline-none resize-y focus:border-pink-400" placeholder="Masukkan data debit, head, kapasitas, atau penjelasan sesuai produk."></textarea>
+          </div>
+
+          <div class="rounded-2xl border border-orange-200 bg-white p-4 shadow-sm">
+            <div class="w-11 h-11 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center text-xl mb-4"><i class="fas fa-gas-pump"></i></div>
+            <label class="block text-xs font-black uppercase tracking-wider text-gray-500 mb-1">Judul Menu</label>
+            <input id="admin-feature-operation-title" maxlength="40" class="w-full px-3 py-2.5 rounded-xl border border-gray-200 font-black text-gray-900 outline-none focus:border-orange-400" value="Operasional" />
+            <label class="block text-xs font-black uppercase tracking-wider text-gray-500 mt-4 mb-1">Isi / Keterangan</label>
+            <textarea id="admin-feature-operation-desc" rows="6" maxlength="350" class="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-700 outline-none resize-y focus:border-orange-400" placeholder="Masukkan cara operasi, sumber tenaga, durasi kerja, atau catatan lapangan."></textarea>
+          </div>
+
+          <div class="rounded-2xl border border-sky-200 bg-white p-4 shadow-sm">
+            <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-500 flex items-center justify-center text-xl mb-4"><i class="fas fa-shield-alt"></i></div>
+            <label class="block text-xs font-black uppercase tracking-wider text-gray-500 mb-1">Judul Menu</label>
+            <input id="admin-feature-aftersales-title" maxlength="40" class="w-full px-3 py-2.5 rounded-xl border border-gray-200 font-black text-gray-900 outline-none focus:border-sky-400" value="Purna Jual" />
+            <label class="block text-xs font-black uppercase tracking-wider text-gray-500 mt-4 mb-1">Isi / Keterangan</label>
+            <textarea id="admin-feature-aftersales-desc" rows="6" maxlength="350" class="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-700 outline-none resize-y focus:border-sky-400" placeholder="Masukkan garansi, service, spare part, konsultasi, atau layanan purna jual."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-end">
+        <div id="admin-feature-save-status" class="text-sm font-bold text-gray-500 sm:mr-auto"><i class="fas fa-info-circle mr-1"></i>Pilih produk, isi data, lalu simpan.</div>
+        <button type="button" onclick="resetProductFeatureEditor()" class="px-5 py-3 rounded-full bg-white border border-gray-300 text-gray-700 font-black hover:bg-gray-50 transition-all"><i class="fas fa-undo mr-2"></i>Kembalikan Isian</button>
+        <button type="button" onclick="saveProductDetailFeatures()" class="px-6 py-3 rounded-full text-white font-black shadow-lg bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 hover:scale-[1.01] transition-transform"><i class="fas fa-save mr-2"></i>Simpan Detail Produk</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Fitur Keunggulan -->
 <section class="-mt-8 md:-mt-12 relative z-20 mx-4 sm:mx-6 lg:mx-8 max-w-7xl xl:mx-auto">
 <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
@@ -696,10 +773,22 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
       <article class="fresh-card rounded-[1.75rem] p-5 md:p-7">
         <h3 id="article-heading" class="text-xl md:text-2xl font-black mb-4 text-gray-900">Keterangan Produk</h3>
         <div id="article-body" class="space-y-4 text-sm md:text-base text-gray-700 leading-relaxed"></div>
-        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <div class="rounded-2xl bg-white/80 border border-pink-100 p-4"><div class="text-2xl mb-2 text-brand"><i class="fas fa-water"></i></div><b>Debit Air</b><p class="text-xs text-gray-600 mt-1">Disesuaikan ukuran pompa dan kebutuhan lapangan.</p></div>
-          <div class="rounded-2xl bg-white/80 border border-orange-100 p-4"><div class="text-2xl mb-2 text-brand"><i class="fas fa-gas-pump"></i></div><b>Operasional</b><p class="text-xs text-gray-600 mt-1">Mudah dipindahkan dan cocok untuk area tanpa listrik.</p></div>
-          <div class="rounded-2xl bg-white/80 border border-sky-100 p-4"><div class="text-2xl mb-2 text-brand"><i class="fas fa-shield-alt"></i></div><b>Purna Jual</b><p class="text-xs text-gray-600 mt-1">Siap didukung garansi dan konsultasi pemakaian.</p></div>
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3" id="article-feature-grid">
+          <div class="rounded-2xl bg-white/80 border border-pink-100 p-4">
+            <div class="text-2xl mb-2 text-brand"><i class="fas fa-water"></i></div>
+            <b id="article-feature-debit-title">Debit Air</b>
+            <p id="article-feature-debit-desc" class="text-xs text-gray-600 mt-1">Disesuaikan ukuran pompa dan kebutuhan lapangan.</p>
+          </div>
+          <div class="rounded-2xl bg-white/80 border border-orange-100 p-4">
+            <div class="text-2xl mb-2 text-brand"><i class="fas fa-gas-pump"></i></div>
+            <b id="article-feature-operation-title">Operasional</b>
+            <p id="article-feature-operation-desc" class="text-xs text-gray-600 mt-1">Mudah dipindahkan dan cocok untuk area tanpa listrik.</p>
+          </div>
+          <div class="rounded-2xl bg-white/80 border border-sky-100 p-4">
+            <div class="text-2xl mb-2 text-brand"><i class="fas fa-shield-alt"></i></div>
+            <b id="article-feature-aftersales-title">Purna Jual</b>
+            <p id="article-feature-aftersales-desc" class="text-xs text-gray-600 mt-1">Siap didukung garansi dan konsultasi pemakaian.</p>
+          </div>
         </div>
       </article>
 
@@ -1370,6 +1459,8 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
                 });
                 document.getElementById('admin-slider-panel')?.classList.remove('hidden');
                 document.getElementById('admin-garansi-view')?.classList.remove('hidden');
+                document.getElementById('admin-product-detail-panel')?.classList.remove('hidden');
+                loadProductFeatureEditor(document.getElementById('admin-detail-product')?.value || 'bensin3');
 // Refresh agar tombol delete muncul di item dinamis
                 refreshUI();
             } else {
@@ -1592,6 +1683,207 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
 
         let activePumpArticle = 'irigasi';
 
+        // ==========================================
+        // KONTEN 3 KOTAK DETAIL PRODUK (ADMIN EDITABLE)
+        // Disimpan per produk di Firestore: settings/detail_features_<articleId>
+        // ==========================================
+        const productFeatureNames = {
+            bensin3: 'Pompa Air Irigasi Bensin 3 Inch',
+            bensin4: 'Pompa Air Irigasi Bensin 4 Inch',
+            diesel3: 'Pompa Irigasi Diesel 3 Inch',
+            diesel4: 'Pompa Irigasi Diesel 4 Inch',
+            diesel6: 'Pompa Irigasi Diesel 6 Inch',
+            elektrik: 'Pompa Elektrik',
+            solar: 'Pompa Solar Panel',
+            hybrid: 'Pompa Hybrid'
+        };
+
+        const editableProductFeatureIds = Object.keys(productFeatureNames);
+        window.productDetailFeatures = window.productDetailFeatures || {};
+
+        function getDefaultProductFeatures(articleId) {
+            const defaults = {
+                bensin3: {
+                    debitTitle: 'Debit Air',
+                    debitDesc: 'Kapasitas aliran disesuaikan kebutuhan irigasi 3 inch, tinggi dorong, tinggi hisap, dan kondisi lapangan.',
+                    operationTitle: 'Operasional',
+                    operationDesc: 'Mesin bensin ringkas, mudah dipindahkan, dan cocok untuk lokasi kerja yang tidak memiliki sumber listrik.',
+                    aftersalesTitle: 'Purna Jual',
+                    aftersalesDesc: 'Dukungan garansi, konsultasi pemakaian, service, dan ketersediaan suku cadang sesuai ketentuan Kalimaja.'
+                },
+                bensin4: {
+                    debitTitle: 'Debit Air',
+                    debitDesc: 'Debit lebih besar untuk jalur 4 inch, cocok untuk pengairan area lebih luas dan distribusi air lapangan.',
+                    operationTitle: 'Operasional',
+                    operationDesc: 'Penggerak bensin dengan mobilitas tinggi untuk pekerjaan lapangan tanpa ketergantungan pada jaringan listrik.',
+                    aftersalesTitle: 'Purna Jual',
+                    aftersalesDesc: 'Dukungan garansi, konsultasi teknis, service, dan penyediaan komponen pendukung sesuai kebutuhan unit.'
+                },
+                diesel3: {
+                    debitTitle: 'Debit Air',
+                    debitDesc: 'Pompa diesel 3 inch untuk irigasi dan distribusi air dengan kapasitas yang disesuaikan spesifikasi unit serta kondisi lapangan.',
+                    operationTitle: 'Operasional',
+                    operationDesc: 'Mesin diesel tangguh untuk penggunaan lapangan, mudah ditempatkan, dan sesuai untuk jam kerja yang lebih panjang.',
+                    aftersalesTitle: 'Purna Jual',
+                    aftersalesDesc: 'Dukungan garansi, konsultasi operator, service berkala, dan kebutuhan spare part pompa maupun mesin.'
+                },
+                diesel4: {
+                    debitTitle: 'Debit Air',
+                    debitDesc: 'Pompa diesel 4 inch untuk kebutuhan debit lebih besar pada pertanian, perkebunan, pengurasan, dan pekerjaan lapangan.',
+                    operationTitle: 'Operasional',
+                    operationDesc: 'Penggerak diesel untuk kerja intensif dan area tanpa listrik, dengan penempatan selang hisap serta buang yang disesuaikan kondisi lokasi.',
+                    aftersalesTitle: 'Purna Jual',
+                    aftersalesDesc: 'Dukungan garansi, konsultasi pemakaian, service, pengecekan unit, dan penyediaan suku cadang.'
+                },
+                diesel6: {
+                    debitTitle: 'Debit Air',
+                    debitDesc: 'Pompa diesel 6 inch untuk debit besar, hamparan luas, dewatering, proyek, dan suplai air intensif.',
+                    operationTitle: 'Operasional',
+                    operationDesc: 'Dirancang untuk pekerjaan berat dengan penggerak diesel; konfigurasi selang, head, dan sumber air perlu disesuaikan sebelum operasi.',
+                    aftersalesTitle: 'Purna Jual',
+                    aftersalesDesc: 'Dukungan garansi, asistensi teknis, service, inspeksi berkala, dan dukungan spare part untuk menjaga kesiapan unit.'
+                },
+                elektrik: {
+                    debitTitle: 'Debit Air',
+                    debitDesc: 'Kapasitas debit mengikuti ukuran pompa, daya motor listrik, head sistem, dan kebutuhan aliran di lokasi pemakaian.',
+                    operationTitle: 'Operasional',
+                    operationDesc: 'Menggunakan motor listrik untuk operasi yang halus dan praktis pada lokasi dengan suplai listrik yang stabil.',
+                    aftersalesTitle: 'Purna Jual',
+                    aftersalesDesc: 'Dukungan konsultasi sizing motor, panel kontrol, proteksi listrik, service pompa, dan komponen pendukung.'
+                },
+                solar: {
+                    debitTitle: 'Debit Air',
+                    debitDesc: 'Debit disesuaikan kapasitas pompa, kebutuhan head, daya panel surya, controller, dan pola penyinaran di lokasi.',
+                    operationTitle: 'Operasional',
+                    operationDesc: 'Mengandalkan energi surya untuk lokasi yang ingin mengurangi ketergantungan pada bahan bakar atau jaringan listrik.',
+                    aftersalesTitle: 'Purna Jual',
+                    aftersalesDesc: 'Dukungan desain sistem, pengecekan pompa, controller, panel surya, instalasi, dan konsultasi pemeliharaan.'
+                },
+                hybrid: {
+                    debitTitle: 'Debit Air',
+                    debitDesc: 'Kapasitas aliran mengikuti pompa yang dipakai dan tetap mempertimbangkan head, selang, serta sumber air di lapangan.',
+                    operationTitle: 'Operasional',
+                    operationDesc: 'Sistem kombinasi dua sumber penggerak untuk fleksibilitas operasi, misalnya diesel dan listrik sesuai kebutuhan lokasi.',
+                    aftersalesTitle: 'Purna Jual',
+                    aftersalesDesc: 'Dukungan integrasi penggerak, panel kontrol, proteksi, service pompa, dan konsultasi sistem hybrid.'
+                }
+            };
+            return defaults[articleId] || {
+                debitTitle: 'Debit Air',
+                debitDesc: 'Disesuaikan ukuran pompa dan kebutuhan lapangan.',
+                operationTitle: 'Operasional',
+                operationDesc: 'Disesuaikan sumber tenaga dan kondisi area kerja.',
+                aftersalesTitle: 'Purna Jual',
+                aftersalesDesc: 'Siap didukung garansi dan konsultasi pemakaian.'
+            };
+        }
+
+        function normalizeProductFeatures(data, articleId) {
+            const base = getDefaultProductFeatures(articleId);
+            const src = data || {};
+            return {
+                debitTitle: String(src.debitTitle || base.debitTitle),
+                debitDesc: String(src.debitDesc || base.debitDesc),
+                operationTitle: String(src.operationTitle || base.operationTitle),
+                operationDesc: String(src.operationDesc || base.operationDesc),
+                aftersalesTitle: String(src.aftersalesTitle || base.aftersalesTitle),
+                aftersalesDesc: String(src.aftersalesDesc || base.aftersalesDesc)
+            };
+        }
+
+        function setTextById(id, value) {
+            const el = document.getElementById(id);
+            if (el) el.textContent = value || '';
+        }
+
+        function renderProductFeatureCards(articleId) {
+            const data = normalizeProductFeatures(window.productDetailFeatures?.[articleId], articleId);
+            setTextById('article-feature-debit-title', data.debitTitle);
+            setTextById('article-feature-debit-desc', data.debitDesc);
+            setTextById('article-feature-operation-title', data.operationTitle);
+            setTextById('article-feature-operation-desc', data.operationDesc);
+            setTextById('article-feature-aftersales-title', data.aftersalesTitle);
+            setTextById('article-feature-aftersales-desc', data.aftersalesDesc);
+        }
+
+        function fillFeatureEditor(articleId, force = false) {
+            const select = document.getElementById('admin-detail-product');
+            if (!select) return;
+            if (!force && select.value !== articleId) return;
+            const data = normalizeProductFeatures(window.productDetailFeatures?.[articleId], articleId);
+            setTextById('admin-detail-selected-name', productFeatureNames[articleId] || articleId);
+            const values = {
+                'admin-feature-debit-title': data.debitTitle,
+                'admin-feature-debit-desc': data.debitDesc,
+                'admin-feature-operation-title': data.operationTitle,
+                'admin-feature-operation-desc': data.operationDesc,
+                'admin-feature-aftersales-title': data.aftersalesTitle,
+                'admin-feature-aftersales-desc': data.aftersalesDesc
+            };
+            Object.entries(values).forEach(([id, value]) => {
+                const el = document.getElementById(id);
+                if (el) el.value = value;
+            });
+        }
+
+        window.loadProductFeatureEditor = function(articleId) {
+            fillFeatureEditor(articleId, true);
+            const status = document.getElementById('admin-feature-save-status');
+            if (status) status.innerHTML = `<i class="fas fa-edit mr-1"></i>Mengedit: ${escapeHTML(productFeatureNames[articleId] || articleId)}`;
+        };
+
+        window.resetProductFeatureEditor = function() {
+            const articleId = document.getElementById('admin-detail-product')?.value || 'bensin3';
+            fillFeatureEditor(articleId, true);
+            const status = document.getElementById('admin-feature-save-status');
+            if (status) status.innerHTML = '<i class="fas fa-undo mr-1"></i>Isian dikembalikan ke data terakhir yang tersimpan.';
+        };
+
+        window.saveProductDetailFeatures = async function() {
+            if (!window.isAdmin) {
+                alert('Silakan masuk sebagai Admin terlebih dahulu.');
+                return;
+            }
+            const articleId = document.getElementById('admin-detail-product')?.value || 'bensin3';
+            const read = (id) => (document.getElementById(id)?.value || '').trim();
+            const payload = {
+                debitTitle: read('admin-feature-debit-title') || 'Debit Air',
+                debitDesc: read('admin-feature-debit-desc'),
+                operationTitle: read('admin-feature-operation-title') || 'Operasional',
+                operationDesc: read('admin-feature-operation-desc'),
+                aftersalesTitle: read('admin-feature-aftersales-title') || 'Purna Jual',
+                aftersalesDesc: read('admin-feature-aftersales-desc'),
+                updatedAt: Date.now()
+            };
+            const status = document.getElementById('admin-feature-save-status');
+            if (status) status.innerHTML = '<i class="fas fa-spinner fa-spin mr-1"></i>Menyimpan ke server...';
+            try {
+                await setDoc(doc(db, 'settings', `detail_features_${articleId}`), payload, { merge: true });
+                window.productDetailFeatures[articleId] = payload;
+                if (activePumpArticle === articleId) renderProductFeatureCards(articleId);
+                if (status) status.innerHTML = '<span class="text-green-700"><i class="fas fa-check-circle mr-1"></i>Berhasil disimpan permanen.</span>';
+                showCloudToast('Konten detail produk berhasil disimpan.');
+            } catch (error) {
+                console.error('Gagal menyimpan detail produk:', error);
+                if (status) status.innerHTML = '<span class="text-red-600"><i class="fas fa-exclamation-circle mr-1"></i>Gagal menyimpan. Coba lagi.</span>';
+                alert('Gagal menyimpan konten detail produk.');
+            }
+        };
+
+        function watchProductDetailFeatures() {
+            editableProductFeatureIds.forEach(articleId => {
+                onSnapshot(doc(db, 'settings', `detail_features_${articleId}`), (docSnap) => {
+                    window.productDetailFeatures[articleId] = docSnap.exists() ? docSnap.data() : getDefaultProductFeatures(articleId);
+                    if (activePumpArticle === articleId) renderProductFeatureCards(articleId);
+                    fillFeatureEditor(articleId, false);
+                }, (error) => {
+                    console.error(`Error Fetch Detail Features ${articleId}:`, error);
+                    if (!window.productDetailFeatures[articleId]) window.productDetailFeatures[articleId] = getDefaultProductFeatures(articleId);
+                });
+            });
+        }
+        watchProductDetailFeatures();
+
         function youtubeEmbed(url) {
             if (!url) return '';
             const value = String(url).trim();
@@ -1636,6 +1928,7 @@ section.py-10.md\:py-14{background:linear-gradient(90deg,var(--brand-3),var(--br
             document.getElementById('article-subtitle').innerText = data.subtitle;
             document.getElementById('article-heading').innerText = 'Detail ' + data.title;
             document.getElementById('article-body').innerHTML = '';
+            renderProductFeatureCards(articleId);
 
             for (let slot = 1; slot <= 3; slot++) {
                 const saved = window.articleMedia?.[articleId]?.photos?.[slot];
